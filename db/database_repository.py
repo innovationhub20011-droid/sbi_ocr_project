@@ -1,0 +1,186 @@
+import logging
+
+from fastapi import HTTPException
+from sqlalchemy.exc import IntegrityError
+from sqlalchemy.orm import Session
+
+from models.document_model import PanCardDetails, AadhaarCardDetails, RawTextDetails
+from schemas.document_schemas import PanCreate, AadhaarCreate, RawTextCreate
+
+logger = logging.getLogger(__name__)
+
+
+# =====================================================
+# 🔵 PAN SAVE SERVICE
+# =====================================================
+def create_pan(
+    db: Session,
+    pan: PanCreate,
+    ocr_source: str = "vision_model",
+    created_by: str = "system"
+):
+
+    # -----------------------------
+    # 1️⃣ Pre-check for duplicate
+    # -----------------------------
+    existing = db.query(PanCardDetails).filter(
+        PanCardDetails.pan_number == pan.pan_number
+    ).first()
+
+    if existing:
+        logger.warning("PAN %s already exists in database.", pan.pan_number)
+        raise HTTPException(
+            status_code=400,
+            detail="Data for this PAN card already exists in the database."
+        )
+
+    # -----------------------------
+    # 2️⃣ Create DB Object
+    # -----------------------------
+    db_pan = PanCardDetails(
+        pan_number=pan.pan_number,
+        full_name=pan.full_name,
+        father_name=pan.father_name,
+        date_of_birth=pan.date_of_birth,
+        pan_type=pan.derive_pan_type(),
+        ocr_source=ocr_source,
+        created_by=created_by,
+    )
+
+    # -----------------------------
+    # 3️⃣ Save to DB
+    # -----------------------------
+    try:
+        db.add(db_pan)
+        db.commit()
+        db.refresh(db_pan)
+
+        logger.info("PAN %s saved successfully.", pan.pan_number)
+        return db_pan
+
+    except IntegrityError:
+        db.rollback()
+        logger.warning("Integrity error while saving PAN %s", pan.pan_number)
+        raise HTTPException(
+            status_code=400,
+            detail="Data for this PAN card already exists in the database."
+        )
+
+    except Exception as exc:
+        db.rollback()
+        logger.exception("Unexpected error while saving PAN")
+        raise HTTPException(
+            status_code=500,
+            detail=f"Failed to save PAN details: {str(exc)}"
+        )
+
+
+# =====================================================
+# 🟢 AADHAAR SAVE SERVICE
+# =====================================================
+def create_aadhaar(
+    db: Session,
+    aadhaar: AadhaarCreate,
+    ocr_source: str = "vision_model",
+    created_by: str = "system"
+):
+
+    # -----------------------------
+    # 1️⃣ Pre-check for duplicate
+    # -----------------------------
+    existing = db.query(AadhaarCardDetails).filter(
+        AadhaarCardDetails.aadhaar_number == aadhaar.aadhaar_number
+    ).first()
+
+    if existing:
+        logger.warning(
+            "Aadhaar %s already exists in database.",
+            aadhaar.aadhaar_number
+        )
+        raise HTTPException(
+            status_code=400,
+            detail="Data for this Aadhaar card already exists in the database."
+        )
+
+    # -----------------------------
+    # 2️⃣ Create DB Object
+    # -----------------------------
+    db_aadhaar = AadhaarCardDetails(
+        aadhaar_number=aadhaar.aadhaar_number,
+        full_name=aadhaar.full_name,
+        date_of_birth=aadhaar.date_of_birth,
+        gender=aadhaar.gender,
+        address=aadhaar.address,
+        ocr_source=ocr_source,
+        created_by=created_by,
+    )
+
+    # -----------------------------
+    # 3️⃣ Save to DB
+    # -----------------------------
+    try:
+        db.add(db_aadhaar)
+        db.commit()
+        db.refresh(db_aadhaar)
+
+        logger.info(
+            "Aadhaar %s saved successfully.",
+            aadhaar.aadhaar_number
+        )
+        return db_aadhaar
+
+    except IntegrityError:
+        db.rollback()
+        logger.warning(
+            "Integrity error while saving Aadhaar %s",
+            aadhaar.aadhaar_number
+        )
+        raise HTTPException(
+            status_code=400,
+            detail="Data for this Aadhaar card already exists in the database."
+        )
+
+    except Exception as exc:
+        db.rollback()
+        logger.exception("Unexpected error while saving Aadhaar")
+        raise HTTPException(
+            status_code=500,
+            detail=f"Failed to save Aadhaar details: {str(exc)}"
+        )
+        
+
+
+def create_raw_text(
+    db,
+    raw_text: RawTextCreate,
+    ocr_source: str = "vision_model",
+    created_by: str = "system"
+):
+    db_raw = RawTextDetails(
+        document_text=raw_text.document_text,
+        ocr_source=ocr_source,
+        created_by=created_by,
+    )
+
+    try:
+        db.add(db_raw)
+        db.commit()
+        db.refresh(db_raw)
+
+        logger.info("Raw text document saved successfully.")
+        return db_raw
+
+    except IntegrityError:
+        db.rollback()
+        raise HTTPException(
+            status_code=400,
+            detail="Failed to save raw text document."
+        )
+
+    except Exception as exc:
+        db.rollback()
+        logger.exception("Unexpected error while saving raw text")
+        raise HTTPException(
+            status_code=500,
+            detail=f"Failed to save raw text: {str(exc)}"
+        )
