@@ -5,6 +5,7 @@ from services.page_classifier import classify_page
 from prompts.loan_page1_prompt import LOAN_PAGE1_PROMPT
 from prompts.loan_page2_prompt import LOAN_PAGE2_PROMPT
 
+#added test comment.
 async def extract_loan(file):
 
     if not file.filename.lower().endswith(".pdf"):
