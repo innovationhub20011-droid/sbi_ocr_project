@@ -88,7 +88,6 @@ async def extract_aadhaar(file: UploadFile) -> dict:
         # 5️⃣ Return Extracted Data
         # ---------------------------------
         return {
-            "message": "Aadhaar extraction successful",
             "aadhaar_data": aadhaar_data
         }
 

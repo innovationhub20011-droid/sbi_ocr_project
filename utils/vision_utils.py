@@ -14,10 +14,12 @@ load_dotenv()
 OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL") or os.getenv("OLLAMA_HOST")
 OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "llama3.2-vision:11b")
 OLLAMA_TEMPERATURE = float(os.getenv("OLLAMA_TEMPERATURE", "0"))
+OLLAMA_NUM_PREDICT = int(os.getenv("OLLAMA_NUM_PREDICT", "2048"))
 
 llm_config = {
     "model": OLLAMA_MODEL,
     "temperature": OLLAMA_TEMPERATURE,
+    "num_predict": OLLAMA_NUM_PREDICT,
 }
 
 if OLLAMA_BASE_URL:
@@ -26,6 +28,11 @@ if OLLAMA_BASE_URL:
 
 llm = ChatOllama(
     **llm_config
+)
+
+llm_json = ChatOllama(
+    **llm_config,
+    format="json"
 )
 
 
@@ -44,6 +51,48 @@ def _normalize_content(content: Any) -> str:
         return result
 
     return ""
+
+
+def _empty_like(schema: dict) -> dict:
+    """Return a shallow empty copy for flat dict schemas."""
+    return {k: "" for k in schema.keys()}
+
+
+def _extract_from_labeled_text(raw_output: str, empty_schema: dict) -> dict:
+    """
+    Fallback parser for outputs like:
+    **Full Name:** John Doe
+    **Father's Name:** ...
+    """
+    # Only apply on flat JSON schemas.
+    if not isinstance(empty_schema, dict) or any(isinstance(v, dict) for v in empty_schema.values()):
+        return empty_schema
+
+    parsed = _empty_like(empty_schema)
+
+    for key in parsed.keys():
+        label = key.replace("_", " ")
+        pattern = rf"(?im)^\s*\**\s*{re.escape(label)}\s*\**\s*:\s*(.+?)\s*$"
+        match = re.search(pattern, raw_output)
+        if match:
+            parsed[key] = match.group(1).strip()
+
+    # PAN-specific fallback from free text if label mapping didn't work.
+    if "pan_number" in parsed and not parsed["pan_number"]:
+        pan_match = re.search(r"\b[A-Z]{5}[0-9]{4}[A-Z]\b", raw_output.upper())
+        if pan_match:
+            parsed["pan_number"] = pan_match.group(0)
+
+    # Aadhaar fallback from free text if label mapping didn't work.
+    if "aadhaar_number" in parsed and not parsed["aadhaar_number"]:
+        aadhaar_match = re.search(r"\b(?:\d{4}\s?){3}\b", raw_output)
+        if aadhaar_match:
+            parsed["aadhaar_number"] = " ".join(aadhaar_match.group(0).split())
+
+    if any(value for value in parsed.values()):
+        return parsed
+
+    return empty_schema
 
 
 def call_vision_model(prompt: str, image_base64: str, empty_schema: dict) -> dict:
@@ -65,7 +114,7 @@ def call_vision_model(prompt: str, image_base64: str, empty_schema: dict) -> dic
             ]
         )
 
-        response = llm.invoke([message])
+        response = llm_json.invoke([message])
 
         raw_output = _normalize_content(response.content)
 
@@ -78,14 +127,14 @@ def call_vision_model(prompt: str, image_base64: str, empty_schema: dict) -> dic
         json_match = re.search(r"\{.*\}", raw_output, re.DOTALL)
 
         if not json_match:
-            return empty_schema  # Model refused
+            return _extract_from_labeled_text(raw_output, empty_schema)
 
         json_string = json_match.group(0)
 
         try:
             return json.loads(json_string)
         except json.JSONDecodeError:
-            return empty_schema
+            return _extract_from_labeled_text(raw_output, empty_schema)
 
     except Exception:
         return empty_schema
