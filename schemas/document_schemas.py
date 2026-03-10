@@ -65,18 +65,37 @@ class AadhaarCreate(BaseModel):
             raise ValueError("Invalid Aadhaar number")
         return digits
     
-class RawTextCreate(BaseModel):
-    document_text: str
-    language: Optional[str] = "en"
+class TextDocumentOcrCreate(BaseModel):
+    document_type: str
+    ocr_result: dict
+    total_pages: int
+    file_name: Optional[str] = None
     ocr_source: Optional[str] = "vision_model"
 
-    @field_validator("document_text")
+    @field_validator("document_type")
     @classmethod
-    def validate_document_text(cls, v):
-        if not v or not v.strip():
-            raise ValueError("Document text cannot be empty")
+    def validate_document_type(cls, v):
+        allowed = {"handwritten_text", "digital_text", "miscellaneous_text"}
+        normalized = (v or "").strip().lower()
+        if normalized not in allowed:
+            raise ValueError("Unsupported text document type")
+        return normalized
 
-        if len(v) < 5:
-            raise ValueError("Extracted text is too short to be valid")
+    @field_validator("total_pages")
+    @classmethod
+    def validate_positive_number(cls, v):
+        if v < 1:
+            raise ValueError("Page numbers must be positive")
+        return v
 
-        return " ".join(v.split())
+    @field_validator("ocr_result")
+    @classmethod
+    def validate_ocr_result(cls, v):
+        if not isinstance(v, dict):
+            raise ValueError("ocr_result must be a valid JSON object")
+
+        pages = v.get("pages", [])
+        if not isinstance(pages, list):
+            raise ValueError("ocr_result.pages must be a list")
+
+        return v

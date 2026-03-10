@@ -9,7 +9,14 @@ from extractors.loan_extractor import extract_loan
 from extractors.passport_extractor import extract_passport
 from extractors.driving_extractor import extract_driving_license
 from extractors.voter_extractor import extract_voter_id
-from extractors.generic_ocr_extractor import extract_raw_text
+from extractors.text_documents_extractor import (
+    extract_handwritten_text,
+    extract_digital_text,
+    extract_misc_text,
+    get_all_handwritten_text_ocr,
+    get_all_digital_text_ocr,
+    get_all_miscellaneous_text_ocr,
+)
 from extractors.account_opening.page1_extractor import extract_account_opening_page1
 from extractors.account_opening.page2_extractor import extract_account_opening_page2
 
@@ -48,9 +55,19 @@ async def driving_license_api(file: UploadFile = File(...)):
 async def voter_id_api(file: UploadFile = File(...)):
     return await extract_voter_id(file)
 
-@app.post("/extract/raw-text")
-async def raw_text_api(file: UploadFile = File(...)):
-    return await extract_raw_text(file)
+@app.post("/extract/text/handwritten_text")
+async def handwritten_text_api(file: UploadFile = File(...)):
+    return await extract_handwritten_text(file)
+
+
+@app.post("/extract/text/digital_text")
+async def digital_text_api(file: UploadFile = File(...)):
+    return await extract_digital_text(file)
+
+
+@app.post("/extract/text/miscellaneous_text")
+async def misc_text_api(file: UploadFile = File(...)):
+    return await extract_misc_text(file)
 
 @app.post("/extract/account-opening/page1")
 async def account_opening_page1_api(file: UploadFile = File(...)):
@@ -67,3 +84,18 @@ async def retrieve_all_pan():
 @app.get("/retrieve/aadhaar/all")
 async def retrieve_all_aadhaar():
    return get_all_aadhaar()
+
+
+@app.get("/retrieve/text/handwritten_text/all")
+async def retrieve_all_handwritten_text():
+    return get_all_handwritten_text_ocr()
+
+
+@app.get("/retrieve/text/digital_text/all")
+async def retrieve_all_digital_text():
+    return get_all_digital_text_ocr()
+
+
+@app.get("/retrieve/text/miscellaneous_text/all")
+async def retrieve_all_miscellaneous_text():
+    return get_all_miscellaneous_text_ocr()

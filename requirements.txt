@@ -5,8 +5,8 @@ python-multipart
 langchain
 langchain-ollama
 pillow
-pdf2image
 opencv-python
 numpy
 sqlalchemy
 python-dotenv
+pypdfium2
