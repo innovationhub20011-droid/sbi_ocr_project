@@ -43,3 +43,45 @@ CREATE TABLE AADHAR_CARD_DETAILS (
     UPDATED_DATE       TIMESTAMP
 );
 
+CREATE TABLE account_forms (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+
+    form_reference VARCHAR(50) UNIQUE,
+
+    branch_code VARCHAR(10),
+    account_number VARCHAR(20),
+
+    customer_name VARCHAR(150),
+    pan_number VARCHAR(20),
+    mobile_number VARCHAR(20),
+
+    form_status VARCHAR(30) DEFAULT 'OCR_PENDING',
+
+    created_by VARCHAR(100),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+    updated_by VARCHAR(100),
+    updated_at TIMESTAMP,
+
+    is_approved BOOLEAN DEFAULT FALSE
+);
+
+CREATE TABLE account_form_pages (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+
+    form_id UUID REFERENCES account_forms(id) ON DELETE CASCADE,
+
+    page_number INT NOT NULL,
+
+    page_data TEXT NOT NULL,
+
+    created_by VARCHAR(100),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+    updated_by VARCHAR(100),
+    updated_at TIMESTAMP,
+
+    is_approved BOOLEAN DEFAULT FALSE,
+
+    UNIQUE(form_id, page_number)
+);
