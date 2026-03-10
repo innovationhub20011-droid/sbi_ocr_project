@@ -1,7 +1,11 @@
 from fastapi import UploadFile, HTTPException
+from sqlalchemy.orm import Session
+
+from db.database import SessionLocal
 from utils.vision_utils import call_vision_model
 from prompts.passport_prompt import PASSPORT_PROMPT
 from services.file_service import convert_image_to_base64
+from services.document_service import process_passport
 
 
 def empty_passport():
@@ -51,5 +55,18 @@ async def extract_passport(file: UploadFile):
     # PIN code validation
     if not re.match(r"^[0-9]{6}$", response.get("pin_code", "")):
         response["pin_code"] = ""
+
+    db: Session = SessionLocal()
+    try:
+        process_passport(db, response)
+        db.commit()
+    except HTTPException:
+        db.rollback()
+        raise
+    except Exception as exc:
+        db.rollback()
+        raise HTTPException(status_code=500, detail=f"Failed to save passport details: {str(exc)}")
+    finally:
+        db.close()
 
     return {"passport_data": response}

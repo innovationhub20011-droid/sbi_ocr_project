@@ -1,9 +1,19 @@
 from sqlalchemy.orm import Session
 from models.document_model import AadhaarCardDetails, PanCardDetails
-from schemas.document_schemas import PanCreate, AadhaarCreate, TextDocumentOcrCreate
+from schemas.document_schemas import (
+    PanCreate,
+    AadhaarCreate,
+    PassportCreate,
+    DrivingLicenseCreate,
+    VoterIdCreate,
+    TextDocumentOcrCreate,
+)
 from db.database_repository import (
     create_pan,
     create_aadhaar,
+    create_passport,
+    create_driving_license,
+    create_voter_id,
     create_handwritten_text_ocr,
     create_digital_text_ocr,
     create_miscellaneous_text_ocr,
@@ -21,6 +31,21 @@ def process_pan(db: Session, data: dict):
 def process_aadhaar(db: Session, data: dict):
     aadhaar = AadhaarCreate(**data)
     return create_aadhaar(db, aadhaar)
+
+
+def process_passport(db: Session, data: dict):
+    passport = PassportCreate(**data)
+    return create_passport(db, passport)
+
+
+def process_driving_license(db: Session, data: dict):
+    dl_data = DrivingLicenseCreate(**data)
+    return create_driving_license(db, dl_data)
+
+
+def process_voter_id(db: Session, data: dict):
+    voter_data = VoterIdCreate(**data)
+    return create_voter_id(db, voter_data)
 
 def process_text_document_ocr(db: Session, data: dict):
     ocr_data = TextDocumentOcrCreate(**data)

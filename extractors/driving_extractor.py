@@ -1,6 +1,10 @@
 from fastapi import UploadFile, HTTPException
+from sqlalchemy.orm import Session
+
+from db.database import SessionLocal
 from utils.vision_utils import call_vision_model
 from prompts.driving_license_prompt import DRIVING_LICENSE_PROMPT
+from services.document_service import process_driving_license
 import base64
 
 
@@ -44,6 +48,19 @@ async def extract_driving_license(file: UploadFile) -> dict:
             image_base64,
             empty_driving_license()
         )
+
+        db: Session = SessionLocal()
+        try:
+            process_driving_license(db, dl_data)
+            db.commit()
+        except HTTPException:
+            db.rollback()
+            raise
+        except Exception as exc:
+            db.rollback()
+            raise HTTPException(status_code=500, detail=f"Failed to save driving license details: {str(exc)}")
+        finally:
+            db.close()
 
         return {
             "driving_license_data": dl_data

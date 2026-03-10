@@ -64,6 +64,50 @@ class AadhaarCreate(BaseModel):
         if len(digits) != 12:
             raise ValueError("Invalid Aadhaar number")
         return digits
+
+
+class PassportCreate(BaseModel):
+    passport_number: Optional[str] = None
+    surname: Optional[str] = None
+    given_names: Optional[str] = None
+    nationality: Optional[str] = None
+    sex: Optional[str] = None
+    date_of_birth: Optional[str] = None
+    place_of_birth: Optional[str] = None
+    date_of_issue: Optional[str] = None
+    date_of_expiry: Optional[str] = None
+    place_of_issue: Optional[str] = None
+    father_name: Optional[str] = None
+    mother_name: Optional[str] = None
+    address: Optional[str] = None
+    pin_code: Optional[str] = None
+    file_number: Optional[str] = None
+
+
+class DrivingLicenseCreate(BaseModel):
+    driving_licence_number: Optional[str] = None
+    name: Optional[str] = None
+    father_name: Optional[str] = None
+    date_of_birth: Optional[str] = None
+    date_of_issue: Optional[str] = None
+    valid_till_nt: Optional[str] = None
+    valid_till_tr: Optional[str] = None
+    address: Optional[str] = None
+    blood_group: Optional[str] = None
+    class_of_vehicle: Optional[str] = None
+    issuing_authority: Optional[str] = None
+
+
+class VoterIdCreate(BaseModel):
+    epic_number: Optional[str] = None
+    name: Optional[str] = None
+    father_name: Optional[str] = None
+    gender: Optional[str] = None
+    date_of_birth: Optional[str] = None
+    address: Optional[str] = None
+    electoral_registration_officer: Optional[str] = None
+    assembly_constituency: Optional[str] = None
+    download_date: Optional[str] = None
     
 class TextDocumentOcrCreate(BaseModel):
     document_type: str

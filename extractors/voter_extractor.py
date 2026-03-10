@@ -1,6 +1,10 @@
 from fastapi import UploadFile, HTTPException
+from sqlalchemy.orm import Session
+
+from db.database import SessionLocal
 from utils.vision_utils import call_vision_model
 from prompts.voter_prompt import VOTER_ID_PROMPT
+from services.document_service import process_voter_id
 import base64
 
 
@@ -42,6 +46,19 @@ async def extract_voter_id(file: UploadFile) -> dict:
             image_base64,
             empty_voter_id()
         )
+
+        db: Session = SessionLocal()
+        try:
+            process_voter_id(db, voter_data)
+            db.commit()
+        except HTTPException:
+            db.rollback()
+            raise
+        except Exception as exc:
+            db.rollback()
+            raise HTTPException(status_code=500, detail=f"Failed to save voter ID details: {str(exc)}")
+        finally:
+            db.close()
 
         return {
             "voter_id_data": voter_data

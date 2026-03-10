@@ -10,6 +10,9 @@ from models.account_opening_models import AccountForm, AccountFormPage
 from schemas.document_schemas import (
     PanCreate,
     AadhaarCreate,
+    PassportCreate,
+    DrivingLicenseCreate,
+    VoterIdCreate,
     TextDocumentOcrCreate,
 )
 from schemas.account_opening_schemas import AccountFormCreate, AccountFormPageCreate
@@ -18,6 +21,9 @@ logger = logging.getLogger(__name__)
 
 PanCardDetails = document_model.PanCardDetails
 AadhaarCardDetails = document_model.AadhaarCardDetails
+PassportDetails = document_model.PassportDetails
+DrivingLicenseDetails = document_model.DrivingLicenseDetails
+VoterIdDetails = document_model.VoterIdDetails
 HandwrittenTextOcrDetails = document_model.HandwrittenTextOcrDetails
 DigitalTextOcrDetails = document_model.DigitalTextOcrDetails
 MiscellaneousTextOcrDetails = document_model.MiscellaneousTextOcrDetails
@@ -160,6 +166,149 @@ def create_aadhaar(
             status_code=500,
             detail=f"Failed to save Aadhaar details: {str(exc)}"
         )
+
+
+def create_passport(
+    db: Session,
+    passport: PassportCreate,
+    ocr_source: str = "vision_model",
+    created_by: str = "system"
+):
+    passport_number = (passport.passport_number or "").strip() or None
+
+    if passport_number:
+        existing = db.query(PassportDetails).filter(
+            PassportDetails.passport_number == passport_number
+        ).first()
+        if existing:
+            logger.warning("Passport %s already exists in database.", passport_number)
+            raise HTTPException(status_code=400, detail="Data for this passport already exists in the database.")
+
+    db_passport = PassportDetails(
+        passport_number=passport_number,
+        surname=passport.surname,
+        given_names=passport.given_names,
+        nationality=passport.nationality,
+        sex=passport.sex,
+        date_of_birth=passport.date_of_birth,
+        place_of_birth=passport.place_of_birth,
+        date_of_issue=passport.date_of_issue,
+        date_of_expiry=passport.date_of_expiry,
+        place_of_issue=passport.place_of_issue,
+        father_name=passport.father_name,
+        mother_name=passport.mother_name,
+        address=passport.address,
+        pin_code=passport.pin_code,
+        file_number=passport.file_number,
+        ocr_source=ocr_source,
+        created_by=created_by,
+    )
+
+    try:
+        db.add(db_passport)
+        db.commit()
+        db.refresh(db_passport)
+        return db_passport
+    except IntegrityError:
+        db.rollback()
+        raise HTTPException(status_code=400, detail="Data for this passport already exists in the database.")
+    except Exception as exc:
+        db.rollback()
+        logger.exception("Unexpected error while saving passport")
+        raise HTTPException(status_code=500, detail=f"Failed to save passport details: {str(exc)}")
+
+
+def create_driving_license(
+    db: Session,
+    driving_license: DrivingLicenseCreate,
+    ocr_source: str = "vision_model",
+    created_by: str = "system"
+):
+    dl_number = (driving_license.driving_licence_number or "").strip() or None
+
+    if dl_number:
+        existing = db.query(DrivingLicenseDetails).filter(
+            DrivingLicenseDetails.driving_licence_number == dl_number
+        ).first()
+        if existing:
+            logger.warning(
+                "Driving License %s already exists in database.",
+                dl_number,
+            )
+            raise HTTPException(status_code=400, detail="Data for this driving license already exists in the database.")
+
+    db_dl = DrivingLicenseDetails(
+        driving_licence_number=dl_number,
+        name=driving_license.name,
+        father_name=driving_license.father_name,
+        date_of_birth=driving_license.date_of_birth,
+        date_of_issue=driving_license.date_of_issue,
+        valid_till_nt=driving_license.valid_till_nt,
+        valid_till_tr=driving_license.valid_till_tr,
+        address=driving_license.address,
+        blood_group=driving_license.blood_group,
+        class_of_vehicle=driving_license.class_of_vehicle,
+        issuing_authority=driving_license.issuing_authority,
+        ocr_source=ocr_source,
+        created_by=created_by,
+    )
+
+    try:
+        db.add(db_dl)
+        db.commit()
+        db.refresh(db_dl)
+        return db_dl
+    except IntegrityError:
+        db.rollback()
+        raise HTTPException(status_code=400, detail="Data for this driving license already exists in the database.")
+    except Exception as exc:
+        db.rollback()
+        logger.exception("Unexpected error while saving driving license")
+        raise HTTPException(status_code=500, detail=f"Failed to save driving license details: {str(exc)}")
+
+
+def create_voter_id(
+    db: Session,
+    voter_id: VoterIdCreate,
+    ocr_source: str = "vision_model",
+    created_by: str = "system"
+):
+    epic_number = (voter_id.epic_number or "").strip() or None
+
+    if epic_number:
+        existing = db.query(VoterIdDetails).filter(
+            VoterIdDetails.epic_number == epic_number
+        ).first()
+        if existing:
+            logger.warning("Voter EPIC %s already exists in database.", epic_number)
+            raise HTTPException(status_code=400, detail="Data for this voter ID already exists in the database.")
+
+    db_voter = VoterIdDetails(
+        epic_number=epic_number,
+        name=voter_id.name,
+        father_name=voter_id.father_name,
+        gender=voter_id.gender,
+        date_of_birth=voter_id.date_of_birth,
+        address=voter_id.address,
+        electoral_registration_officer=voter_id.electoral_registration_officer,
+        assembly_constituency=voter_id.assembly_constituency,
+        download_date=voter_id.download_date,
+        ocr_source=ocr_source,
+        created_by=created_by,
+    )
+
+    try:
+        db.add(db_voter)
+        db.commit()
+        db.refresh(db_voter)
+        return db_voter
+    except IntegrityError:
+        db.rollback()
+        raise HTTPException(status_code=400, detail="Data for this voter ID already exists in the database.")
+    except Exception as exc:
+        db.rollback()
+        logger.exception("Unexpected error while saving voter ID")
+        raise HTTPException(status_code=500, detail=f"Failed to save voter ID details: {str(exc)}")
         
 
 
