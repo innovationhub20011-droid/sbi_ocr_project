@@ -39,6 +39,13 @@ async def extract_account_opening_page1(file: UploadFile, db: Session):
     )
     logger.info(f"Vision model response for account opening page 1: {response}")
     
+    # Check if extraction failed
+    if not response or response == {}:
+        logger.error("Vision model returned empty response")
+        raise HTTPException(
+            status_code=422,
+            detail="Extraction failed: Unable to extract data from the image"
+        )
 
     # -------------------------------
     # Extract main form fields

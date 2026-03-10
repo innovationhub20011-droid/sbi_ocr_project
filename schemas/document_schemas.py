@@ -3,7 +3,6 @@ from datetime import datetime
 from typing import Optional
 from pydantic import BaseModel, field_validator
 
-PAN_REGEX = r"^[A-Z]{5}[0-9]{4}[A-Z]$"
 
 PAN_TYPE_MAP = {
     "P": "INDIVIDUAL",
@@ -25,13 +24,6 @@ class PanCreate(BaseModel):
     father_name: Optional[str]
     date_of_birth: Optional[str]
 
-    @field_validator("pan_number")
-    @classmethod
-    def validate_pan(cls, v):
-        v = v.strip().upper().replace(" ", "")
-        if not re.match(PAN_REGEX, v):
-            raise ValueError("Invalid PAN format")
-        return v
 
     @field_validator("date_of_birth")
     @classmethod
