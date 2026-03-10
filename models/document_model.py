@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, DateTime, func
+from sqlalchemy import Column, Integer, String, DateTime, Text, func
 from db.database import Base
 
 
@@ -34,9 +34,6 @@ class AadhaarCardDetails(Base):
     created_date = Column(DateTime, server_default=func.now())
     updated_by = Column(String(100))
     updated_date = Column(DateTime)
-    
-from sqlalchemy import Column, Integer, String, DateTime, Text, func
-from db.database import Base
 
 
 class RawTextDetails(Base):
