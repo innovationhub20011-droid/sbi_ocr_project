@@ -1,13 +1,31 @@
 from langchain_ollama import ChatOllama
 from langchain_core.messages import HumanMessage
 from typing import Any
+import os
 import re
 import json
 
+from dotenv import load_dotenv
+
+
+load_dotenv()
+
+
+OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL") or os.getenv("OLLAMA_HOST")
+OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "llama3.2-vision:11b")
+OLLAMA_TEMPERATURE = float(os.getenv("OLLAMA_TEMPERATURE", "0"))
+
+llm_config = {
+    "model": OLLAMA_MODEL,
+    "temperature": OLLAMA_TEMPERATURE,
+}
+
+if OLLAMA_BASE_URL:
+    llm_config["base_url"] = OLLAMA_BASE_URL
+
 
 llm = ChatOllama(
-    model="llama3.2-vision:11b",
-    temperature=0
+    **llm_config
 )
 
 
