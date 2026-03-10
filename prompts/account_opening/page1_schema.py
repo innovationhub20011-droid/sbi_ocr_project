@@ -8,7 +8,11 @@ Rules:
 - If "Others" is selected and a value is written, return: "Others - <value>"
 - If nothing is selected or field not visible, return empty string.
 - Date format: DDMMYYYY.
-- Return valid JSON only. No explanations.
+- Return STRICT JSON only. No explanations.
+- Do not include markdown, bullets, section headers, or labels like "Extracted Data".
+- Do not wrap output in code fences.
+- Output must start with "{" and end with "}".
+- Use only double quotes for JSON keys and string values.
 
 Return this JSON:
 

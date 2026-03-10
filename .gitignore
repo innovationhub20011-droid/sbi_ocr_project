@@ -12,6 +12,7 @@ ENV/
 # Environment and secrets
 .env.*
 !.env.example
+.env
 
 # Local databases and runtime data
 data/ocr_records.db

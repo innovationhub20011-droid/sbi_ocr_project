@@ -1,7 +1,8 @@
-from fastapi import FastAPI, UploadFile, File
+from fastapi import FastAPI, UploadFile, File, Depends
+from sqlalchemy.orm import Session
 from controllers.pan_controller import get_all_pan 
 from controllers.aadhar_controller import get_all_aadhaar
-from db.database import engine
+from db.database import engine, get_db
 from models.document_model import Base
 from controllers.pan_controller import extract_pan
 from controllers.aadhar_controller import extract_aadhaar
@@ -17,8 +18,8 @@ from extractors.text_documents_extractor import (
     get_all_digital_text_ocr,
     get_all_miscellaneous_text_ocr,
 )
-from extractors.account_opening.page1_extractor import extract_account_opening_page1
-from extractors.account_opening.page2_extractor import extract_account_opening_page2
+from controllers.account_opening_controller.page1_controller import extract_account_opening_page1
+from controllers.account_opening_controller.page2_controller import extract_account_opening_page2
 
 app = FastAPI(title="SBI OCR Vision API")
 
@@ -70,8 +71,8 @@ async def misc_text_api(file: UploadFile = File(...)):
     return await extract_misc_text(file)
 
 @app.post("/extract/account-opening/page1")
-async def account_opening_page1_api(file: UploadFile = File(...)):
-    return await extract_account_opening_page1(file)
+async def account_opening_page1_api(file: UploadFile = File(...), db: Session = Depends(get_db)):
+    return await extract_account_opening_page1(file, db)
 
 @app.post("/extract/account-opening/page2")
 async def account_opening_page2_api(file: UploadFile = File(...)):
