@@ -19,7 +19,7 @@ class AccountFormCreate(BaseModel):
 
 class AccountFormPageCreate(BaseModel):
     """Pydantic model for creating account opening form page entry"""
-    form_id: str  # UUID as string
+    form_id: str  # UUID form ID
     page_number: int
     page_data: str  # JSON string containing the extracted data
     created_by: str = "system"
