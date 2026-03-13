@@ -9,7 +9,6 @@ from db.database import engine, get_db
 from models.document_model import Base
 from controllers.pan_controller import extract_pan
 from controllers.aadhaar_controller import extract_aadhaar
-from extractors.loan_extractor import extract_loan
 from controllers.passport_controller import extract_passport
 from controllers.driving_controller import extract_driving_license
 from controllers.voter_controller import extract_voter_id
@@ -78,11 +77,6 @@ async def pan_api(file: UploadFile = File(...)):
 async def aadhaar_api(file: UploadFile = File(...)):
     logger.info("Request received on /extract/aadhaar | file=%s", file.filename)
     return await extract_aadhaar(file)
-
-@app.post("/extract/loan")
-async def loan_api(file: UploadFile = File(...)):
-    logger.info("Request received on /extract/loan | file=%s", file.filename)
-    return await extract_loan(file)
 
 @app.post("/extract/passport")
 async def passport_api(file: UploadFile = File(...)):

@@ -7,7 +7,6 @@ ENDPOINT_MODEL_ENV: Dict[str, str] = {
     # Document extraction endpoints
     "/extract/pan": "OLLAMA_MODEL",
     "/extract/aadhaar": "OLLAMA_MODEL",
-    "/extract/loan": "OLLAMA_MODEL",
     "/extract/passport": "OLLAMA_MODEL",
     "/extract/driving-license": "OLLAMA_MODEL",
     "/extract/voter-id": "OLLAMA_MODEL",
