@@ -1,0 +1,297 @@
+Date and Time: 2026-03-13T14:46:51
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/aadhaar
+File Name: Imtiaz Aadhar Full.jpg
+Actual output data
+{ "full_name": "Imtiaz Hussain", "date_of_birth": "05/04/1996", "gender": "Male", "aadhaar_number": "6108 5609 7480", "address": "S/O: Din Mohd, village dallan teh haveli poonch, Degwar Maldayalan, Degwar Maldayalan, Punch, Jammu and Kashmir, 185101" }
+=============================
+
+
+
+
+
+Date and Time: 2026-03-13T14:47:18
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: Imtiaz.jpg
+Actual output data
+{ "full_name": "IMTIAZ HUSSAIN", "pan_number": "ARNPH9322G", "date_of_birth": "05/04/1996", "father_name": "MOHD DIN" }
+=============================
+
+
+
+
+
+Date and Time: 2026-03-13T14:47:59
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/passport
+File Name: Sample 15.jpg
+Actual output data
+{ 
+    "passport_number": "P0304202", 
+    "surname": "Hussain", 
+    "given_names": "Imtiaz", 
+    "nationality": "Indian", 
+    "sex": "Male", 
+    "date_of_birth": "05/04/1996", 
+    "place_of_birth": "Dallan, Jammu and Kashmir", 
+    "date_of_issue": "15/02/2017", 
+    "date_of_expiry": "14/02/2027", 
+    "place_of_issue": "Jammu", 
+    "father_name": "Din Mohd", 
+    "mother_name": "Sarwar Bi", 
+    "address": "Vill Dallan PO Degwar Maldayalan Teh Haveli, Poonch", 
+    "pin_code": "185101", 
+    "file_number": "JM1060542428416" 
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-03-13T14:48:38
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/driving-license
+File Name: Imtiaz Hussain.jpg
+Actual output data
+{ 
+  "driving_licence_number": "JK12 2021 0003885", 
+  "name": "IMTIAZ HUSSAIN", 
+  "father_name": "DIN MOHD", 
+  "date_of_birth": "05-04-1996", 
+  "date_of_issue": "29-09-2021", 
+  "valid_till_nt": "04-04-2036", 
+  "valid_till_tr": "", 
+  "address": "POST OFFICE DEGWAR MALDAYALAN, POONCH, BEHIND MIDDLE SCHOOL DALLAN, 185101", 
+  "blood_group": "A+", 
+  "class_of_vehicle": "MCWG, LMV", 
+  "issuing_authority": "GOVERNMENT OF JAMMU & KASHMIR" 
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-03-13T14:49:12
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/voter-id
+File Name: Election Card Latest.jpg
+Actual output data
+{ "epic_number": "GCH1213917", "name": "Imtiaz Hussain", "father_name": "Din Mohd", "gender": "Male", "date_of_birth": "05-04-1996", "address": "73, Masjid Mohalla, Dalan, Degwar Terwan, Haveli, Poonch, Jammu and Kashmir - 185101", "electoral_registration_officer": "89 - Poonch Haveli", "assembly_constituency": "", "download_date": "07-03-2024" }
+=============================
+
+
+
+
+
+Date and Time: 2026-03-13T14:49:49
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: Handwritten 1.jpeg
+Actual output data
+The principal
+Jawahar Navodaya Vidyalaya
+Surankote (Poonch)
+Dated: 10-03-2026
+Subject: Application for two days leave.
+
+Respected Sir,
+With due respect and humble submission, I wish to inform you that I am a student of class tenth.
+I have an urgent piece of work at home for next two days, so I won't be able to attend the school for next two days. Kindly sanction two days' leave in my favour.
+
+Thanking you,
+Your's faithfully
+Juntia Hussain
+Class 10th.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-13T14:51:15
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/digital_text
+File Name: DIgital Text 2.jpg
+Actual output data
+1.7 Cardiac Arrhythmias
+
+Changes in the generation of electric impulses or contraction in the heart lead to cardiac disorders. Heart arrhythmia is a condition of the irregular heartbeat either too fast or too slow. The abnormal heart rhythms called arrhythmia, occur due to changes in the normal sequence of electrical impulses of the heart. The different organs of the body may be damaged or may not work properly if the heart does not pump blood effectively. Arrhythmias can occur in the upper and lower heart chambers; however, arrhythmias of the ventricles can be life-threatening events. The factors like disease in the coronary artery, changes in the myocardium, damage from a cardiac attack, or the remedial process after heart surgery may be the source of arrhythmia. It may occur with a normal heart rate, bradyarrhythmia's (slow heart rate below 60 bpm) or tachyarrhythmia (rapid heart rate above 100 bpm). Many arrhythmias have no symptoms and if symptoms persist, the person may feel a gap between the heartbeats or chest pain. Most of the dysrhythmias are not dangerous, but some may cause a stroke, and others may have a cardiac arrest. An ECG analysis and Holter monitor could be helpful in the diagnosis of cardiac disorders.
+
+1.8 Problem Definition
+
+The following discussion is important because in the particular case of the bioelectric signal of a cardiac nature registered in the ECG, it contains mostly noise that originated by the electrocardiogram or by network interference, which can be eliminated or reduced completely by filters. The devices in the field of bioengineering have revealed that the passage of the analog signal to a digital format and its subsequent treatment with banks of digital filters minimizes its distortion and maximizes the amount of noise eliminated. The importance of addressing the issue of the analysis of digital noise reduction in an ECG is for this, we must select an optimal threshold value, a good level of signal decomposition, and a good base wavelet. One of the primary advantages of this procedure is its ease of implementation in a computer program, which is a basic condition for its application since a very high number of operations must be carried out for the analysis of a signal. However, this amount of calculations is not a limitation with the current standard computers.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-13T14:53:18
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/miscellaneous_text
+File Name: Miscellenous Text 1.pdf
+Actual output data
+1.7 Cardiac Arrhythmias
+
+Changes in the generation of electric impulses or contractions in the heart lead to cardiac disorders. Heart arrhythmia is a condition of the irregular heartbeat either too fast or too slow. The abnormal heart rhythms called arrhythmia occur due to changes in the normal sequence of electrical impulses of the heart. The different organs of the body may be damaged or may not work properly if the heart doesn’t pump blood effectively. Arrhythmias can occur in the upper and lower heart chambers; however, arrhythmias of ventricles can be life-threatening events. The factors like disease in the coronary artery, changes in the myocardium, damage from a cardiac attack, or a remedial process after a heart surgery may source of arrhythmia. It may occur with a normal heart rate, bradycardia (slow heart rate below 60 BPM) or tachycardia (fast heart rate above 100 BPM). Many arrhythmias have no symptoms and if they persist, the person may feel a gap between heartbeats or chest pain. Most of the arrhythmias are not dangerous, but some may cause a stroke or others may have a cardiac arrest. An ECG analysis and Holter monitor may be helpful in the diagnosis of arrhythmias.
+
+1.8 Problem Definition
+
+The following discussion is important because in the particular case of the bioelectric signal of a cardiac nature registered in the electrocardiogram (ECG), it contains mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that
+=============================
+
+
+
+
+
+Date and Time: 2026-03-13T14:53:30
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/miscellaneous_text
+File Name: Miscellenous Text 1.pdf
+Actual output data
+Java is a platform-independent high-level programming language. It is platform independent because its byte codes can run on any system regardless of its operating system. Java was invented by James Gosling in 1995 while he was working at Sun Microsystems.
+
+Encapsulation is a concept in object-oriented programming for combining properties and methods in a single unit. Encapsulation helps developers follow a modular approach for software development because each object has its own set of methods and variables.
+
+Polymorphism in programming is the ability of an object, function, or method to take on multiple forms. It allows the same interface to be used for different underlying data types.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-13T15:00:38
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/miscellaneous_text
+File Name: Miscellenous Text 1.pdf
+Actual output data
+1.7 Cardiac Arrhythmias
+
+Changes in the generation of electric impulses or contraction in the heart lead to cardiac disorders. Heart arrhythmia is a condition of the irregular heartbeat either too fast or too slow. The abnormal heart rhythms called arrhythmia occur due to changes in the normal sequence of electrical impulses of the heart. The different organs of the body may be damaged or may not work properly if the heart doesn't pump blood effectively. Arrhythmias can occur in the upper and lower chambers; however, arrhythmias of ventricles can be life-threatening events. The factors like disease in coronary artery, changes in myocardium, damage from a cardiac attack, or remedial process after heart surgery may source of arrhythmia. It may occur with a normal heart rate, bradyarrhythmia's (slow heart rate below 60 bpm) or tachyarrhythmia (rapid heart rate above 100 bpm). Many arrhythmias have no symptoms and if symptoms persist the person may feel a gap between heartbeats or chest pain. Most of dysrhythmias are not dangerous, but some may complain of stroke, others may have cardiac arrest. An ECG analysis and Holter monitor could be helpful in the diagnosis of cardiac disorders.
+
+1.8 Problem Definition
+
+The following discussion is important because in the particular case of the bioelectric signal of a cardiac nature registered in the electrocardiogram (ECG), it contains mostly noise originated by the electrocardiograph or by network interference, which can hardly be eliminated or reduced completely by filters. The devices in the field of bioengineering have revealed that the passage of the analog signal to a digital format and its subsequent treatment with banks of digital filters minimizes its distortion and maximizes the amount of noise eliminated. The importance of addressing the issue of the analysis of digital noise reduction in an ECG. For this, we must select an optimal threshold value, a good level of signal decomposition and a good base wavelet. One of the primary advantages of this procedure is its ease of implementation in a computer program, which in turn is a basic condition for its application since a very high number of operations must be carried out for the analysis of a signal. However, this amount of calculations is not a limitation with the current standard computers.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-13T15:00:51
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/miscellaneous_text
+File Name: Miscellenous Text 1.pdf
+Actual output data
+Java is a platform-independent high-level programming language. It is platform independent because its byte codes can run on any system regardless of its operating system. Java was invented by James Gosling in 1995 while he was working at Sun Microsystems.
+
+Encapsulation is a concept in object-oriented programming for combining properties and methods in a single unit. Encapsulation helps developers follow a modular approach for software development because each object has its own set of methods and variables.
+
+Polymorphism in programming is the ability of an object, function, or method to take on multiple forms. It allows the same interface to be used for different underlying data types.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-13T15:09:00
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/miscellaneous_text
+File Name: Miscellenous Text 1.pdf
+Actual output data
+1.7 Cardiac Arrhythmias
+
+Changes in the generation of electric impulses or contraction in the heart lead to cardiac disorders. Heart arrhythmia is a condition of the irregular heartbeat either too fast or too slow. The abnormal heart rhythms called arrhythmia occur due to changes in the normal sequence of electrical impulses of the heart. The different organs of the body may be damaged or may not work properly if the heart doesn't pump blood effectively. Arrhythmias can occur in the upper and lower chambers; however, arrhythmias of ventricles can be life-threatening events. The factors like disease in coronary artery, changes in myocardium, damage from a cardiac attack, or remedial process after heart surgery may source of arrhythmia. It may occur with a normal heart rate, bradyarrhythmia's (slow heart rate below 60 bpm) or tachyarrhythmia (rapid heart rate above 100 bpm). Many arrhythmias have no symptoms and if symptoms persist the person may feel a gap between heartbeats or chest pain. Most of dysrhythmias are not dangerous, but some may complain of stroke, others may have cardiac arrest. An ECG analysis and Holter monitor could be helpful in the diagnosis of cardiac disorders.
+
+1.8 Problem Definition
+
+The following discussion is important because in the particular case of the bioelectric signal of a cardiac nature registered in the electrocardiogram (ECG), it contains mostly noise originated by the electrocardiograph or by network interference, which can hardly be eliminated or reduced completely by filters. The devices in the field of bioengineering have revealed that the passage of the analog signal to a digital format and its subsequent treatment with banks of digital filters minimizes its distortion and maximizes the amount of noise eliminated. The importance of addressing the issue of the analysis of digital noise reduction in an ECG. For this, we must select an optimal threshold value, a good level of signal decomposition and a good base wavelet. One of the primary advantages of this procedure is its ease of implementation in a computer program, which in turn is a basic condition for its application since a very high number of operations must be carried out for the analysis of a signal. However, this amount of calculations is not a limitation with the current standard computers.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-13T15:09:12
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/miscellaneous_text
+File Name: Miscellenous Text 1.pdf
+Actual output data
+Java is a platform-independent high-level programming language. It is platform independent because its byte codes can run on any system regardless of its operating system. Java was invented by James Gosling in 1995 while he was working at Sun Microsystems.
+
+Encapsulation is a concept in object-oriented programming for combining properties and methods in a single unit. Encapsulation helps developers follow a modular approach for software development because each object has its own set of methods and variables.
+
+Polymorphism in programming is the ability of an object, function, or method to take on multiple forms. It allows the same interface to be used for different underlying data types.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-13T15:10:43
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/miscellaneous_text
+File Name: Miscellenous Text 1.pdf
+Actual output data
+1.7 Cardiac Arrhythmias
+
+Changes in the generation of electric impulses or contractions in the heart lead to cardiac disorders. Heart arrhythmia is a condition of the irregular heartbeat either too fast or too slow. The abnormal heart rhythms called arrhythmia occur due to changes in the normal sequence of electrical impulses of the heart. The different organs of the body may be damaged or may not work properly if the heart doesn't pump blood effectively. Arrhythmias can occur in the upper and lower heart chambers; however, arrhythmias of ventricles can be life-threatening events. The factors like disease in the coronary artery, changes in the myocardium, damage from a cardiac attack, or a remedial process after a heart surgery may be a source of arrhythmia. It may occur with a normal heart rate, bradycardia (slow heart rate below 60 beats per minute) or tachycardia (rapid heart rate above 100 beats per minute). Many arrhythmias have no symptoms and if they persist, the person may feel a gap between heartbeats or chest pain. Most of the arrhythmias are not dangerous, but some may cause a stroke or even cardiac arrest. An ECG analysis and Holter monitor may be helpful in the diagnosis of arrhythmias.
+
+1.8 Problem Definition
+
+The following discussion is important because in the particular case of the bioelectric signal of a cardiac nature registered in the electrocardiogram (ECG), it contains mostly noise originated by the electrocardiograph or by network interference, which can be eliminated or reduced completely by filters. The devices in the field of bioengineering have revealed that the passage of the analog signal to a digital format and its subsequent treatment with banks of digital filters minimizes its distortion and maximizes the amount of noise eliminated. The importance of addressing the issue of the analysis of digital noise reduction in an ECG is for this reason. For this reason, we must select an optimal threshold value, a good level of signal decomposition, and a good base wavelet. One of the primary advantages of this procedure is its ease of implementation in a computer program, which is a basic condition for its application since a very high number of operations must be carried out for the analysis of a signal. However, this amount of calculations is not a limitation for the current standard computers.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-13T15:10:56
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/miscellaneous_text
+File Name: Miscellenous Text 1.pdf
+Actual output data
+Java is a platform-independent high-level programming language. It is platform independent because its byte codes can run on any system regardless of its operating system. Java was invented by James Gosling in 1995 while he was working at Sun Microsystems.
+
+Encapsulation is a concept in object-oriented programming for combining properties and methods in a single unit. Encapsulation helps developers follow a modular approach for software development because each object has its own set of methods and variables.
+
+Polymorphism in programming is the ability of an object, function, or method to take on multiple forms. It allows the same interface to be used for different underlying data types.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-13T15:14:52
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/miscellaneous_text
+File Name: Miscellenous Text 1.pdf
+Actual output data
+1.7 Cardiac Arrhythmias
+
+Changes in the generation of electric impulses or contractions in the heart lead to cardiac disorders. Heart arrhythmia is a condition of the irregular heartbeat either too fast or too slow. The abnormal heart rhythms called arrhythmia occur due to changes in the normal sequence of electrical impulses of the heart. The different organs of the body may be damaged or may not work properly if the heart doesn’t pump blood effectively. Arrhythmias can occur in the upper and lower heart chambers; however, arrhythmias of ventricles can be life-threatening events. The factors like disease in the coronary artery, changes in the myocardium, damage from a cardiac attack, or a remedial process after a heart surgery may be a source of arrhythmia. It may occur with a normal heart rate, bradycardia (slow heart rate below 60 beats per minute) or tachycardia (fast heart rate above 100 beats per minute). Many arrhythmias have no symptoms and if they do, they may feel a gap between heartbeats or chest pain. Most of the arrhythmias are not dangerous, but some may cause a stroke or even cardiac arrest. An ECG analysis and Holter monitor may be helpful in the diagnosis of arrhythmias.
+
+1.8 Problem Definition
+
+The following discussion is important because in the particular case of the bioelectric signal of a cardiac nature registered in the electrocardiogram (ECG), it contains mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is
+[END OF FILE]
+=============================
+
+
+
+
+
+Date and Time: 2026-03-13T15:15:05
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/miscellaneous_text
+File Name: Miscellenous Text 1.pdf
+Actual output data
+Java is a platform-independent high-level programming language. It is platform independent because its byte codes can run on any system regardless of its operating system. Java was invented by James Gosling in 1995 while he was working at Sun Microsystems.
+
+Encapsulation is a concept in object-oriented programming for combining properties and methods in a single unit. Encapsulation helps developers follow a modular approach for software development because each object has its own set of methods and variables.
+
+Polymorphism in programming is the ability of an object, function, or method to take on multiple forms. It allows the same interface to be used for different underlying data types.
+=============================

@@ -1,3 +1,4 @@
+import logging
 from typing import Optional
 
 from langchain_core.messages import HumanMessage
@@ -11,6 +12,13 @@ from utils.model_routing import get_model_for_endpoint
 
 
 _settings = load_ollama_settings()
+_RAW_OUTPUT_LOG_PATH = "data/raw_model_output.txt"
+_logger = logging.getLogger("uvicorn.error")
+
+
+def _build_prompt_with_model_info(prompt: str, model_name: str, api_endpoint: str) -> str:
+    """Attach model metadata to the message content sent to Ollama."""
+    return f"[MODEL={model_name}] [ENDPOINT={api_endpoint}]\n{prompt}"
 
 
 def call_vision_model(
@@ -26,9 +34,15 @@ def call_vision_model(
         empty_schema = {}
 
     try:
+        model_name = get_model_for_endpoint(api_endpoint, _settings.model)
+        _logger.info("Calling call_vision_model with model=%s endpoint=%s file=%s", model_name, api_endpoint, file_name)
+
         message = HumanMessage(
             content=[
-                {"type": "text", "text": prompt},
+                {
+                    "type": "text",
+                    "text": _build_prompt_with_model_info(prompt, model_name, api_endpoint),
+                },
                 {
                     "type": "image_url",
                     "image_url": {"url": f"data:image/jpeg;base64,{image_base64}"},
@@ -36,11 +50,10 @@ def call_vision_model(
             ]
         )
 
-        model_name = get_model_for_endpoint(api_endpoint, _settings.default_model)
         response = get_json_client(model_name).invoke([message])
 
         raw_output = normalize_content(response.content)
-        log_raw_output(raw_output, _settings.raw_output_log_path, api_endpoint=api_endpoint, file_name=file_name)
+        log_raw_output(raw_output, _RAW_OUTPUT_LOG_PATH, api_endpoint=api_endpoint, file_name=file_name)
         return parse_json_or_fallback(raw_output, empty_schema)
 
     except Exception:
@@ -56,9 +69,15 @@ def call_vision_model_raw(
     """Vision caller for plain text OCR."""
 
     try:
+        model_name = get_model_for_endpoint(api_endpoint, _settings.model)
+        _logger.info("Calling call_vision_model_raw with model=%s endpoint=%s file=%s", model_name, api_endpoint, file_name)
+
         message = HumanMessage(
             content=[
-                {"type": "text", "text": prompt},
+                {
+                    "type": "text",
+                    "text": _build_prompt_with_model_info(prompt, model_name, api_endpoint),
+                },
                 {
                     "type": "image_url",
                     "image_url": {"url": f"data:image/jpeg;base64,{image_base64}"},
@@ -66,11 +85,10 @@ def call_vision_model_raw(
             ]
         )
 
-        model_name = get_model_for_endpoint(api_endpoint, _settings.default_model)
         response = get_raw_client(model_name).invoke([message])
 
         raw_output = normalize_content(response.content)
-        log_raw_output(raw_output, _settings.raw_output_log_path, api_endpoint=api_endpoint, file_name=file_name)
+        log_raw_output(raw_output, _RAW_OUTPUT_LOG_PATH, api_endpoint=api_endpoint, file_name=file_name)
         return raw_output.strip()
 
     except Exception:
