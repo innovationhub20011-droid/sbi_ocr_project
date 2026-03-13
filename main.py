@@ -1,21 +1,25 @@
 from fastapi import FastAPI, UploadFile, File, Depends
 from sqlalchemy.orm import Session
 from controllers.pan_controller import get_all_pan 
-from controllers.aadhar_controller import get_all_aadhaar
+from controllers.aadhaar_controller import get_all_aadhaar
 from db.database import engine, get_db
 from models.document_model import Base
 from controllers.pan_controller import extract_pan
-from controllers.aadhar_controller import extract_aadhaar
+from controllers.aadhaar_controller import extract_aadhaar
 from extractors.loan_extractor import extract_loan
-from extractors.passport_extractor import extract_passport
-from extractors.driving_extractor import extract_driving_license
-from extractors.voter_extractor import extract_voter_id
-from extractors.text_documents_extractor import (
+from controllers.passport_controller import extract_passport
+from controllers.driving_controller import extract_driving_license
+from controllers.voter_controller import extract_voter_id
+from controllers.text_documents.handwritten_text_controller import (
     extract_handwritten_text,
-    extract_digital_text,
-    extract_misc_text,
     get_all_handwritten_text_ocr,
+)
+from controllers.text_documents.digital_text_controller import (
+    extract_digital_text,
     get_all_digital_text_ocr,
+)
+from controllers.text_documents.miscellaneous_text_controller import (
+    extract_misc_text,
     get_all_miscellaneous_text_ocr,
 )
 from controllers.account_opening_controller.page1_controller import extract_account_opening_page1

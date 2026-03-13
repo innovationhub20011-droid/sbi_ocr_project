@@ -1,6 +1,6 @@
 from fastapi import UploadFile, HTTPException
 from prompts.account_opening.page2_schema import PAGE2_PROMPT
-from utils.vision_utils import call_vision_model
+from llm.inference import call_vision_model
 from services.file_service import convert_image_to_base64
 
 
@@ -88,7 +88,9 @@ async def extract_account_opening_page2(file: UploadFile):
     response = call_vision_model(
         prompt=PAGE2_PROMPT,
         image_base64=image_base64,
-        empty_schema=empty_page2()
+      empty_schema=empty_page2(),
+      api_endpoint="/extract/account-opening/page2",
+      file_name=file.filename,
     )
 
     return {"page2_data": response}

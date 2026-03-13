@@ -1,6 +1,6 @@
 import base64
 from services.file_service import convert_pdf_to_images
-from utils.vision_utils import call_vision_model
+from llm.inference import call_vision_model
 from services.page_classifier import classify_page
 from prompts.loan_page1_prompt import LOAN_PAGE1_PROMPT
 from prompts.loan_page2_prompt import LOAN_PAGE2_PROMPT

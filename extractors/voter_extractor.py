@@ -2,7 +2,7 @@ from fastapi import UploadFile, HTTPException
 from sqlalchemy.orm import Session
 
 from db.database import SessionLocal
-from utils.vision_utils import call_vision_model
+from llm.inference import call_vision_model
 from prompts.voter_prompt import VOTER_ID_PROMPT
 from services.document_service import process_voter_id
 import base64
@@ -44,7 +44,9 @@ async def extract_voter_id(file: UploadFile) -> dict:
         voter_data = call_vision_model(
             VOTER_ID_PROMPT,
             image_base64,
-            empty_voter_id()
+            empty_voter_id(),
+            api_endpoint="/extract/voter-id",
+            file_name=file.filename,
         )
 
         db: Session = SessionLocal()

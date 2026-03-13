@@ -1,11 +1,11 @@
 import json
 from fastapi import UploadFile, HTTPException
 from sqlalchemy.orm import Session
-from utils.vision_utils import call_vision_model
+from llm.inference import call_vision_model
 from prompts.account_opening.page1_schema import PAGE1_PROMPT
 from services.file_service import convert_image_to_base64
 from schemas.account_opening_schemas import AccountFormCreate, AccountFormPageCreate
-from db.database_repository import create_account_form, create_account_form_page
+from db.repositories.account_opening_repository import create_account_form, create_account_form_page
 import logging
 logger = logging.getLogger(__name__)
 
@@ -35,7 +35,9 @@ async def extract_account_opening_page1(file: UploadFile, db: Session):
     response = call_vision_model(
         prompt=PAGE1_PROMPT,
         image_base64=image_base64,
-        empty_schema={}
+        empty_schema={},
+        api_endpoint="/extract/account-opening/page1",
+        file_name=file.filename,
     )
     logger.info(f"Vision model response for account opening page 1: {response}")
     

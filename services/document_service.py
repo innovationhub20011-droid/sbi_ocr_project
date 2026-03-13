@@ -8,17 +8,21 @@ from schemas.document_schemas import (
     VoterIdCreate,
     TextDocumentOcrCreate,
 )
-from db.database_repository import (
-    create_pan,
-    create_aadhaar,
-    create_passport,
-    create_driving_license,
-    create_voter_id,
+from db.repositories.pan_repository import create_pan
+from db.repositories.aadhaar_repository import create_aadhaar
+from db.repositories.passport_repository import create_passport
+from db.repositories.driving_license_repository import create_driving_license
+from db.repositories.voter_id_repository import create_voter_id
+from db.repositories.handwritten_text_repository import (
     create_handwritten_text_ocr,
-    create_digital_text_ocr,
-    create_miscellaneous_text_ocr,
     retrieve_all_handwritten_text_ocr,
+)
+from db.repositories.digital_text_repository import (
+    create_digital_text_ocr,
     retrieve_all_digital_text_ocr,
+)
+from db.repositories.miscellaneous_text_repository import (
+    create_miscellaneous_text_ocr,
     retrieve_all_miscellaneous_text_ocr,
 )
 

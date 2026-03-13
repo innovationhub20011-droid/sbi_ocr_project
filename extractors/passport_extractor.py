@@ -2,7 +2,7 @@ from fastapi import UploadFile, HTTPException
 from sqlalchemy.orm import Session
 
 from db.database import SessionLocal
-from utils.vision_utils import call_vision_model
+from llm.inference import call_vision_model
 from prompts.passport_prompt import PASSPORT_PROMPT
 from services.file_service import convert_image_to_base64
 from services.document_service import process_passport
@@ -41,7 +41,9 @@ async def extract_passport(file: UploadFile):
     response = call_vision_model(
         PASSPORT_PROMPT,
         image_base64,
-        empty_passport()
+        empty_passport(),
+        api_endpoint="/extract/passport",
+        file_name=file.filename,
     )
 
     # Optional: Validate formats

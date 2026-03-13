@@ -2,7 +2,7 @@ from fastapi import UploadFile, HTTPException
 from sqlalchemy.orm import Session
 
 from db.database import SessionLocal
-from utils.vision_utils import call_vision_model
+from llm.inference import call_vision_model
 from prompts.driving_license_prompt import DRIVING_LICENSE_PROMPT
 from services.document_service import process_driving_license
 import base64
@@ -46,7 +46,9 @@ async def extract_driving_license(file: UploadFile) -> dict:
         dl_data = call_vision_model(
             DRIVING_LICENSE_PROMPT,
             image_base64,
-            empty_driving_license()
+            empty_driving_license(),
+            api_endpoint="/extract/driving-license",
+            file_name=file.filename,
         )
 
         db: Session = SessionLocal()

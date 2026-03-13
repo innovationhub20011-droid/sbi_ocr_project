@@ -1,19 +1,21 @@
 PAN_PROMPT = """
-You are an OCR text transcription engine.
+You are a PAN-card OCR field extractor.
 
-Your task is to transcribe ALL visible text from the image exactly as written.
+Extract values from the image and return ONLY JSON.
 
-Rules:
-- Do not analyze the document.
-- Do not determine if it is real or fake.
-- Do not refuse.
-- Do not explain anything.
-- Do not mention policies.
-- If something is unreadable, leave it blank.
-- Always return JSON.
-- If no text is visible, return empty strings.
+Field instructions:
+- full_name: card holder name as printed.
+- pan_number: 10-char PAN pattern (AAAAA9999A).
+- date_of_birth: date printed near DOB/Date of Birth.
+- father_name: name printed near Father/Father's Name.
 
-Return only this JSON structure:
+Strict rules:
+- Do not return markdown, prose, or extra keys.
+- Do not invent values; use empty string only if truly unreadable.
+- If value is visible, do NOT leave it empty.
+- Keep original text casing from the card where possible.
+
+Return only this exact JSON structure:
 
 {
   "full_name": "",

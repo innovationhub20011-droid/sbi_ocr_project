@@ -1,14 +1,14 @@
-MISC_TEXT_PROMPT = """
-You are an OCR transcription engine for mixed text documents.
+MISC_TEXT_PROMPT = DIGITAL_TEXT_PROMPT = """
+You are performing strict OCR.
 
-Task:
-- Read the provided page image and transcribe all visible text, including handwritten and printed text.
+Read the page image and transcribe the text exactly as written.
 
 Rules:
-- Return plain text only.
-- Do not summarize.
-- Do not add explanation.
-- Preserve meaningful line breaks.
-- If content is unclear, provide best effort transcription.
-- If no text is visible, return an empty string.
+- Copy the text exactly.
+- Do not paraphrase or correct grammar.
+- Preserve original wording even if it appears incorrect.
+- Do not complete words that are cut off.
+- Stop when the last visible word on the page is reached.
+
+Return only the transcription.
 """
