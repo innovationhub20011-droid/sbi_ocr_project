@@ -136,3 +136,15 @@ Actual output data
     "address": "Din Mohd, Village Dallan Teh Haveli Poonch, Degwar Maldayalan, Degwar Maldalyan, Punch, Jammu and Kashmir 185101" 
 }
 =============================
+
+
+
+
+
+Date and Time: 2026-03-13T14:03:22
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: Imtiaz.jpg
+Actual output data
+{"full_name":"","pan_number":"ARNPH9322G","date_of_birth":"","father_name":""}
+=============================
