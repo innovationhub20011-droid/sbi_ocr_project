@@ -72,40 +72,23 @@ def _extract_date_of_birth_fallback(raw_output: str) -> str:
 
     return ""
 
-
 def extract_from_labeled_text(raw_output: str, empty_schema: dict) -> dict:
-    """
-    Fallback parser for outputs like:
-    **Full Name:** John Doe
-    **Father's Name:** ...
-    """
-    if not isinstance(empty_schema, dict) or any(isinstance(v, dict) for v in empty_schema.values()):
-        return empty_schema
+    parsed = {}
 
-    parsed = _empty_like(empty_schema)
+    for section, fields in empty_schema.items():
+        parsed[section] = {}
 
-    for key in parsed.keys():
-        label = key.replace("_", " ")
-        pattern = rf"(?im)^\s*\**\s*{re.escape(label)}\s*\**\s*:\s*(.+?)\s*$"
-        match = re.search(pattern, raw_output)
-        if match:
-            parsed[key] = match.group(1).strip()
+        for key in fields.keys():
+            label = key.replace("_", " ")
+            pattern = rf"(?im)^\s*\**\s*{re.escape(label)}\s*\**\s*:\s*(.+?)\s*$"
+            match = re.search(pattern, raw_output)
 
-    if "pan_number" in parsed and not parsed["pan_number"]:
-        pan_match = re.search(r"\b[A-Z]{5}[0-9]{4}[A-Z]\b", raw_output.upper())
-        if pan_match:
-            parsed["pan_number"] = pan_match.group(0)
+            if match:
+                parsed[section][key] = match.group(1).strip()
+            else:
+                parsed[section][key] = ""
 
-    if "aadhaar_number" in parsed and not parsed["aadhaar_number"]:
-        aadhaar_match = re.search(r"\b(?:\d{4}\s?){3}\b", raw_output)
-        if aadhaar_match:
-            parsed["aadhaar_number"] = " ".join(aadhaar_match.group(0).split())
-
-    if any(value for value in parsed.values()):
-        return parsed
-
-    return empty_schema
-
+    return parsed
 
 def parse_json_or_fallback(raw_output: str, empty_schema: dict) -> dict:
     json_match = re.search(r"\{.*\}", raw_output, re.DOTALL)
@@ -113,20 +96,20 @@ def parse_json_or_fallback(raw_output: str, empty_schema: dict) -> dict:
         return extract_from_labeled_text(raw_output, empty_schema)
 
     json_string = json_match.group(0)
+
     try:
         parsed_json = json.loads(json_string)
-        normalized = _normalize_json_to_schema(parsed_json, empty_schema)
 
-        if "date_of_birth" in normalized and not str(normalized.get("date_of_birth", "")).strip():
-            normalized["date_of_birth"] = _extract_date_of_birth_fallback(raw_output)
-
-        # If JSON is present but effectively empty, try labeled-text fallback.
-        if not any(str(v).strip() for v in normalized.values()):
+        # Basic validation
+        if not any(parsed_json.values()):
             return extract_from_labeled_text(raw_output, empty_schema)
 
-        return normalized
+        return parsed_json
+
     except json.JSONDecodeError:
         parsed = extract_from_labeled_text(raw_output, empty_schema)
+
         if "date_of_birth" in parsed and not str(parsed.get("date_of_birth", "")).strip():
             parsed["date_of_birth"] = _extract_date_of_birth_fallback(raw_output)
+
         return parsed

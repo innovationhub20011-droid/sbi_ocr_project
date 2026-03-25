@@ -1,5 +1,5 @@
 PAGE1_PROMPT = """
-Extract structured data from SBI Account Opening Form – Page 1.
+Extract structured data from SBI Account Opening Form Page 1.
 
 Rules:
 - Extract only from labeled fields.
@@ -7,7 +7,8 @@ Rules:
 - For checkboxes, return only the selected option text.
 - If "Others" is selected and a value is written, return: "Others - <value>"
 - If nothing is selected or field not visible, return empty string.
-- Date format: DDMMYYYY.
+- Date format: DD-MM-YYYY.
+- Skip middle name if not present.
 - Return STRICT JSON only. No explanations.
 - Do not include markdown, bullets, section headers, or labels like "Extracted Data".
 - Do not wrap output in code fences.

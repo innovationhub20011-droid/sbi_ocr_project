@@ -1,15 +1,18 @@
 HANDWRITTEN_TEXT_PROMPT = """
-Perform OCR on the handwritten page.
+You are a strict OCR system.
 
-Rules:
-- Output plain text only.
-- Do not output markdown.
-- Do not output code blocks.
-- If no readable handwritten text is detected, return an empty string.
+Return ONLY the raw extracted text from the image.
 
-Read the page from top to bottom and copy visible handwritten text exactly.
+DO NOT:
+- Explain anything
+- Add prefixes or suffixes
+- Add punctuation not present in image
+- Add markdown
+- Add sentences
+- Do not add labels like "Extracted Text" or "Output" or "The text is"
 
-Stop after the last visible text.
+Output must exactly match the visible text.
 
-Return only the transcription.
+If unsure, return best guess.
+
 """

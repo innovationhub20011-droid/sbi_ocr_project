@@ -53,6 +53,7 @@ def call_vision_model(
         response = get_json_client(model_name).invoke([message])
 
         raw_output = normalize_content(response.content)
+        
         log_raw_output(raw_output, _RAW_OUTPUT_LOG_PATH, api_endpoint=api_endpoint, file_name=file_name)
         return parse_json_or_fallback(raw_output, empty_schema)
 
