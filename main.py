@@ -25,7 +25,6 @@ from controllers.text_documents.miscellaneous_text_controller import (
     get_all_miscellaneous_text_ocr,
 )
 from controllers.account_opening_controller.page1_controller import extract_account_opening_page1
-from controllers.account_opening_controller.page2_controller import extract_account_opening_page2
 
 logging.basicConfig(
     level=logging.INFO,
@@ -114,11 +113,6 @@ async def misc_text_api(file: UploadFile = File(...)):
 async def account_opening_page1_api(file: UploadFile = File(...), db: Session = Depends(get_db)):
     logger.info("Request received on /extract/account-opening/page1 | file=%s", file.filename)
     return await extract_account_opening_page1(file, db)
-
-@app.post("/extract/account-opening/page2")
-async def account_opening_page2_api(file: UploadFile = File(...)):
-    logger.info("Request received on /extract/account-opening/page2 | file=%s", file.filename)
-    return await extract_account_opening_page2(file)
 
 @app.get("/retrieve/pan/all")
 async def retrieve_all_pan():

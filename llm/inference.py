@@ -8,7 +8,6 @@ from llm.client_factory import get_json_client, get_raw_client
 from llm.content_utils import normalize_content
 from llm.raw_output_logger import log_raw_output
 from llm.response_parsers import parse_json_or_fallback
-from utils.model_routing import get_model_for_endpoint
 
 
 _settings = load_ollama_settings()
@@ -34,7 +33,7 @@ def call_vision_model(
         empty_schema = {}
 
     try:
-        model_name = get_model_for_endpoint(api_endpoint, _settings.model)
+        model_name = _settings.model
         _logger.info("Calling call_vision_model with model=%s endpoint=%s file=%s", model_name, api_endpoint, file_name)
 
         message = HumanMessage(
@@ -53,12 +52,17 @@ def call_vision_model(
         response = get_json_client(model_name).invoke([message])
 
         raw_output = normalize_content(response.content)
-        
+
         log_raw_output(raw_output, _RAW_OUTPUT_LOG_PATH, api_endpoint=api_endpoint, file_name=file_name)
         return parse_json_or_fallback(raw_output, empty_schema)
 
-    except Exception:
-        return empty_schema
+    except Exception as exc:
+        _logger.exception(
+            "Vision model call failed | endpoint=%s file=%s",
+            api_endpoint,
+            file_name,
+        )
+        raise RuntimeError("Vision model call failed") from exc
 
 
 def call_vision_model_raw(
@@ -70,7 +74,7 @@ def call_vision_model_raw(
     """Vision caller for plain text OCR."""
 
     try:
-        model_name = get_model_for_endpoint(api_endpoint, _settings.model)
+        model_name = _settings.model
         _logger.info("Calling call_vision_model_raw with model=%s endpoint=%s file=%s", model_name, api_endpoint, file_name)
 
         message = HumanMessage(
@@ -92,5 +96,10 @@ def call_vision_model_raw(
         log_raw_output(raw_output, _RAW_OUTPUT_LOG_PATH, api_endpoint=api_endpoint, file_name=file_name)
         return raw_output.strip()
 
-    except Exception:
-        return ""
+    except Exception as exc:
+        _logger.exception(
+            "Raw vision model call failed | endpoint=%s file=%s",
+            api_endpoint,
+            file_name,
+        )
+        raise RuntimeError("Raw vision model call failed") from exc

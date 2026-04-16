@@ -27,8 +27,24 @@ from db.repositories.miscellaneous_text_repository import (
 )
 
 
+def _extract_pan_value(field):
+    if isinstance(field, dict):
+        value = field.get("value", "")
+        return value if value is not None else ""
+    return field if field is not None else ""
+
+
+def normalize_pan_data(data: dict) -> dict:
+    return {
+        "pan_number": _extract_pan_value(data.get("pan_number")),
+        "full_name": _extract_pan_value(data.get("full_name")),
+        "father_name": _extract_pan_value(data.get("father_name")),
+        "date_of_birth": _extract_pan_value(data.get("date_of_birth")),
+    }
+
+
 def process_pan(db: Session, data: dict):
-    pan = PanCreate(**data)
+    pan = PanCreate(**normalize_pan_data(data))
     return create_pan(db, pan)
 
 

@@ -9,7 +9,7 @@ DO NOT:
 - Add punctuation not present in image
 - Add markdown
 - Add sentences
-- Do not add labels like "Extracted Text" or "Output" or "The text is"
+- Do not add labels like "Extracted Text" or "Output" or "The text is" or "the extracted text from the image is" etc
 
 Output must exactly match the visible text.
 

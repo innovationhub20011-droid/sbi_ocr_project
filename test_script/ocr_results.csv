@@ -1,0 +1,36 @@
+image,ground_truth,prediction,cer,wer
+img1.png,hi how are you,hi how are you,0.0,0.0
+img2.png,hope you are doing good,,1.0,1.0
+img3.png,it was nice meeting you,it was nice meeting you,0.0,0.0
+img4.png,lets catch up soon,lets catch up soon,0.0,0.0
+img5.png,please call me back,please call me back,0.0,0.0
+img6.png,did you finish the work,did you finish the work,0.0,0.0
+img7.png,i will send the details,i will send the details,0.0,0.0
+img8.png,thanks for your help,thanks for your help,0.0,0.0
+img9.png,see you tomorrow,see you tomorrow,0.0,0.0
+img10.png,good morning have a nice day,good morning have a nice day,0.0,0.0
+img11.png,take care of yourself,take care of yourself,0.0,0.0
+img12.png,what are you doing,what are you doing,0.0,0.0
+img13.png,let me know your thoughts,let me know your thoughts,0.0,0.0
+img14.png,we will plan something,we will plan something,0.0,0.0
+img15.png,happy birthday to you,happy birthday to you,0.0,0.0
+img16.png,congratulations on your success,congratulations on your success,0.0,0.0
+img17.png,i miss our old days,i miss our old days,0.0,0.0
+img18.png,this is just a reminder,this is just a reminder,0.0,0.0
+img19.png,please dont forget this,please dont forget this,0.0,0.0
+img20.png,can we reschedule the meeting,can we reschedule the meeting,0.0,0.0
+img21.png,i will reach by 5 pm,i will reach by 5 pm,0.0,0.0
+img22.png,waiting for your reply,waiting for your reply,0.0,0.0
+img23.png,this looks really good,this looks really good,0.0,0.0
+img24.png,we can meet later,we can meet later,0.0,0.0
+img25.png,i might be late today,i might be late today,0.0,0.0
+img26.png,please check the document,please check the document,0.0,0.0
+img27.png,all the best for exam,all the best for exam,0.0,0.0
+img28.png,keep working hard,keep working hard,0.0,0.0
+img29.png,stay positive always,stay positive always,0.0,0.0
+img30.png,have a great day,have a great day,0.0,0.0
+img31.png,hi how are you hope you are doing fine,hi howw are you hope you are doing fine,1.0,1.0
+img32.png,good evening,good evening,0.0,0.0
+img33.png,innovation hub,innovation hub,0.0,0.0
+img34.png,state bank of india,state bank of india,0.0,0.0
+img35.png,beautiful day,beautiful day,0.0,0.0

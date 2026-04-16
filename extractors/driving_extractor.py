@@ -1,3 +1,6 @@
+import base64
+import logging
+
 from fastapi import UploadFile, HTTPException
 from sqlalchemy.orm import Session
 
@@ -5,8 +8,17 @@ from db.database import SessionLocal
 from llm.inference import call_vision_model
 from prompts.driving_license_prompt import DRIVING_LICENSE_PROMPT
 from services.document_service import process_driving_license
-import base64
 
+logger = logging.getLogger(__name__)
+
+
+def _has_meaningful_content(data: dict) -> bool:
+    for value in data.values():
+        if isinstance(value, str) and value.strip():
+            return True
+        if value not in (None, "", {}, [], ()):
+            return True
+    return False
 
 def empty_driving_license():
     return {
@@ -25,17 +37,16 @@ def empty_driving_license():
 
 
 async def extract_driving_license(file: UploadFile) -> dict:
-
-    if not file.filename:
-        raise HTTPException(status_code=400, detail="File must have a name")
-
-    if not file.filename.lower().endswith((".png", ".jpg", ".jpeg")):
-        raise HTTPException(
-            status_code=400,
-            detail="Only PNG, JPG, JPEG images are allowed"
-        )
-
     try:
+        if not file.filename:
+            raise HTTPException(status_code=400, detail="File must have a name")
+
+        if not file.filename.lower().endswith((".png", ".jpg", ".jpeg")):
+            raise HTTPException(
+                status_code=400,
+                detail="Only PNG, JPG, JPEG images are allowed"
+            )
+
         contents = await file.read()
 
         if not contents:
@@ -51,24 +62,30 @@ async def extract_driving_license(file: UploadFile) -> dict:
             file_name=file.filename,
         )
 
-        db: Session = SessionLocal()
-        try:
-            process_driving_license(db, dl_data)
-            db.commit()
-        except HTTPException:
-            db.rollback()
-            raise
-        except Exception as exc:
-            db.rollback()
-            raise HTTPException(status_code=500, detail=f"Failed to save driving license details: {str(exc)}")
-        finally:
-            db.close()
+        if _has_meaningful_content(dl_data):
+            db: Session = SessionLocal()
+            try:
+                process_driving_license(db, dl_data)
+                db.commit()
+            except HTTPException:
+                db.rollback()
+                raise
+            except Exception as exc:
+                db.rollback()
+                raise HTTPException(status_code=500, detail=f"Failed to save driving license details: {str(exc)}")
+            finally:
+                db.close()
+        else:
+            logger.info("Skipping driving license save because extraction returned no meaningful content")
 
         return {
             "driving_license_data": dl_data
         }
 
+    except HTTPException:
+        raise
     except Exception as e:
+        logger.exception("Driving License extraction failed")
         raise HTTPException(
             status_code=500,
             detail=f"Driving License extraction failed: {str(e)}"

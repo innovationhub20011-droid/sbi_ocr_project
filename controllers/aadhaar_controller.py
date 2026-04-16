@@ -10,6 +10,10 @@ from services.document_service import retrieve_aadhaar_details
 logger = logging.getLogger(__name__)
 
 
+def _serialize_record(record) -> dict:
+    return {key: value for key, value in record.__dict__.items() if not key.startswith("_")}
+
+
 async def extract_aadhaar(file: UploadFile) -> dict:
     """Controller wrapper to keep route layer consistent across document types."""
     return await _extract_aadhaar(file)
@@ -20,7 +24,7 @@ def get_all_aadhaar() -> list[dict]:
     try:
         aadhaar_records = retrieve_aadhaar_details(db)
 
-        return [record.__dict__ for record in aadhaar_records]
+        return [_serialize_record(record) for record in aadhaar_records]
 
     except Exception as exc:
         logger.exception("Failed to retrieve Aadhaar records")

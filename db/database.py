@@ -1,7 +1,10 @@
 import os
+import logging
 from pathlib import Path
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
+
+logger = logging.getLogger(__name__)
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -13,7 +16,7 @@ DATABASE_URL = os.getenv(
     f"sqlite:///{(data_dir / 'ocr_records.db').resolve()}"
 )
 
-print("Using DB:", DATABASE_URL)
+logger.info("Using DB: %s", DATABASE_URL)
 
 engine = create_engine(
     DATABASE_URL,

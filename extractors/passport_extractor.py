@@ -1,3 +1,6 @@
+import logging
+import re
+
 from fastapi import UploadFile, HTTPException
 from sqlalchemy.orm import Session
 
@@ -6,6 +9,17 @@ from llm.inference import call_vision_model
 from prompts.passport_prompt import PASSPORT_PROMPT
 from services.file_service import convert_image_to_base64
 from services.document_service import process_passport
+
+logger = logging.getLogger(__name__)
+
+
+def _has_meaningful_content(data: dict) -> bool:
+    for value in data.values():
+        if isinstance(value, str) and value.strip():
+            return True
+        if value not in (None, "", {}, [], ()):
+            return True
+    return False
 
 
 def empty_passport():
@@ -29,46 +43,51 @@ def empty_passport():
 
 
 async def extract_passport(file: UploadFile):
-
-    if not file.filename:
-        raise HTTPException(status_code=400, detail="File must have a name")
-
-    if not file.filename.lower().endswith((".png", ".jpg", ".jpeg")):
-        raise HTTPException(status_code=400, detail="Only image files allowed")
-
-    image_base64 = await convert_image_to_base64(file)
-
-    response = call_vision_model(
-        PASSPORT_PROMPT,
-        image_base64,
-        empty_passport(),
-        api_endpoint="/extract/passport",
-        file_name=file.filename,
-    )
-
-    # Optional: Validate formats
-
-    import re
-
-    # Passport number (Indian format)
-    if not re.match(r"^[A-Z][0-9]{7}$", response.get("passport_number", "")):
-        response["passport_number"] = ""
-
-    # PIN code validation
-    if not re.match(r"^[0-9]{6}$", response.get("pin_code", "")):
-        response["pin_code"] = ""
-
-    db: Session = SessionLocal()
     try:
-        process_passport(db, response)
-        db.commit()
+        if not file.filename:
+            raise HTTPException(status_code=400, detail="File must have a name")
+
+        if not file.filename.lower().endswith((".png", ".jpg", ".jpeg")):
+            raise HTTPException(status_code=400, detail="Only image files allowed")
+
+        image_base64 = await convert_image_to_base64(file)
+
+        response = call_vision_model(
+            PASSPORT_PROMPT,
+            image_base64,
+            empty_passport(),
+            api_endpoint="/extract/passport",
+            file_name=file.filename,
+        )
+
+        # Passport number (Indian format)
+        if not re.match(r"^[A-Z][0-9]{7}$", response.get("passport_number", "")):
+            response["passport_number"] = ""
+
+        # PIN code validation
+        if not re.match(r"^[0-9]{6}$", response.get("pin_code", "")):
+            response["pin_code"] = ""
+
+        if _has_meaningful_content(response):
+            db: Session = SessionLocal()
+            try:
+                process_passport(db, response)
+                db.commit()
+            except HTTPException:
+                db.rollback()
+                raise
+            except Exception as exc:
+                db.rollback()
+                raise HTTPException(status_code=500, detail=f"Failed to save passport details: {str(exc)}")
+            finally:
+                db.close()
+        else:
+            logger.info("Skipping passport save because extraction returned no meaningful content")
+
+        return {"passport_data": response}
+
     except HTTPException:
-        db.rollback()
         raise
     except Exception as exc:
-        db.rollback()
-        raise HTTPException(status_code=500, detail=f"Failed to save passport details: {str(exc)}")
-    finally:
-        db.close()
-
-    return {"passport_data": response}
+        logger.exception("Passport extraction failed")
+        raise HTTPException(status_code=500, detail=f"Passport extraction failed: {str(exc)}")

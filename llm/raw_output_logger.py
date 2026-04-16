@@ -1,5 +1,8 @@
+import logging
 from datetime import datetime
 from pathlib import Path
+
+logger = logging.getLogger(__name__)
 
 
 def write_raw_output_to_file(raw_output: str, log_path_str: str, api_endpoint: str = "N/A", file_name: str = "N/A") -> None:
@@ -22,4 +25,9 @@ def write_raw_output_to_file(raw_output: str, log_path_str: str, api_endpoint: s
 
 def log_raw_output(raw_output: str, log_path_str: str, api_endpoint: str = "N/A", file_name: str = "N/A") -> None:
     write_raw_output_to_file(raw_output, log_path_str, api_endpoint=api_endpoint, file_name=file_name)
-    print(f"RAW MODEL OUTPUT logged to {log_path_str} | endpoint={api_endpoint} | file={file_name}")
+    logger.info(
+        "RAW MODEL OUTPUT logged | path=%s endpoint=%s file=%s",
+        log_path_str,
+        api_endpoint,
+        file_name,
+    )

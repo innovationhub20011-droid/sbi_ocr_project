@@ -1,48 +1,311 @@
-Date and Time: 2026-03-13T14:46:51
+Date and Time: 2026-03-24T17:03:01
 ===== RAW MODEL OUTPUT =====
-API Endpoint: /extract/aadhaar
-File Name: Imtiaz Aadhar Full.jpg
+API Endpoint: /extract/account-opening/page1
+File Name: account_form_page1.jpg
 Actual output data
-{ "full_name": "Imtiaz Hussain", "date_of_birth": "05/04/1996", "gender": "Male", "aadhaar_number": "6108 5609 7480", "address": "S/O: Din Mohd, village dallan teh haveli poonch, Degwar Maldayalan, Degwar Maldayalan, Punch, Jammu and Kashmir, 185101" }
+{
+  "top_section": {
+    "branch_name": "BELAPUR",
+    "branch_code": "03660",
+    "date": "24-03-2026",
+    "customer_id": "1088987",
+    "account_number": "123456789012",
+    "account_type": "Normal",
+    "ckyc_number": "",
+    "pf_number": "1088987"
+  },
+  "personal_section": {
+    "first_name": "NITHIN",
+    "middle_name": "YESUDAS",
+    "last_name": "",
+    "dob": "14-11-2004",
+    "gender": "Male",
+    "marital_status": "Married",
+    "parent_or_spouse_name": "YESUDAS",
+    "guardian_name": "YESUDAS",
+    "relationship_with_guardian": "Father",
+    "nationality": "Indian",
+    "citizenship": "Indian",
+    "occupation_type": "Others",
+    "employee_id": "10889",
+    "place_of_posting": "NAVI MUMBAI",
+    "organization_name": "SBT",
+    "nature_of_business": "BANKING",
+    "designation": "ENGINEER",
+    "annual_income": "1000000",
+    "net_worth": "1000000",
+    "source_of_funds": "Salary",
+    "religion": "Hindu",
+    "category": "General",
+    "person_with_disability": "No",
+    "education": "10th Class Passed",
+    "politically_exposed": "No",
+    "pan_number": "BKPPY3202W"
+  },
+  "contact_section": {
+    "mobile_number": "91 9498060036",
+    "email": "NATHANIVAGNATH.COM",
+    "std_tel_off": "",
+    "tel_res": ""
+  }
+}
 =============================
 
 
 
 
 
-Date and Time: 2026-03-13T14:47:18
+Date and Time: 2026-03-24T17:24:31
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/account-opening/page1
+File Name: account_form_page1.jpg
+Actual output data
+{ 
+  "top_section": { 
+    "branch_name": "BELAPUR", 
+    "branch_code": "03660", 
+    "date": "24-03-2026", 
+    "customer_id": "1088987", 
+    "account_number": "123456789012", 
+    "account_type": "Normal", 
+    "ckyc_number": "", 
+    "pf_number": "1088987" 
+  }, 
+  "personal_section": { 
+    "first_name": "NITHIN", 
+    "middle_name": "YESUDAS", 
+    "last_name": "", 
+    "dob": "", 
+    "gender": "Male", 
+    "marital_status": "Married", 
+    "parent_or_spouse_name": "YESUDAS", 
+    "guardian_name": "", 
+    "relationship_with_guardian": "", 
+    "nationality": "Indian", 
+    "citizenship": "Indian", 
+    "occupation_type": "Others - Eng. / Architect / Tech. Consultant", 
+    "employee_id": "", 
+    "place_of_posting": "Navi Mumbai", 
+    "organization_name": "SBI", 
+    "nature_of_business": "Banking", 
+    "designation": "Engineer", 
+    "annual_income": "1000000", 
+    "net_worth": "1000000", 
+    "source_of_funds": "Salary", 
+    "religion": "Hindu", 
+    "category": "General", 
+    "person_with_disability": "No", 
+    "education": "10th Class Passed", 
+    "politically_exposed": "No", 
+    "pan_number": "BKPPY3202W" 
+  }, 
+  "contact_section": { 
+    "mobile_number": "91 9498060036", 
+    "email": "NATHANY@GMAIL.COM", 
+    "std_tel_off": "", 
+    "tel_res": "" 
+  } 
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-03-24T17:26:00
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/account-opening/page1
+File Name: account_form_page1.jpg
+Actual output data
+{
+  "top_section": {
+    "branch_name": "BELAPUR",
+    "branch_code": "03660",
+    "date": "24-03-2026",
+    "customer_id": "1088987",
+    "account_number": "123456789012",
+    "account_type": "Normal",
+    "ckyc_number": "",
+    "pf_number": "1088987"
+  },
+  "personal_section": {
+    "first_name": "NITHIN",
+    "middle_name": "YESUDAS",
+    "last_name": "",
+    "dob": "14-11-2004",
+    "gender": "Male",
+    "marital_status": "Married",
+    "parent_or_spouse_name": "YESUDAS",
+    "guardian_name": "YESUDAS",
+    "relationship_with_guardian": "Father",
+    "nationality": "Indian",
+    "citizenship": "Indian",
+    "occupation_type": "Others",
+    "employee_id": "10889",
+    "place_of_posting": "NAVI MUMBAI",
+    "organization_name": "SBT",
+    "nature_of_business": "BANKING",
+    "designation": "ENGINEER",
+    "annual_income": "1000000",
+    "net_worth": "1000000",
+    "source_of_funds": "Salary",
+    "religion": "Hindu",
+    "category": "General",
+    "person_with_disability": "No",
+    "education": "10th Class Passed",
+    "politically_exposed": "No",
+    "pan_number": "BKPPY3202W"
+  },
+  "contact_section": {
+    "mobile_number": "91 9498060036",
+    "email": "NATHANIVAGNATH.COM",
+    "std_tel_off": "",
+    "tel_res": ""
+  }
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-03-24T18:11:29
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/account-opening/page1
+File Name: account_form_page1.jpg
+Actual output data
+{ 
+  "top_section": { 
+    "branch_name": "BELAPUR", 
+    "branch_code": "03660", 
+    "date": "24-03-2026", 
+    "customer_id": "1088987", 
+    "account_number": "123456789012", 
+    "account_type": "Normal", 
+    "ckyc_number": "", 
+    "pf_number": "1088987" 
+  }, 
+  "personal_section": { 
+    "first_name": "NITHIN", 
+    "middle_name": "YESUDAS", 
+    "last_name": "", 
+    "dob": "", 
+    "gender": "Male", 
+    "marital_status": "Married", 
+    "parent_or_spouse_name": "YESUDAS", 
+    "guardian_name": "", 
+    "relationship_with_guardian": "", 
+    "nationality": "Indian", 
+    "citizenship": "Indian", 
+    "occupation_type": "Others - Eng. / Architect / Tech. Consultant", 
+    "employee_id": "", 
+    "place_of_posting": "Navi Mumbai", 
+    "organization_name": "SBI", 
+    "nature_of_business": "Banking", 
+    "designation": "Engineer", 
+    "annual_income": "1000000", 
+    "net_worth": "1000000", 
+    "source_of_funds": "Salary", 
+    "religion": "Hindu", 
+    "category": "General", 
+    "person_with_disability": "No", 
+    "education": "10th Class Passed", 
+    "politically_exposed": "No", 
+    "pan_number": "BKPPY3202W" 
+  }, 
+  "contact_section": { 
+    "mobile_number": "91 9498060036", 
+    "email": "NATHANY@GMAIL.COM", 
+    "std_tel_off": "", 
+    "tel_res": "" 
+  } 
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-03-25T11:22:29
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/account-opening/page1
+File Name: account_form_page1.jpg
+Actual output data
+{ 
+  "top_section": { 
+    "branch_name": "BELAPUR", 
+    "branch_code": "03660", 
+    "date": "24-03-2026", 
+    "customer_id": "1088987", 
+    "account_number": "123456789012", 
+    "account_type": "Normal", 
+    "ckyc_number": "", 
+    "pf_number": "1088987" 
+  }, 
+  "personal_section": { 
+    "first_name": "NITHIN", 
+    "middle_name": "YESUDAS", 
+    "last_name": "", 
+    "dob": "", 
+    "gender": "Male", 
+    "marital_status": "Married", 
+    "parent_or_spouse_name": "YESUDAS", 
+    "guardian_name": "", 
+    "relationship_with_guardian": "", 
+    "nationality": "Indian", 
+    "citizenship": "Indian", 
+    "occupation_type": "Others - Eng. / Architect / Tech. Consultant", 
+    "employee_id": "", 
+    "place_of_posting": "Navi Mumbai", 
+    "organization_name": "SBI", 
+    "nature_of_business": "Banking", 
+    "designation": "Engineer", 
+    "annual_income": "1000000", 
+    "net_worth": "1000000", 
+    "source_of_funds": "Salary", 
+    "religion": "Hindu", 
+    "category": "General", 
+    "person_with_disability": "No", 
+    "education": "10th Class Passed", 
+    "politically_exposed": "No", 
+    "pan_number": "BKPPY3202W" 
+  }, 
+  "contact_section": { 
+    "mobile_number": "91 9498060036", 
+    "email": "NATHANY@GMAIL.COM", 
+    "std_tel_off": "", 
+    "tel_res": "" 
+  } 
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-03-25T12:18:54
 ===== RAW MODEL OUTPUT =====
 API Endpoint: /extract/pan
-File Name: Imtiaz.jpg
+File Name: Pan1.jpeg
 Actual output data
-{ "full_name": "IMTIAZ HUSSAIN", "pan_number": "ARNPH9322G", "date_of_birth": "05/04/1996", "father_name": "MOHD DIN" }
+{ "full_name": "MANJIRI VITTHALRAO GAWANDE", "pan_number": "BQOPG7155B", "date_of_birth": "20/09/1987", "father_name": "VITTHALRAO GAWANDE" }
 =============================
 
 
 
 
 
-Date and Time: 2026-03-13T14:47:59
+Date and Time: 2026-03-25T12:22:32
 ===== RAW MODEL OUTPUT =====
-API Endpoint: /extract/passport
-File Name: Sample 15.jpg
+API Endpoint: /extract/aadhaar
+File Name: Sadase Hanief Aadhar.jpeg
 Actual output data
-{ 
-    "passport_number": "P0304202", 
-    "surname": "Hussain", 
-    "given_names": "Imtiaz", 
-    "nationality": "Indian", 
-    "sex": "Male", 
-    "date_of_birth": "05/04/1996", 
-    "place_of_birth": "Dallan, Jammu and Kashmir", 
-    "date_of_issue": "15/02/2017", 
-    "date_of_expiry": "14/02/2027", 
-    "place_of_issue": "Jammu", 
-    "father_name": "Din Mohd", 
-    "mother_name": "Sarwar Bi", 
-    "address": "Vill Dallan PO Degwar Maldayalan Teh Haveli, Poonch", 
-    "pin_code": "185101", 
-    "file_number": "JM1060542428416" 
+{
+  "full_name": "Sadase Hanief",
+  "date_of_birth": "01/07/1996",
+  "gender": "FEMALE",
+  "aadhaar_number": "802576290678",
+  "address": "Mohd Hanif, Village Chandak Teh Haveli Poonch, Chandak, Punch, Jammu and Kashmir - 185101"
 }
 =============================
 
@@ -50,248 +313,6978 @@ Actual output data
 
 
 
-Date and Time: 2026-03-13T14:48:38
-===== RAW MODEL OUTPUT =====
-API Endpoint: /extract/driving-license
-File Name: Imtiaz Hussain.jpg
-Actual output data
-{ 
-  "driving_licence_number": "JK12 2021 0003885", 
-  "name": "IMTIAZ HUSSAIN", 
-  "father_name": "DIN MOHD", 
-  "date_of_birth": "05-04-1996", 
-  "date_of_issue": "29-09-2021", 
-  "valid_till_nt": "04-04-2036", 
-  "valid_till_tr": "", 
-  "address": "POST OFFICE DEGWAR MALDAYALAN, POONCH, BEHIND MIDDLE SCHOOL DALLAN, 185101", 
-  "blood_group": "A+", 
-  "class_of_vehicle": "MCWG, LMV", 
-  "issuing_authority": "GOVERNMENT OF JAMMU & KASHMIR" 
-}
-=============================
-
-
-
-
-
-Date and Time: 2026-03-13T14:49:12
-===== RAW MODEL OUTPUT =====
-API Endpoint: /extract/voter-id
-File Name: Election Card Latest.jpg
-Actual output data
-{ "epic_number": "GCH1213917", "name": "Imtiaz Hussain", "father_name": "Din Mohd", "gender": "Male", "date_of_birth": "05-04-1996", "address": "73, Masjid Mohalla, Dalan, Degwar Terwan, Haveli, Poonch, Jammu and Kashmir - 185101", "electoral_registration_officer": "89 - Poonch Haveli", "assembly_constituency": "", "download_date": "07-03-2024" }
-=============================
-
-
-
-
-
-Date and Time: 2026-03-13T14:49:49
+Date and Time: 2026-03-25T12:23:18
 ===== RAW MODEL OUTPUT =====
 API Endpoint: /extract/text/handwritten_text
-File Name: Handwritten 1.jpeg
+File Name: Handwritten Text 3.jpeg
 Actual output data
-The principal
-Jawahar Navodaya Vidyalaya
-Surankote (Poonch)
-Dated: 10-03-2026
-Subject: Application for two days leave.
-
-Respected Sir,
-With due respect and humble submission, I wish to inform you that I am a student of class tenth.
-I have an urgent piece of work at home for next two days, so I won't be able to attend the school for next two days. Kindly sanction two days' leave in my favour.
-
-Thanking you,
-Your's faithfully
-Juntia Hussain
-Class 10th.
+This is a handwritten example. Write as good as you can.
 =============================
 
 
 
 
 
-Date and Time: 2026-03-13T14:51:15
+Date and Time: 2026-03-25T12:26:33
 ===== RAW MODEL OUTPUT =====
-API Endpoint: /extract/text/digital_text
-File Name: DIgital Text 2.jpg
+API Endpoint: /extract/account-opening/page1
+File Name: account_form_page1.jpg
 Actual output data
-1.7 Cardiac Arrhythmias
-
-Changes in the generation of electric impulses or contraction in the heart lead to cardiac disorders. Heart arrhythmia is a condition of the irregular heartbeat either too fast or too slow. The abnormal heart rhythms called arrhythmia, occur due to changes in the normal sequence of electrical impulses of the heart. The different organs of the body may be damaged or may not work properly if the heart does not pump blood effectively. Arrhythmias can occur in the upper and lower heart chambers; however, arrhythmias of the ventricles can be life-threatening events. The factors like disease in the coronary artery, changes in the myocardium, damage from a cardiac attack, or the remedial process after heart surgery may be the source of arrhythmia. It may occur with a normal heart rate, bradyarrhythmia's (slow heart rate below 60 bpm) or tachyarrhythmia (rapid heart rate above 100 bpm). Many arrhythmias have no symptoms and if symptoms persist, the person may feel a gap between the heartbeats or chest pain. Most of the dysrhythmias are not dangerous, but some may cause a stroke, and others may have a cardiac arrest. An ECG analysis and Holter monitor could be helpful in the diagnosis of cardiac disorders.
-
-1.8 Problem Definition
-
-The following discussion is important because in the particular case of the bioelectric signal of a cardiac nature registered in the ECG, it contains mostly noise that originated by the electrocardiogram or by network interference, which can be eliminated or reduced completely by filters. The devices in the field of bioengineering have revealed that the passage of the analog signal to a digital format and its subsequent treatment with banks of digital filters minimizes its distortion and maximizes the amount of noise eliminated. The importance of addressing the issue of the analysis of digital noise reduction in an ECG is for this, we must select an optimal threshold value, a good level of signal decomposition, and a good base wavelet. One of the primary advantages of this procedure is its ease of implementation in a computer program, which is a basic condition for its application since a very high number of operations must be carried out for the analysis of a signal. However, this amount of calculations is not a limitation with the current standard computers.
+{
+  "top_section": {
+    "branch_name": "BELAPUR",
+    "branch_code": "03660",
+    "date": "24-03-2023",
+    "customer_id": "1088987",
+    "account_number": "123456789012",
+    "account_type": "Normal",
+    "ckyc_number": "",
+    "pf_number": ""
+  },
+  "personal_section": {
+    "first_name": "NITHIN",
+    "middle_name": "YESUDAS",
+    "last_name": "YESUDAS",
+    "dob": "14-11-2004",
+    "gender": "Male",
+    "marital_status": "Married",
+    "parent_or_spouse_name": "YESUDAS",
+    "guardian_name": "YESUDAS",
+    "relationship_with_guardian": "Father",
+    "nationality": "Indian",
+    "citizenship": "Indian",
+    "occupation_type": "Others",
+    "employee_id": "",
+    "place_of_posting": "NAVI MUMBAI",
+    "organization_name": "SBT BANKING",
+    "nature_of_business": "SALARY",
+    "designation": "ENGINEER",
+    "annual_income": "1000000",
+    "net_worth": "1000000",
+    "source_of_funds": "SALARY",
+    "religion": "Hindu",
+    "category": "General",
+    "person_with_disability": "No",
+    "education": "10th Class Passed",
+    "politically_exposed": "No",
+    "pan_number": "BKPPY3202W"
+  },
+  "contact_section": {
+    "mobile_number": "91 9498060036",
+    "email": "NITHIN@GMAIL.COM",
+    "std_tel_off": "",
+    "tel_res": ""
+  }
+}
 =============================
 
 
 
 
 
-Date and Time: 2026-03-13T14:53:18
+Date and Time: 2026-03-25T12:30:21
 ===== RAW MODEL OUTPUT =====
-API Endpoint: /extract/text/miscellaneous_text
-File Name: Miscellenous Text 1.pdf
+API Endpoint: /extract/account-opening/page1
+File Name: account_form_page1.jpg
 Actual output data
-1.7 Cardiac Arrhythmias
-
-Changes in the generation of electric impulses or contractions in the heart lead to cardiac disorders. Heart arrhythmia is a condition of the irregular heartbeat either too fast or too slow. The abnormal heart rhythms called arrhythmia occur due to changes in the normal sequence of electrical impulses of the heart. The different organs of the body may be damaged or may not work properly if the heart doesn’t pump blood effectively. Arrhythmias can occur in the upper and lower heart chambers; however, arrhythmias of ventricles can be life-threatening events. The factors like disease in the coronary artery, changes in the myocardium, damage from a cardiac attack, or a remedial process after a heart surgery may source of arrhythmia. It may occur with a normal heart rate, bradycardia (slow heart rate below 60 BPM) or tachycardia (fast heart rate above 100 BPM). Many arrhythmias have no symptoms and if they persist, the person may feel a gap between heartbeats or chest pain. Most of the arrhythmias are not dangerous, but some may cause a stroke or others may have a cardiac arrest. An ECG analysis and Holter monitor may be helpful in the diagnosis of arrhythmias.
-
-1.8 Problem Definition
-
-The following discussion is important because in the particular case of the bioelectric signal of a cardiac nature registered in the electrocardiogram (ECG), it contains mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that
+{
+  "top_section": {
+    "branch_name": "BELAPUR",
+    "branch_code": "03660",
+    "date": "24-03-2023",
+    "customer_id": "1088987",
+    "account_number": "123456789012",
+    "account_type": "Normal",
+    "ckyc_number": "",
+    "pf_number": ""
+  },
+  "personal_section": {
+    "first_name": "NITHIN",
+    "middle_name": "YESUDAS",
+    "last_name": "YESUDAS",
+    "dob": "14-11-2004",
+    "gender": "Male",
+    "marital_status": "Married",
+    "parent_or_spouse_name": "YESUDAS",
+    "guardian_name": "YESUDAS",
+    "relationship_with_guardian": "Father",
+    "nationality": "Indian",
+    "citizenship": "Indian",
+    "occupation_type": "Others",
+    "employee_id": "",
+    "place_of_posting": "NAVI MUMBAI",
+    "organization_name": "SBT",
+    "nature_of_business": "BANKING",
+    "designation": "ENGINEER",
+    "annual_income": "1000000",
+    "net_worth": "1000000",
+    "source_of_funds": "Salary",
+    "religion": "Hindu",
+    "category": "General",
+    "person_with_disability": "No",
+    "education": "10th Class Passed",
+    "politically_exposed": "No",
+    "pan_number": "BKPPY3202W"
+  },
+  "contact_section": {
+    "mobile_number": "91 9498060036",
+    "email": "NITHIN@GMAIL.COM",
+    "std_tel_off": "",
+    "tel_res": ""
+  }
+}
 =============================
 
 
 
 
 
-Date and Time: 2026-03-13T14:53:30
+Date and Time: 2026-03-25T14:46:32
 ===== RAW MODEL OUTPUT =====
-API Endpoint: /extract/text/miscellaneous_text
-File Name: Miscellenous Text 1.pdf
+API Endpoint: /extract/pan
+File Name: Pan1.jpeg
 Actual output data
-Java is a platform-independent high-level programming language. It is platform independent because its byte codes can run on any system regardless of its operating system. Java was invented by James Gosling in 1995 while he was working at Sun Microsystems.
-
-Encapsulation is a concept in object-oriented programming for combining properties and methods in a single unit. Encapsulation helps developers follow a modular approach for software development because each object has its own set of methods and variables.
-
-Polymorphism in programming is the ability of an object, function, or method to take on multiple forms. It allows the same interface to be used for different underlying data types.
+{ "full_name": "MANJIRI VITTHALRAO GAWANDE", "pan_number": "BQOPG7155B", "date_of_birth": "20/09/1987", "father_name": "VITTHALRAO GAWANDE" }
 =============================
 
 
 
 
 
-Date and Time: 2026-03-13T15:00:38
+Date and Time: 2026-03-25T14:49:57
 ===== RAW MODEL OUTPUT =====
-API Endpoint: /extract/text/miscellaneous_text
-File Name: Miscellenous Text 1.pdf
+API Endpoint: /extract/text/handwritten_text
+File Name: Handwritten Text 3.jpeg
 Actual output data
-1.7 Cardiac Arrhythmias
-
-Changes in the generation of electric impulses or contraction in the heart lead to cardiac disorders. Heart arrhythmia is a condition of the irregular heartbeat either too fast or too slow. The abnormal heart rhythms called arrhythmia occur due to changes in the normal sequence of electrical impulses of the heart. The different organs of the body may be damaged or may not work properly if the heart doesn't pump blood effectively. Arrhythmias can occur in the upper and lower chambers; however, arrhythmias of ventricles can be life-threatening events. The factors like disease in coronary artery, changes in myocardium, damage from a cardiac attack, or remedial process after heart surgery may source of arrhythmia. It may occur with a normal heart rate, bradyarrhythmia's (slow heart rate below 60 bpm) or tachyarrhythmia (rapid heart rate above 100 bpm). Many arrhythmias have no symptoms and if symptoms persist the person may feel a gap between heartbeats or chest pain. Most of dysrhythmias are not dangerous, but some may complain of stroke, others may have cardiac arrest. An ECG analysis and Holter monitor could be helpful in the diagnosis of cardiac disorders.
-
-1.8 Problem Definition
-
-The following discussion is important because in the particular case of the bioelectric signal of a cardiac nature registered in the electrocardiogram (ECG), it contains mostly noise originated by the electrocardiograph or by network interference, which can hardly be eliminated or reduced completely by filters. The devices in the field of bioengineering have revealed that the passage of the analog signal to a digital format and its subsequent treatment with banks of digital filters minimizes its distortion and maximizes the amount of noise eliminated. The importance of addressing the issue of the analysis of digital noise reduction in an ECG. For this, we must select an optimal threshold value, a good level of signal decomposition and a good base wavelet. One of the primary advantages of this procedure is its ease of implementation in a computer program, which in turn is a basic condition for its application since a very high number of operations must be carried out for the analysis of a signal. However, this amount of calculations is not a limitation with the current standard computers.
+This is a handwritten example. Write as good as you can.
 =============================
 
 
 
 
 
-Date and Time: 2026-03-13T15:00:51
+Date and Time: 2026-03-25T14:54:43
 ===== RAW MODEL OUTPUT =====
-API Endpoint: /extract/text/miscellaneous_text
-File Name: Miscellenous Text 1.pdf
+API Endpoint: /extract/account-opening/page1
+File Name: account_form_page1.jpg
 Actual output data
-Java is a platform-independent high-level programming language. It is platform independent because its byte codes can run on any system regardless of its operating system. Java was invented by James Gosling in 1995 while he was working at Sun Microsystems.
-
-Encapsulation is a concept in object-oriented programming for combining properties and methods in a single unit. Encapsulation helps developers follow a modular approach for software development because each object has its own set of methods and variables.
-
-Polymorphism in programming is the ability of an object, function, or method to take on multiple forms. It allows the same interface to be used for different underlying data types.
+{
+  "top_section": {
+    "branch_name": "BELAPUR",
+    "branch_code": "03660",
+    "date": "24-03-2023",
+    "customer_id": "1088987",
+    "account_number": "123456789012",
+    "account_type": "Normal",
+    "ckyc_number": "",
+    "pf_number": ""
+  },
+  "personal_section": {
+    "first_name": "NITHIN",
+    "middle_name": "YESUDAS",
+    "last_name": "YESUDAS",
+    "dob": "14-11-2004",
+    "gender": "Male",
+    "marital_status": "Married",
+    "parent_or_spouse_name": "YESUDAS",
+    "guardian_name": "YESUDAS",
+    "relationship_with_guardian": "Father",
+    "nationality": "Indian",
+    "citizenship": "Indian",
+    "occupation_type": "Others - CA/ICWA/Taxation/Finance",
+    "employee_id": "",
+    "place_of_posting": "NAVI MUMBAI",
+    "organization_name": "SBT BANKING",
+    "nature_of_business": "BANKING",
+    "designation": "ENGINEER",
+    "annual_income": "1000000",
+    "net_worth": "1000000",
+    "source_of_funds": "Salary",
+    "religion": "Hindu",
+    "category": "General",
+    "person_with_disability": "No",
+    "education": "10th Class Passed",
+    "politically_exposed": "No",
+    "pan_number": "BKPPY3202W"
+  },
+  "contact_section": {
+    "mobile_number": "91 9498060036",
+    "email": "NATHANIVAGATH.COM",
+    "std_tel_off": "",
+    "tel_res": ""
+  }
+}
 =============================
 
 
 
 
 
-Date and Time: 2026-03-13T15:09:00
+Date and Time: 2026-03-25T14:57:17
 ===== RAW MODEL OUTPUT =====
-API Endpoint: /extract/text/miscellaneous_text
-File Name: Miscellenous Text 1.pdf
+API Endpoint: /extract/pan
+File Name: IMG_2439.jpeg
 Actual output data
-1.7 Cardiac Arrhythmias
-
-Changes in the generation of electric impulses or contraction in the heart lead to cardiac disorders. Heart arrhythmia is a condition of the irregular heartbeat either too fast or too slow. The abnormal heart rhythms called arrhythmia occur due to changes in the normal sequence of electrical impulses of the heart. The different organs of the body may be damaged or may not work properly if the heart doesn't pump blood effectively. Arrhythmias can occur in the upper and lower chambers; however, arrhythmias of ventricles can be life-threatening events. The factors like disease in coronary artery, changes in myocardium, damage from a cardiac attack, or remedial process after heart surgery may source of arrhythmia. It may occur with a normal heart rate, bradyarrhythmia's (slow heart rate below 60 bpm) or tachyarrhythmia (rapid heart rate above 100 bpm). Many arrhythmias have no symptoms and if symptoms persist the person may feel a gap between heartbeats or chest pain. Most of dysrhythmias are not dangerous, but some may complain of stroke, others may have cardiac arrest. An ECG analysis and Holter monitor could be helpful in the diagnosis of cardiac disorders.
-
-1.8 Problem Definition
-
-The following discussion is important because in the particular case of the bioelectric signal of a cardiac nature registered in the electrocardiogram (ECG), it contains mostly noise originated by the electrocardiograph or by network interference, which can hardly be eliminated or reduced completely by filters. The devices in the field of bioengineering have revealed that the passage of the analog signal to a digital format and its subsequent treatment with banks of digital filters minimizes its distortion and maximizes the amount of noise eliminated. The importance of addressing the issue of the analysis of digital noise reduction in an ECG. For this, we must select an optimal threshold value, a good level of signal decomposition and a good base wavelet. One of the primary advantages of this procedure is its ease of implementation in a computer program, which in turn is a basic condition for its application since a very high number of operations must be carried out for the analysis of a signal. However, this amount of calculations is not a limitation with the current standard computers.
+{
+  "full_name": "SUBHASH TUKARAM KHEWLE",
+  "pan_number": "AKVPK4048H",
+  "date_of_birth": "18/04/1978",
+  "father_name": "TUKARAM KHEWLE"
+}
 =============================
 
 
 
 
 
-Date and Time: 2026-03-13T15:09:12
+Date and Time: 2026-03-27T12:24:56
 ===== RAW MODEL OUTPUT =====
-API Endpoint: /extract/text/miscellaneous_text
-File Name: Miscellenous Text 1.pdf
+API Endpoint: /extract/account-opening/page1
+File Name: account_form_page1.jpg
 Actual output data
-Java is a platform-independent high-level programming language. It is platform independent because its byte codes can run on any system regardless of its operating system. Java was invented by James Gosling in 1995 while he was working at Sun Microsystems.
-
-Encapsulation is a concept in object-oriented programming for combining properties and methods in a single unit. Encapsulation helps developers follow a modular approach for software development because each object has its own set of methods and variables.
-
-Polymorphism in programming is the ability of an object, function, or method to take on multiple forms. It allows the same interface to be used for different underlying data types.
+{ 
+  "top_section": { 
+    "branch_name": "BELAPUR", 
+    "branch_code": "03660", 
+    "date": "24-03-2026", 
+    "customer_id": "1088987", 
+    "account_number": "123456789012", 
+    "account_type": "Normal", 
+    "ckyc_number": "", 
+    "pf_number": "1088987" 
+  }, 
+  "personal_section": { 
+    "first_name": "NITHIN", 
+    "middle_name": "YESUDAS", 
+    "last_name": "", 
+    "dob": "", 
+    "gender": "Male", 
+    "marital_status": "Married", 
+    "parent_or_spouse_name": "YESUDAS", 
+    "guardian_name": "", 
+    "relationship_with_guardian": "", 
+    "nationality": "Indian", 
+    "citizenship": "Indian", 
+    "occupation_type": "Others - Eng. / Architect / Tech. Consultant", 
+    "employee_id": "", 
+    "place_of_posting": "Navi Mumbai", 
+    "organization_name": "SBI", 
+    "nature_of_business": "Banking", 
+    "designation": "Engineer", 
+    "annual_income": "1000000", 
+    "net_worth": "1000000", 
+    "source_of_funds": "Salary", 
+    "religion": "Hindu", 
+    "category": "General", 
+    "person_with_disability": "No", 
+    "education": "10th Class Passed", 
+    "politically_exposed": "No", 
+    "pan_number": "BKPPY3202W" 
+  }, 
+  "contact_section": { 
+    "mobile_number": "91 9498060036", 
+    "email": "NATHANY@GMAIL.COM", 
+    "std_tel_off": "", 
+    "tel_res": "" 
+  } 
+}
 =============================
 
 
 
 
 
-Date and Time: 2026-03-13T15:10:43
+Date and Time: 2026-03-27T12:31:47
 ===== RAW MODEL OUTPUT =====
-API Endpoint: /extract/text/miscellaneous_text
-File Name: Miscellenous Text 1.pdf
+API Endpoint: /extract/text/handwritten_text
+File Name: img1.png
 Actual output data
-1.7 Cardiac Arrhythmias
-
-Changes in the generation of electric impulses or contractions in the heart lead to cardiac disorders. Heart arrhythmia is a condition of the irregular heartbeat either too fast or too slow. The abnormal heart rhythms called arrhythmia occur due to changes in the normal sequence of electrical impulses of the heart. The different organs of the body may be damaged or may not work properly if the heart doesn't pump blood effectively. Arrhythmias can occur in the upper and lower heart chambers; however, arrhythmias of ventricles can be life-threatening events. The factors like disease in the coronary artery, changes in the myocardium, damage from a cardiac attack, or a remedial process after a heart surgery may be a source of arrhythmia. It may occur with a normal heart rate, bradycardia (slow heart rate below 60 beats per minute) or tachycardia (rapid heart rate above 100 beats per minute). Many arrhythmias have no symptoms and if they persist, the person may feel a gap between heartbeats or chest pain. Most of the arrhythmias are not dangerous, but some may cause a stroke or even cardiac arrest. An ECG analysis and Holter monitor may be helpful in the diagnosis of arrhythmias.
-
-1.8 Problem Definition
-
-The following discussion is important because in the particular case of the bioelectric signal of a cardiac nature registered in the electrocardiogram (ECG), it contains mostly noise originated by the electrocardiograph or by network interference, which can be eliminated or reduced completely by filters. The devices in the field of bioengineering have revealed that the passage of the analog signal to a digital format and its subsequent treatment with banks of digital filters minimizes its distortion and maximizes the amount of noise eliminated. The importance of addressing the issue of the analysis of digital noise reduction in an ECG is for this reason. For this reason, we must select an optimal threshold value, a good level of signal decomposition, and a good base wavelet. One of the primary advantages of this procedure is its ease of implementation in a computer program, which is a basic condition for its application since a very high number of operations must be carried out for the analysis of a signal. However, this amount of calculations is not a limitation for the current standard computers.
+hi how are you
 =============================
 
 
 
 
 
-Date and Time: 2026-03-13T15:10:56
+Date and Time: 2026-03-27T12:31:54
 ===== RAW MODEL OUTPUT =====
-API Endpoint: /extract/text/miscellaneous_text
-File Name: Miscellenous Text 1.pdf
+API Endpoint: /extract/text/handwritten_text
+File Name: img2.png
 Actual output data
-Java is a platform-independent high-level programming language. It is platform independent because its byte codes can run on any system regardless of its operating system. Java was invented by James Gosling in 1995 while he was working at Sun Microsystems.
+The extracted text from the image is:
 
-Encapsulation is a concept in object-oriented programming for combining properties and methods in a single unit. Encapsulation helps developers follow a modular approach for software development because each object has its own set of methods and variables.
-
-Polymorphism in programming is the ability of an object, function, or method to take on multiple forms. It allows the same interface to be used for different underlying data types.
+"hope you are doing good"
 =============================
 
 
 
 
 
-Date and Time: 2026-03-13T15:14:52
+Date and Time: 2026-03-27T12:32:01
 ===== RAW MODEL OUTPUT =====
-API Endpoint: /extract/text/miscellaneous_text
-File Name: Miscellenous Text 1.pdf
+API Endpoint: /extract/text/handwritten_text
+File Name: img3.png
 Actual output data
-1.7 Cardiac Arrhythmias
-
-Changes in the generation of electric impulses or contractions in the heart lead to cardiac disorders. Heart arrhythmia is a condition of the irregular heartbeat either too fast or too slow. The abnormal heart rhythms called arrhythmia occur due to changes in the normal sequence of electrical impulses of the heart. The different organs of the body may be damaged or may not work properly if the heart doesn’t pump blood effectively. Arrhythmias can occur in the upper and lower heart chambers; however, arrhythmias of ventricles can be life-threatening events. The factors like disease in the coronary artery, changes in the myocardium, damage from a cardiac attack, or a remedial process after a heart surgery may be a source of arrhythmia. It may occur with a normal heart rate, bradycardia (slow heart rate below 60 beats per minute) or tachycardia (fast heart rate above 100 beats per minute). Many arrhythmias have no symptoms and if they do, they may feel a gap between heartbeats or chest pain. Most of the arrhythmias are not dangerous, but some may cause a stroke or even cardiac arrest. An ECG analysis and Holter monitor may be helpful in the diagnosis of arrhythmias.
-
-1.8 Problem Definition
-
-The following discussion is important because in the particular case of the bioelectric signal of a cardiac nature registered in the electrocardiogram (ECG), it contains mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is mostly noise that is
-[END OF FILE]
+It was nice meeting you.
 =============================
 
 
 
 
 
-Date and Time: 2026-03-13T15:15:05
+Date and Time: 2026-03-27T12:32:09
 ===== RAW MODEL OUTPUT =====
-API Endpoint: /extract/text/miscellaneous_text
-File Name: Miscellenous Text 1.pdf
+API Endpoint: /extract/text/handwritten_text
+File Name: img4.png
 Actual output data
-Java is a platform-independent high-level programming language. It is platform independent because its byte codes can run on any system regardless of its operating system. Java was invented by James Gosling in 1995 while he was working at Sun Microsystems.
+let's catch up soon.
+=============================
 
-Encapsulation is a concept in object-oriented programming for combining properties and methods in a single unit. Encapsulation helps developers follow a modular approach for software development because each object has its own set of methods and variables.
 
-Polymorphism in programming is the ability of an object, function, or method to take on multiple forms. It allows the same interface to be used for different underlying data types.
+
+
+
+Date and Time: 2026-03-27T12:32:16
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img5.png
+Actual output data
+please call me back.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:32:23
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img6.png
+Actual output data
+did you finish the work.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:32:30
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img7.png
+Actual output data
+I will send the details.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:32:38
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img8.png
+Actual output data
+thanks for your help.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:32:45
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img9.png
+Actual output data
+see you tomorrow.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:32:52
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img10.png
+Actual output data
+good morning have a nice day
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:33:00
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img11.png
+Actual output data
+take care of yourself.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:33:07
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img12.png
+Actual output data
+what are you doing.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:33:14
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img13.png
+Actual output data
+let me know your thoughts.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:33:22
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img14.png
+Actual output data
+The text in the image is: we will plan something.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:33:30
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img15.png
+Actual output data
+happy birthday to you.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:33:37
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img16.png
+Actual output data
+Congratulations on your success.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:33:44
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img17.png
+Actual output data
+i miss our old days.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:33:52
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img18.png
+Actual output data
+this is just a reminder.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:33:59
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img19.png
+Actual output data
+please don't forget this.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:34:07
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img20.png
+Actual output data
+can we reschedule the meeting.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:34:14
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img21.png
+Actual output data
+I will reach by 5 pm.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:34:22
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img22.png
+Actual output data
+waiting for your reply.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:34:30
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img23.png
+Actual output data
+this looks really good.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:34:37
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img24.png
+Actual output data
+we can meet later.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:34:45
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img25.png
+Actual output data
+I might be late today.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:34:52
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img26.png
+Actual output data
+please check the document.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:35:00
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img27.png
+Actual output data
+all the best for exam
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:35:08
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img28.png
+Actual output data
+The extracted text from the image is: keep working hard.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:35:16
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img29.png
+Actual output data
+The extracted text from the image is: "stay positive always".
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:35:24
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img30.png
+Actual output data
+have a great day.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:35:32
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img31.png
+Actual output data
+Hi how are you Hope you are doing fine.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:35:40
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img32.png
+Actual output data
+Good evening.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:35:48
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img33.png
+Actual output data
+Innovation hub.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:35:56
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img34.png
+Actual output data
+State Bank of India.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:36:04
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img35.png
+Actual output data
+Beautiful day.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:37:11
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img1.png
+Actual output data
+hi how are you.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:37:19
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img2.png
+Actual output data
+hope you are doing good.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:37:26
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img3.png
+Actual output data
+it was nice meeting you.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:37:33
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img4.png
+Actual output data
+let's catch up soon.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:37:41
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img5.png
+Actual output data
+please call me back.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:37:48
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img6.png
+Actual output data
+did you finish the work.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:37:56
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img7.png
+Actual output data
+I will send the details.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:38:04
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img8.png
+Actual output data
+thanks for your help.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:38:11
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img9.png
+Actual output data
+see you tomorrow.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:38:19
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img10.png
+Actual output data
+good morning have a nice day.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:38:27
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img11.png
+Actual output data
+take care of yourself.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:38:35
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img12.png
+Actual output data
+what are you doing.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:38:43
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img13.png
+Actual output data
+let me know your thoughts.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:38:51
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img14.png
+Actual output data
+we will plan something.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:38:59
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img15.png
+Actual output data
+happy birthday to you.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:39:07
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img16.png
+Actual output data
+Congratulations on your success.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:39:15
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img17.png
+Actual output data
+i miss our old days.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:39:22
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img18.png
+Actual output data
+this is just a reminder.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:39:30
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img19.png
+Actual output data
+please don't forget this.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:39:38
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img20.png
+Actual output data
+can we reschedule the meeting.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:39:47
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img21.png
+Actual output data
+I will reach by 5 pm.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:39:55
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img22.png
+Actual output data
+waiting for your reply.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:40:03
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img23.png
+Actual output data
+this looks really good.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:40:11
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img24.png
+Actual output data
+we can meet later.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:40:19
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img25.png
+Actual output data
+I might be late today.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:40:27
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img26.png
+Actual output data
+please check the document.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:40:35
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img27.png
+Actual output data
+all the best for exam
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:40:43
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img28.png
+Actual output data
+keep working hard.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:40:52
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img29.png
+Actual output data
+The extracted text from the image is: "stay positive always".
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:41:00
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img30.png
+Actual output data
+have a great day.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:41:08
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img31.png
+Actual output data
+Hi how are you, Hope you are doing fine.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:41:16
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img32.png
+Actual output data
+Good evening.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:41:24
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img33.png
+Actual output data
+Innovation hub.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:41:32
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img34.png
+Actual output data
+State Bank of India.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:41:40
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img35.png
+Actual output data
+Beautiful day.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:43:59
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img1.png
+Actual output data
+hi how are you
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:44:06
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img2.png
+Actual output data
+hope you are doing good.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:44:13
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img3.png
+Actual output data
+it was nice meeting you.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:44:21
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img4.png
+Actual output data
+let's catch up soon.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:44:28
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img5.png
+Actual output data
+please call me back.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:44:35
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img6.png
+Actual output data
+did you finish the work.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:44:43
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img7.png
+Actual output data
+I will send the details.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:44:50
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img8.png
+Actual output data
+thanks for your help.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:44:57
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img9.png
+Actual output data
+see you tomorrow.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:45:05
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img10.png
+Actual output data
+good morning have a nice day.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:45:12
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img11.png
+Actual output data
+take care of yourself.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:45:20
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img12.png
+Actual output data
+what are you doing.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:45:27
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img13.png
+Actual output data
+let me know your thoughts.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:45:35
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img14.png
+Actual output data
+we will plan something.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:45:42
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img15.png
+Actual output data
+happy birthday to you.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:45:49
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img16.png
+Actual output data
+Congratulations on your success.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:45:57
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img17.png
+Actual output data
+i miss our old days.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:46:04
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img18.png
+Actual output data
+this is just a reminder.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:46:12
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img19.png
+Actual output data
+please don't forget this.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:46:19
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img20.png
+Actual output data
+can we reschedule the meeting.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:46:27
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img21.png
+Actual output data
+I will reach by 5 pm.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:46:34
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img22.png
+Actual output data
+waiting for your reply.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:46:42
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img23.png
+Actual output data
+this looks really good.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:46:49
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img24.png
+Actual output data
+we can meet later.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:46:56
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img25.png
+Actual output data
+I might be late today.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:47:04
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img26.png
+Actual output data
+please check the document.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:47:11
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img27.png
+Actual output data
+all the best for exam.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:47:19
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img28.png
+Actual output data
+keep working hard.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:47:26
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img29.png
+Actual output data
+stay positive always.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:47:34
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img30.png
+Actual output data
+have a great day.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:47:41
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img31.png
+Actual output data
+Hi how are you, Hope you are doing fine.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:47:49
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img32.png
+Actual output data
+Good evening.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:47:56
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img33.png
+Actual output data
+Innovation hub.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:48:04
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img34.png
+Actual output data
+State Bank of India.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:48:11
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img35.png
+Actual output data
+Beautiful day.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:54:16
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/account-opening/page1
+File Name: img1.jpeg
+Actual output data
+{ 
+  "top_section": { 
+    "branch_name": "", 
+    "branch_code": "", 
+    "date": "12-08-2001", 
+    "customer_id": "", 
+    "account_number": "", 
+    "account_type": "", 
+    "ckyc_number": "", 
+    "pf_number": "" 
+  }, 
+  "personal_section": { 
+    "first_name": "PRIYA", 
+    "middle_name": "", 
+    "last_name": "PRIKMAR", 
+    "dob": "", 
+    "gender": "Female", 
+    "marital_status": "Unmarried", 
+    "parent_or_spouse_name": "", 
+    "guardian_name": "THE QUICK BROWN FOX", 
+    "relationship_with_guardian": "", 
+    "nationality": "Indian", 
+    "citizenship": "Indian", 
+    "occupation_type": "", 
+    "employee_id": "", 
+    "place_of_posting": "Navi Mumbai", 
+    "organization_name": "SBI Bank", 
+    "nature_of_business": "Hindu", 
+    "designation": "Manager", 
+    "annual_income": "2,12,305", 
+    "net_worth": "1,00,000", 
+    "source_of_funds": "Salary", 
+    "religion": "Hindu", 
+    "category": "General", 
+    "person_with_disability": "No", 
+    "education": "10th Class Passed", 
+    "politically_exposed": "No", 
+    "pan_number": "APPPM2324" 
+  }, 
+  "contact_section": { 
+    "mobile_number": "91-9541382889", 
+    "email": "SBIofFICE@GMAIL.COM", 
+    "std_tel_off": "", 
+    "tel_res": "" 
+  } 
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T12:59:30
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: Handwritten Text 1.png
+Actual output data
+The extracted text from the image is:
+
+OpenCV is the huge open-source library for learning, and image processing and now it plays which is very important in today's systems. By using it, you can identify objects, faces, or even handwriting libraries, such as Numpy, Python, and structure for analysis. To identify image space and perform mathematical operations, it is necessary for the computer vision, machine learning, and machine learning. It is a major role in real-time operation, and it can process images and videos of a human. When it is integrated with various features, it can process the OpenCV array and its various features we use on these features.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T13:01:00
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: Handwritten Text 1.png
+Actual output data
+OpenCV is the huge open-source library for learning, and image processing and now it plays which is very important in today's systems. By using it, you can identify objects, faces, or even handwriting libraries, such as Numpy, Python, and structure for analysis. To identify image space and perform mathematical operations, you need to use it for the computer vision, machine learning, and machine learning. It is a major role in real-time operation, and it can process images and videos of a human. When it is integrated with various features, it can process the OpenCV array and its various features we use on these features.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:13:06
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img1.png
+Actual output data
+hi how are you
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:13:14
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img2.png
+Actual output data
+The extracted text from the image is: "hope you are doing good".
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:13:21
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img3.png
+Actual output data
+it was nice meeting you.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:13:28
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img4.png
+Actual output data
+let's catch up soon.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:13:35
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img5.png
+Actual output data
+please call me back.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:13:42
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img6.png
+Actual output data
+did you finish the work.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:13:49
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img7.png
+Actual output data
+i will send the details.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:13:56
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img8.png
+Actual output data
+thanks for your help.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:14:03
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img9.png
+Actual output data
+see you tomorrow.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:14:10
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img10.png
+Actual output data
+good morning have a nice day
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:14:17
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img11.png
+Actual output data
+take care of yourself.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:14:24
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img12.png
+Actual output data
+what are you doing.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:14:31
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img13.png
+Actual output data
+let me know your thoughts.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:14:38
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img14.png
+Actual output data
+we will plan something.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:14:45
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img15.png
+Actual output data
+happy birthday to you.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:14:52
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img16.png
+Actual output data
+Congratulations on your success.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:15:00
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img17.png
+Actual output data
+i miss our old days.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:15:07
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img18.png
+Actual output data
+this is just a reminder.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:15:14
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img19.png
+Actual output data
+please don't forget this.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:15:21
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img20.png
+Actual output data
+can we reschedule the meeting.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:15:28
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img21.png
+Actual output data
+I will reach by 5 pm.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:15:36
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img22.png
+Actual output data
+waiting for your reply.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:15:43
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img23.png
+Actual output data
+this looks really good.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:15:50
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img24.png
+Actual output data
+we can meet later.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:15:57
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img25.png
+Actual output data
+I might be late today.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:16:04
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img26.png
+Actual output data
+please check the document.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:16:11
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img27.png
+Actual output data
+all the best for exam
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:16:18
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img28.png
+Actual output data
+keep working hard.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:16:25
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img29.png
+Actual output data
+stay positive always.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:16:32
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img30.png
+Actual output data
+have a great day.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:16:40
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img31.png
+Actual output data
+Hi how are you, Hope you are doing fine.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:16:47
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img32.png
+Actual output data
+Good evening.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:16:54
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img33.png
+Actual output data
+Innovation hub.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:17:01
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img34.png
+Actual output data
+State Bank of India.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:17:08
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img35.png
+Actual output data
+Beautiful day.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:23:32
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/aadhaar
+File Name: Sadase Hanief Aadhar.jpeg
+Actual output data
+{ "full_name": "Sadase Hanief", "date_of_birth": "01/07/1996", "gender": "FEMALE", "aadhaar_number": "802576290678", "address": "Mohd Hanif, Village Chandak Teh Haveli Poonch, Chandak, Punch, Jammu and Kashmir - 185101" }
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:36:54
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: hindi1.jpg
+Actual output data
+The extracted text from the image is:
+
+मैं बचपन से हिंदी और पंजाबी लिखता आ रहा हूँ और मुझे हमेशा से देवनागरी लिखने में बहुत मना आता है। स्कूल में मेरी लिखावट बहुत खराब होती थी, जिसकी वजह से मेरी हिंदी अध्यापिका मुझे हद से ज्यादा डाँटती थी। बड़े होकर मुझे पता चला कि मुझे भाषाएं कितनी अच्छी लगती हैं। इसलिए अब मैं विदेशी लोगों को हिंदी और पंजाबी सिखाता हूँ। मुझे अपनी नौकरी बहुत पसद है!
+
+Note: The text is in Hindi and has not been translated.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:38:27
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: hindi1.jpg
+Actual output data
+The extracted text from the image is:
+
+मैं बचपन से हिंदी और पंजाबी लिखता आ रहा हूँ और मुझे हमेशा से देवनागरी लिखने में बहुत मुश्किल आता है। स्कूल में मेरी लिखावट बहुत खराब होती थी, जिसकी वजह से मेरी हिंदी अध्यापिका मुझे हद से ज्यादा डांटती थी। बडे होकर मुझे पता चला कि मुझे भाषाएं कितनी अच्छी लगती हैं। इसलिए अब मैं विदेशी लोगों को हिंदी और पंजाबी सिखाता हूँ। मुझे अपनी नौकरी बहुत पसद है!
+
+Note: The text is in Hindi and has not been translated or modified in any way. The output exactly matches the visible text in the image.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:39:35
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: hindi1.jpg
+Actual output data
+The extracted text from the image is:
+
+मैं बचपन से हिन्दी और पंजाबी लिखता आ रहा हूँ और मुझे हमेशा से देवनागरी लिखने में बहुत मज़ा आता है। स्कूल में मेरी लिखावट बहुत खराब होती थी, जिस की वजह से मेरी हिन्दी अध्यापिका मुझे हद से ज्यादा डाँटती थी। बाद में मैंने हो कर मुझे पता चला कि मुझे भाषाें कितनी अच्छी लगती है इसलिए अब मैं विदेशी लोगों को हिन्दी और पंजाबी सिखाता हूँ। मुझे अपनी नौकरी बहुत पसद है!
+
+Note: The text is in Hindi and has not been translated or modified in any way. The output exactly matches the visible text in the image.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:40:27
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: hindi1.jpg
+Actual output data
+The extracted text from the image is:
+
+मैं बचपन से हिन्दी और पंजाबी लिखता आ रहा हूँ और मुझे हमेशा से देवनागरी लिखने में बहुत मज़ा आता है। स्कूल में मेरी लिखावट बहुत खराब होती थी, जिस की वजह से मेरी हिन्दी अध्यापिका मुझे हद से ज्यादा डाँटती थी। बाद में मैंने हो कर मुझे पिता चला कि मुझे भाषाें कितनी अच्छी लगती है इसलिए अब मैं विदेशी लोगों को हिन्दी और पंजाबी सिखाता हूँ | मुझे अपनी नौकरी बहुत पासद है !
+
+
+Note: The text is in Hindi language.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:41:36
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: tamil1.jpg
+Actual output data
+The extracted text from the image is:
+
+மண்ணுள் வினைரும் மண்ணிட்டு ஆரம்
+பொன்செய் தொல்லரும் நன்கலம் தருந்து
+துன்ன காரரும் தொலின் துன்னரும்
+கிழபின்ம் திடையும் தொடுப்பல பெருச்சப்முதுகின் செய்வினைப் பால்கெடு மாத்சன் - இலாம்பேவுட்டன்.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:44:14
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: tamil2.jpg
+Actual output data
+The extracted text from the image is:
+
+இக்குற்றம் சாட்டப்பட்டது முன்பட்டது அதன் நாட்டுக்கட்டார் உட்பட்டுச்சேதம் சேதம் சேதம் சேதம் சேதம் சேதம் சேதம் சேதம் சேதம் சேதம் சேதம் சேதம் சேதம் சேதம் சேதம் சேதம் சேதம் சேதம் சேதம் சேதம் சேதம் சேதம் சேதம் சேதம் சேதம் சேதம் சேதம் சேதம் சேதம் சேதம் சேதம் சேதம் சேதம் சேதம் சேதம் சே
+சேதம்
+சே
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+ச
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:45:47
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: tamil2.jpg
+Actual output data
+
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:47:12
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: hindi1.jpg
+Actual output data
+
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:48:24
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/aadhaar
+File Name: Ishtiq Hussain Aadhar.jpeg
+Actual output data
+
+{"full_name": "Ishtiq Hussain", "date_of_birth": "19/05/1997", "gender": "MALE", "aadhaar_number": "6584 4648 4889", "address": "S/O: Din Mohd, House Number 56, Dalan, Punch, Jammu and Kashmir - 185101"}
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:49:51
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: hindi1.jpg
+Actual output data
+[MARK]
+[MODE=
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:50:25
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: Handwritten Text 2.jpg
+Actual output data
+We Start With Good
+Because all businesses should
+be doing something good.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:50:51
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: Handwritten Text 1.png
+Actual output data
+OpenCV is the huge open-source library for the computer vision, machine learning, and
+image processing and now it plays a major role in real-time operation
+which is very
+important in todays systems. By using it, one can process images and videos to
+identify
+objects, faces, or even handwriting of a human. When it integrated with various
+libraries, such as Numpy, python is capable of processing the OpenCV array
+structure
+for analysis. To Identify image pattern and its various features we use vector
+space and
+perform mathematical operations on these features.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T15:51:33
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: tamil2.jpg
+Actual output data
+இது நீங்கள் பயன்படுத்துகிறது...
+இது நீங்கள் பயன்படுத்துகிறது!
+இது நீங்கள் பயன்படுத்துகிறது...
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T16:02:32
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: malayalam.png
+Actual output data
+The image presents a handwritten text in a foreign language, likely Malayalam, which is a Dravidian language spoken primarily in the Indian state of Kerala. The text appears to be a passage from a book or article, with the handwriting being clear and legible.
+
+Here are the details of the image:
+
+* **Handwriting Style**: The handwriting is cursive, with the letters flowing into each other in a smooth, connected manner.
+* **Language**: The language used is Malayalam, which is a Dravidian language spoken primarily in the Indian state of Kerala.
+* **Content**: The text appears to be a passage from a book or article, with the handwriting being clear and legible.
+* **Background**: The background of the image is a light brown color, which provides a neutral and clean backdrop for the text.
+
+Overall, the image presents a clear and legible handwritten text in Malayalam, with a cursive style and a light brown background. The text appears to be a passage from a book or article, and the handwriting is well-written and easy to read.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T16:04:48
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: malayalam.png
+Actual output data
+The extracted text from the image is:
+
+വിന്യോഗം കാട്ടുന്ന വേലി കാട്ടിലും നാട്ടിലും നാട്ടുനാട്ടുകളും വിന്യോഗം കാട്ടുന്നു. അവയുടെ വിന്യോഗം കാട്ടുന്നു. നാട്ടുനാട്ടുകളുടെ വിന്യോഗം കാട്ടുന്നു. നാട്ടുനാട്ടുകളുടെ വിന്യോഗം കാട്ടുന്നു. നാട്ടുനാട്ടുകളുടെ വിന്യോഗം കാട്ടുന്നു. നാട്ടുനാട്ടുകളുടെ വിന്യോഗം കാട്ടുന്നു. നാട്ടുനാട്ടുകളുടെ വിന്യോഗം കാട്ടുന്നു. നാട്ടുനാട്ടുകളുടെ വിന്യോഗം കാട്ടുന്നു. നാട്ടുനാട്ടുകളുടെ വിന്യോഗം കാട്ടുന്നു. നാട്ടുനാട്ടുകളുടെ വിന്യോഗം കാട്ടുന്നു. നാട്ടുനാട്ടുകളുടെ വിന്യോഗം കാട്ടുന്നു. നാട്ടുനാട്ടുകളുടെ വിന്യോഗം കാട്ടുന്നു. നാട്ടുനാട്ടുകളുടെ വിന്യോഗം കാട്ടുന്നു. നാട്ടുനാട്ടുകളുടെ വിന്യോഗം കാട്ടുന്നു. നാട്ടുനാട്ടുകളുടെ വിന്യോഗം കാട്ടുന്നു. നാട്ടുനാട്ടുകളുടെ വിന്യോഗം കാട്ടുന്നു. നാട്ടുനാട്ടുകളുടെ വിന്യോഗം കാട്ടുന്നു. നാട്ടുനാട്ടുകളുടെ വിന്യോഗം കാട്ടുന്നു. നാട്ടുനാട്ടുകളുടെ വിന്യോഗം കാട്ടുന്നു. നാട്ടുനാട്ടുകളുടെ വിന്യോഗം കാട്ടുന്നു. നാട്ടുനാട്ടുകളുടെ വിന്യോഗം കാട്ടുന്നു. നാട്ടുനാട്ടുകളുടെ വിന്യോഗം കാട്ടുന്നു. നാട്ടുനാട്ടുകലീയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയിയി
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T16:05:49
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: hindi1.jpg
+Actual output data
+The raw extracted text from the image is:
+
+मैं बचपन से हिन्दी और पंजाबी लिखता आ र हूँ और मुझे हमेशा से देवनागरी लिखने में बहुत म ना आता है | स्कूल में मेरी लिखावत बहुत खराब होती थी , जिस की वज ह से मेरी हिन्दी अध्यापिका मुझे हद से ज्यादा ड़ टी थी | ब ड हो क र मुझे प ता च ल की मुझे भ षा एं कित नी अच्ची लगती है | इसली एं अब मैं विदेशी लोगों को हिन्दी और पंजाबी सिखा है | मुझे अपनी नौ क री बहु प स द ह !
+
+
+Note: The text is in Hindi and has not been translated or explained. The output is exactly as it appears in the image.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T16:11:40
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: hindi2.jpg
+Actual output data
+The extracted text from the image is:
+
+1. अपना काम समय से करो
+2. दूसरों की मदद करो
+3. हमें किताबों का सम्मान चाहिए
+
+This text appears to be a list of three items, written in Hindi. The first item advises working on time, the second item suggests helping others, and the third item emphasizes the importance of respecting books.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T16:55:03
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img1.png
+Actual output data
+hi how are you
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T16:55:11
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img2.png
+Actual output data
+The extracted text from the image is: "hope you are doing good".
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T16:55:18
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img3.png
+Actual output data
+It was nice meeting you.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T16:55:26
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img4.png
+Actual output data
+let's catch up soon.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T16:55:34
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img5.png
+Actual output data
+please call me back.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T16:55:41
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img6.png
+Actual output data
+did you finish the work.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T16:55:49
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img7.png
+Actual output data
+I will send the details.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T16:55:57
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img8.png
+Actual output data
+thanks for your help.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T16:56:05
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img9.png
+Actual output data
+see you tomorrow.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T16:56:12
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img10.png
+Actual output data
+good morning have a nice day
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T16:56:20
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img11.png
+Actual output data
+take care of yourself.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T16:56:28
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img12.png
+Actual output data
+what are you doing.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T16:56:36
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img13.png
+Actual output data
+let me know your thoughts.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T16:56:44
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img14.png
+Actual output data
+we will plan something.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T16:56:52
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img15.png
+Actual output data
+happy birthday to you.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T16:57:00
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img16.png
+Actual output data
+Congratulations on your success.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T16:57:08
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img17.png
+Actual output data
+i miss our old days.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T16:57:16
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img18.png
+Actual output data
+this is just a reminder.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T16:57:24
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img19.png
+Actual output data
+please don't forget this.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T16:57:31
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img20.png
+Actual output data
+can we reschedule the meeting.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T16:57:39
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img21.png
+Actual output data
+I will reach by 5 pm.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T16:57:47
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img22.png
+Actual output data
+waiting for your reply.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T16:57:55
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img23.png
+Actual output data
+this looks really good.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T16:58:03
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img24.png
+Actual output data
+we can meet later.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T16:58:11
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img25.png
+Actual output data
+I might be late today.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T16:58:19
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img26.png
+Actual output data
+please check the document.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T16:58:27
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img27.png
+Actual output data
+all the best for exam
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T16:58:34
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img28.png
+Actual output data
+keep working hard.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T16:58:42
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img29.png
+Actual output data
+stay positive always.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T16:58:50
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img30.png
+Actual output data
+have a great day.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T16:58:58
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img31.png
+Actual output data
+Hi how are you, Hope you are doing fine.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T16:59:06
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img32.png
+Actual output data
+Good evening.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T16:59:14
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img33.png
+Actual output data
+Innovation hub.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T16:59:22
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img34.png
+Actual output data
+State Bank of India.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-27T16:59:30
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: img35.png
+Actual output data
+Beautiful day.
+=============================
+
+
+
+
+
+Date and Time: 2026-03-30T12:04:21
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: Pan1.jpeg
+Actual output data
+{ "full_name": "MANJIRI VITTHALRAO GAWANDE", "pan_number": "BQOPG7155B", "date_of_birth": "20/09/1987", "father_name": "VITTHALRAO GAWANDE" }
+=============================
+
+
+
+
+
+Date and Time: 2026-03-30T12:18:07
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: Pan1.jpeg
+Actual output data
+{ "full_name": "MANJIRI VITTHALRAO GAWANDE", "pan_number": "BQOPG7155B", "date_of_birth": "20/09/1987", "father_name": "VITTHALRAO GAWANDE" }
+=============================
+
+
+
+
+
+Date and Time: 2026-03-30T12:29:09
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: Pan3.jpeg
+Actual output data
+{ "full_name": "KRISHNA SINGH YADAV", "pan_number": "BFSPY0820C", "date_of_birth": "10/04/2003", "father_name": "JAINATH SINGH YADAV" }
+=============================
+
+
+
+
+
+Date and Time: 2026-03-30T12:29:36
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: Pan3.jpeg
+Actual output data
+{ "full_name": "KRISHNA SINGH YADAV", "pan_number": "BFSPY0820C", "date_of_birth": "10/04/2003", "father_name": "JAINATH SINGH YADAV" }
+=============================
+
+
+
+
+
+Date and Time: 2026-03-30T12:35:17
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: Pan5.png
+Actual output data
+{ "full_name": "ANJALI PATIL", "pan_number": "MCVPG07381", "date_of_birth": "17/02/1995", "father_name": "ANIL PATIL" }
+=============================
+
+
+
+
+
+Date and Time: 2026-04-01T11:13:59
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: Pan4.png
+Actual output data
+{ "full_name": "AMAN GUPTA", "pan_number": "AHTPG2345D", "date_of_birth": "09/09/1994", "father_name": "RAKESH GUPTA" }
+=============================
+
+
+
+
+
+Date and Time: 2026-04-01T11:38:07
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: Pan3.jpeg
+Actual output data
+{ "full_name": "KRISHNA SINGH YADAV", "pan_number": "BFSPY0820C", "date_of_birth": "10/04/2003", "father_name": "JAINATH SINGH YADAV" }
+=============================
+
+
+
+
+
+Date and Time: 2026-04-01T14:35:00
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: Pan3.jpeg
+Actual output data
+{ "full_name": "KRISHNA SINGH YADAV", "pan_number": "BFSPY0820C", "date_of_birth": "10/04/2003", "father_name": "JAINATH SINGH YADAV" }
+=============================
+
+
+
+
+
+Date and Time: 2026-04-01T14:39:37
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: Pan3.jpeg
+Actual output data
+{ "full_name": "KRISHNA SINGH YADAV", "pan_number": "BFSPY0820C", "date_of_birth": "10/04/2003", "father_name": "JAINATH SINGH YADAV" }
+=============================
+
+
+
+
+
+Date and Time: 2026-04-01T14:40:37
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: Pan3.jpeg
+Actual output data
+{ "full_name": "KRISHNA SINGH YADAV", "pan_number": "BFSPY0820C", "date_of_birth": "10/04/2003", "father_name": "JAINATH SINGH YADAV" }
+=============================
+
+
+
+
+
+Date and Time: 2026-04-01T14:42:28
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: Pan3.jpeg
+Actual output data
+{ "full_name": "KRISHNA SINGH YADAV", "pan_number": "BFSPY0820C", "date_of_birth": "10/04/2003", "father_name": "JAINATH SINGH YADAV" }
+=============================
+
+
+
+
+
+Date and Time: 2026-04-01T14:42:41
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: Pan3.jpeg
+Actual output data
+{
+  "full_name": "KRISHNA SINGH YADAV",
+  "pan_number": "BFSPY0820C",
+  "date_of_birth": "10/04/2003",
+  "father_name": "JAINATH SINGH YADAV"
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-01T14:44:23
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: Pan3.jpeg
+Actual output data
+{
+  "full_name": "KRISHNA SINGH YADAV",
+  "pan_number": "BFSPY0820C",
+  "date_of_birth": "10/04/2003",
+  "father_name": "JAINATH SINGH YADAV"
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-01T14:45:46
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: Pan1.jpeg
+Actual output data
+{
+  "full_name": "MANJIRI VITTHALRAO GAWANDE",
+  "pan_number": "BQOPG7155B",
+  "date_of_birth": "20/09/1987",
+  "father_name": "VITTHALRAO GAWANDE"
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-01T14:46:31
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/aadhaar
+File Name: aadhar 2.JPG
+Actual output data
+{ "full_name": "Manjiri Vitthalrao Gawande", "date_of_birth": "20/09/1987", "gender": "FEMALE", "aadhaar_number": "9402 7081 1640", "address": "" }
+=============================
+
+
+
+
+
+Date and Time: 2026-04-01T14:47:20
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: Handwritten Text 1.png
+Actual output data
+OpenCV is the huge open-source library for learning, and image processing and now it plays which is very important in today's systems. By using it, you can identify objects, faces, or even handwriting libraries, such as Numpy, Python, and structure for analysis. To identify image space and perform mathematical operations, you need a library for the computer vision, machine learning, and machine learning. It can process images and videos of a human. When it is integrated with various features, it can process the OpenCV array and its features we use on these features.
+=============================
+
+
+
+
+
+Date and Time: 2026-04-01T14:47:49
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: Handwritten Text 3.jpeg
+Actual output data
+This is a handwritten example
+Write as good as you can.
+=============================
+
+
+
+
+
+Date and Time: 2026-04-01T14:48:42
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/account-opening/page1
+File Name: img1.jpeg
+Actual output data
+{
+  "top_section": {
+    "branch_name": "BELAPUR",
+    "branch_code": "03660",
+    "date": "12-08-2001",
+    "customer_id": "1088699",
+    "account_number": "123456789",
+    "account_type": "Normal",
+    "ckyc_number": "1234567",
+    "pf_number": "1122345"
+  },
+  "personal_section": {
+    "first_name": "PRIYA",
+    "last_name": "PRAKHAR",
+    "dob": "01-12-2004",
+    "gender": "Male",
+    "marital_status": "Unmarried",
+    "parent_or_spouse_name": "THE QUICK BROWN FOX",
+    "guardian_name": "IMTIAZ HUSSAIN",
+    "relationship_with_guardian": "FRIEND",
+    "nationality": "Indian",
+    "citizenship": "Indian",
+    "occupation_type": "State Govt.",
+    "employee_id": "20261",
+    "place_of_posting": "NAYI MUMBAI",
+    "organization_name": "SBI",
+    "nature_of_business": "BANKER",
+    "designation": "Manager",
+    "annual_income": "2123050",
+    "net_worth": "100000",
+    "source_of_funds": "HINDU",
+    "religion": "HINDU",
+    "category": "General",
+    "person_with_disability": "No",
+    "education": "10th Class Passed",
+    "politically_exposed": "No",
+    "pan_number": "APNPH2324"
+  },
+  "contact_section": {
+    "mobile_number": "91 9541382889",
+    "email": "SBI@FICEDGMAIL.COM",
+    "std_tel_off": "",
+    "tel_res": ""
+  }
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-01T14:50:11
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/account-opening/page1
+File Name: account_form_page1.jpg
+Actual output data
+{
+  "top_section": {
+    "branch_name": "BELAPUR",
+    "branch_code": "03660",
+    "date": "24-03-2023",
+    "customer_id": "1088987",
+    "account_number": "123456789012",
+    "account_type": "Normal",
+    "ckyc_number": "",
+    "pf_number": ""
+  },
+  "personal_section": {
+    "first_name": "NITIN",
+    "middle_name": "YESUDAS",
+    "last_name": "YESUDAS",
+    "dob": "14-11-2004",
+    "gender": "Male",
+    "marital_status": "Married",
+    "parent_or_spouse_name": "YESUDAS",
+    "guardian_name": "YESUDAS",
+    "relationship_with_guardian": "Father",
+    "nationality": "Indian",
+    "citizenship": "Indian",
+    "occupation_type": "Others",
+    "employee_id": "",
+    "place_of_posting": "NAVI MUMBAI",
+    "organization_name": "SBT",
+    "nature_of_business": "BANKING",
+    "designations": "Engineer",
+    "annual_income": "1000000",
+    "net_worth": "1000000",
+    "source_of_funds": "Salary",
+    "religion": "Hindu",
+    "category": "General",
+    "person_with_disability": "No",
+    "education": "10th Class Passed",
+    "politically_exposed": "No",
+    "pan_number": "BKPPY3202W"
+  },
+  "contact_section": {
+    "mobile_number": "91 9498060036",
+    "email": "NATHANV@GMAIL.COM",
+    "std_tel_off": "",
+    "tel_res": ""
+  }
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-01T14:53:29
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: hindi1.jpg
+Actual output data
+मैं बचपन से हिन्दी और पंजाबी लिखता आ र हूँ और मुझे हमेशा से देवनागरी लिखने में बहुत माना आता है। स्कूल में मेरी लिखावत बहुत खराब होती थी, जिसकी वजह से मेरी हिन्दी अध्यापिका मुझे हद से ज्यादा डॉटी थी। बडे हो कर मुझे पता च ला कि मुझे भाषाें कितनी अच्छी लगती है | इसलिए अब मैं विदेशी लोगों को हिन्दी और पंजाबी सिखाता है | मुझे अपनी नौकरी बहुत प स द है ! 
+
+Note: The output is exactly as it appears in the image, without any modifications or additions.
+=============================
+
+
+
+
+
+Date and Time: 2026-04-01T14:55:40
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: image4.jpg
+Actual output data
+{
+  "full_name": "BIJU DAKIT",
+  "pan_number": "DWWP B5132B",
+  "date_of_birth": "29/05/1998",
+  "father_name": "KANKAI BAKTI"
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-01T15:09:34
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/account-opening/page1
+File Name: account_form_page1.jpg
+Actual output data
+{ 
+  "top_section": { 
+    "branch_name": "BELAPUR", 
+    "branch_code": "03660", 
+    "date": "24-03-2026", 
+    "customer_id": "1088987", 
+    "account_number": "123456789012", 
+    "account_type": "Normal", 
+    "ckyc_number": "", 
+    "pf_number": "1088987" 
+  }, 
+  "personal_section": { 
+    "first_name": "NITHIN", 
+    "middle_name": "YESUDAS", 
+    "last_name": "", 
+    "dob": "", 
+    "gender": "Male", 
+    "marital_status": "Married", 
+    "parent_or_spouse_name": "YESUDAS", 
+    "guardian_name": "", 
+    "relationship_with_guardian": "", 
+    "nationality": "Indian", 
+    "citizenship": "Indian", 
+    "occupation_type": "Others - Eng. / Architect / Tech. Consultant", 
+    "employee_id": "", 
+    "place_of_posting": "Navi Mumbai", 
+    "organization_name": "SBI", 
+    "nature_of_business": "Banking", 
+    "designation": "Engineer", 
+    "annual_income": "1000000", 
+    "net_worth": "1000000", 
+    "source_of_funds": "Salary", 
+    "religion": "Hindu", 
+    "category": "General", 
+    "person_with_disability": "No", 
+    "education": "10th Class Passed", 
+    "politically_exposed": "No", 
+    "pan_number": "BKPPY3202W" 
+  }, 
+  "contact_section": { 
+    "mobile_number": "91 9498060036", 
+    "email": "NATHANY@GMAIL.COM", 
+    "std_tel_off": "", 
+    "tel_res": "" 
+  } 
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-01T15:21:33
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: image4.jpg
+Actual output data
+{ "full_name": "BIJU DAKIT", "pan_number": "DWWPB5132B", "date_of_birth": "29/05/1998", "father_name": "KANKAI BAKTI" }
+=============================
+
+
+
+
+
+Date and Time: 2026-04-01T15:23:21
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: hindi2.jpg
+Actual output data
+The extracted text from the image is:
+
+1. अपना काम समय से करो
+2. दूसरों की मदद करो
+3. हमें किताबों का सम्मान चाहिए
+
+This text is in Hindi.
+=============================
+
+
+
+
+
+Date and Time: 2026-04-01T15:58:05
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: pan_card_1.png
+Actual output data
+{ "full_name": "ANIL GUPTA", "pan_number": "AVIP27893Q", "date_of_birth": "15/08/1986", "father_name": "RAM KISHORE GUPTA" }
+=============================
+
+
+
+
+
+Date and Time: 2026-04-01T16:06:47
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: pan_card_4.png
+Actual output data
+{ "full_name": "PRIYA SINGH", "pan_number": "BBNPS1243R", "date_of_birth": "15/09/1995", "father_name": "AKASH SINGH" }
+=============================
+
+
+
+
+
+Date and Time: 2026-04-01T16:15:56
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/aadhaar
+File Name: aadhaar.png
+Actual output data
+{ "full_name": "", "date_of_birth": "", "gender": "", "aadhaar_number": "397788000234", "address": "" }
+=============================
+
+
+
+
+
+Date and Time: 2026-04-01T16:22:46
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/aadhaar
+File Name: 1.jpg
+Actual output data
+{ "full_name": "AMAL MANOJ", "date_of_birth": "30/12/2003", "gender": "MALE", "aadhaar_number": "246210479917", "address": "KANDATHINKARAYIL THODUPUZHA EAST P O KARIKKODE (PART) IDUKKI KERALA - 685585" }
+=============================
+
+
+
+
+
+Date and Time: 2026-04-01T16:24:22
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/account-opening/page1
+File Name: account_form_page1.jpg
+Actual output data
+{ 
+  "top_section": { 
+    "branch_name": "", 
+    "branch_code": "03660", 
+    "date": "24-03-2023", 
+    "customer_id": "", 
+    "account_number": "123456789012", 
+    "account_type": "Normal", 
+    "ckyc_number": "", 
+    "pf_number": "1088987" 
+  }, 
+  "personal_section": { 
+    "first_name": "NITHIN", 
+    "middle_name": "YESUDAS", 
+    "last_name": "", 
+    "dob": "", 
+    "gender": "Male", 
+    "marital_status": "Married", 
+    "parent_or_spouse_name": "", 
+    "guardian_name": "", 
+    "relationship_with_guardian": "", 
+    "nationality": "Indian", 
+    "citizenship": "Indian", 
+    "occupation_type": "Others", 
+    "employee_id": "", 
+    "place_of_posting": "NAVI MUMBAI", 
+    "organization_name": "SBT BANKING", 
+    "nature_of_business": "Engineering", 
+    "designation": "Engineer", 
+    "annual_income": "1000000", 
+    "net_worth": "1000000", 
+    "source_of_funds": "Salary", 
+    "religion": "Hindu", 
+    "category": "General", 
+    "person_with_disability": "No", 
+    "education": "10th Class Passed", 
+    "politically_exposed": "No", 
+    "pan_number": "BKPPY3202W" 
+  }, 
+  "contact_section": { 
+    "mobile_number": "91 9498060036", 
+    "email": "NATHANIVAGATH.COM", 
+    "std_tel_off": "", 
+    "tel_res": "" 
+  } 
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-01T19:13:39
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: Pan1.jpeg
+Actual output data
+{ "full_name": "MANJIRI VITTHALRAO GAWANDE", "pan_number": "BQOPG7155B", "date_of_birth": "20/09/1987", "father_name": "VITTHALRAO GAWANDE" }
+=============================
+
+
+
+
+
+Date and Time: 2026-04-01T19:14:13
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: Pan3.jpeg
+Actual output data
+{
+  "full_name": "KRISHNA SINGH YADAV",
+  "pan_number": "BFSPY0820C",
+  "date_of_birth": "10/04/2003",
+  "father_name": "JAINATH SINGH YADAV"
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-01T19:15:10
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: Pan1.jpeg
+Actual output data
+{ "full_name": "MANJIRI VITTHALRAO GAWANDE", "pan_number": "BQOPG7155B", "date_of_birth": "20/09/1987", "father_name": "VITTHALRAO GAWANDE" }
+=============================
+
+
+
+
+
+Date and Time: 2026-04-02T11:25:01
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: Pan3.jpeg
+Actual output data
+{ "full_name": "KRISHNA SINGH YADAV", "pan_number": "BFSPY0820C", "date_of_birth": "10/04/2003", "father_name": "JAINATH SINGH YADAV" }
+=============================
+
+
+
+
+
+Date and Time: 2026-04-02T11:25:37
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/aadhaar
+File Name: 1.jpg
+Actual output data
+{ "full_name": "AMAL MANOJ", "date_of_birth": "30/12/2003", "gender": "MALE", "aadhaar_number": "246210479917", "address": "KANDATHINKARAYIL THODUPUZHA EAST P O KARIKKODE (PART) IDUKKI KERALA - 685585" }
+=============================
+
+
+
+
+
+Date and Time: 2026-04-02T11:27:00
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: Handwritten Text 3.jpeg
+Actual output data
+This is a handwritten example
+
+Write as good as you can.
+=============================
+
+
+
+
+
+Date and Time: 2026-04-02T11:29:26
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/account-opening/page1
+File Name: account_form_page1.jpg
+Actual output data
+{
+  "top_section": {
+    "branch_name": "BELAPUR",
+    "branch_code": "03660",
+    "date": "24-03-2023",
+    "customer_id": "1088987",
+    "account_number": "123456789012",
+    "account_type": "Normal",
+    "ckyc_number": "",
+    "pf_number": "1088987"
+  },
+  "personal_section": {
+    "first_name": "NITHIN",
+    "middle_name": "YESUDAS",
+    "last_name": "YESUDAS",
+    "dob": "14-11-2004",
+    "gender": "Male",
+    "marital_status": "Married",
+    "parent_or_spouse_name": "YESUDAS",
+    "guardian_name": "YESUDAS",
+    "relationship_with_guardian": "Father",
+    "nationality": "Indian",
+    "citizenship": "Indian",
+    "occupation_type": "Others",
+    "employee_id": "",
+    "place_of_posting": "NAVI MUMBAI",
+    "organization_name": "SBT",
+    "nature_of_business": "BANKING",
+    "designation": "ENGINEER",
+    "annual_income": "1000000",
+    "net_worth": "1000000",
+    "source_of_funds": "Salary",
+    "religion": "Hindu",
+    "category": "General",
+    "person_with_disability": "No",
+    "education": "10th Class Passed",
+    "politically_exposed": "No",
+    "pan_number": "BKPPY3202W"
+  },
+  "contact_section": {
+    "mobile_number": "91 9498060036",
+    "email": "NATHANIVAGATH.COM",
+    "std_tel_off": "",
+    "tel_res": ""
+  }
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-02T11:32:32
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/aadhaar
+File Name: aadhaar_card_2.png
+Actual output data
+{
+  "full_name": "SONA BIJU",
+  "date_of_birth": "21/06/2005",
+  "gender": "FEMALE",
+  "aadhaar_number": "4521 3896 2071",
+  "address": "Vayani PO, Bathery (Part), Wayanad, Kerala - 673576"
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-02T11:33:20
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: Pan1.jpeg
+Actual output data
+{
+  "full_name": "MANJIRI VITTHALRAO GAWANDE",
+  "pan_number": "BQOPG7155B",
+  "date_of_birth": "20/09/1987",
+  "father_name": "VITTHALRAO GAWANDE"
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-02T11:54:32
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: Handwritten 7.jpg
+Actual output data
+**Kaunsa Ghar?**
+
+*   Sab kehte hain ki thak jao, toh ghar chale jao, wahan sukoon mil jayega.
+*   Par kaunsa ghar?
+*   Woh ghar jahan har chhoti-badi baat ek ladayi ban jaati hai, jahan pyaar bhi awaaz utha kar milta hai aur chup rehna bhi galti hai.
+*   Woh ghar jahan subah uthte hi hawa bhaari lagti hai, jahan apne hi sikhaate hain ki rona kamzori hota hai aur chup rehna sahi.
+*   Sab kehte hain ghar wahi hota hai jahan apne kehte hain, par "kya karu" jab apne hi ajnabi lagne lagte hain?
+*   Main chahti hoon ki unki tarah na banu, par kabhi apni hi awaaz se darr jati hoon, kyunki usme unka lehaa sunai deti hai.
+*   Woh jazbaat chhupane ki aadat, wahi dard, wahi tareekha... jo maine kasam khaithi ki kabhi nahi dohreungi, sab mere andar reh gaye.
+*   Toh batao "kaunsa ghar?"
+*   Woh jahan log mere hain, ya woh jahan main khud apni hoon?
+*   Aur shayad hum sab ek aisa ghar dhoondh rahe hain jahan "bas hum aur sukoon"...
+*   Toh batao... "kaunsa ghar?"
+=============================
+
+
+
+
+
+Date and Time: 2026-04-02T11:56:46
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: Digital1.jpg
+Actual output data
+The extracted text from the image is:
+
+"डिजिटल इंडिया पर निबंध
+
+भारत सरकार द्वारा द्वारा भारत में प्रौद्योगिकी के उपयोग को बढ़ाने के लिए "डिजिटल इंडिया अभियान" किया गया था। यह अभियान प्रधान मंत्री श्री न मोदी ने 1 जुलाई 2015 को शुरू किया। इसका उद्देश्य भारत देश में अपने ऑनलाइन बुनियादी ढ़चे में सुधार करके सभी नागरिकों को इलेक्ट्रॉनिक रूप में सशक्त बनाना और सरकारी सेवाएं आसानी से उपलब्ध कराना है।
+
+"डिजिटल इंडिया अभियान" के मुख्य उद्देश्यों में से एक है भारतीय नागरिकों को ऑनली बैंकिंग, ऑनली ट्रैवल, ऑनली रजिस्ट्रेशन, ऑनली पेमेंट, ऑनली लॉजिस्टिक्स, ऑनली हैल्थकेयर, ऑनली एजुकेशन, ऑनली रोज़गार, ऑनली प्रिवेंटिव मेडिसिन, ऑनली लॉ-ट्रैवल, ऑनली रेस्पॉंस, ऑनली सोशल-हैविंग, ऑनली प्रिवेंटिव-ट्रैवल, ऑनली रेस्पॉंस-ट्रैवल, ऑनली सोश-हैव-ट्रैवल, ऑनली प्रिव-ट्र-ह-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट--ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट-ट
+=============================
+
+
+
+
+
+Date and Time: 2026-04-02T11:59:04
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: Handwritten3.jpg
+Actual output data
+The extracted text from the image is:
+
+"खुद वी बो
+दुनिया में
+- माह
+र लाव बिन
+अप
+दखन
+मा गै
+च
+"
+
+This text appears to be written in a language that is not English, and it is not possible to provide a translation or further context. The text appears to be a passage of text written in a language that is not English, and it is not possible to provide a translation or further context. The text appears to be a passage of text written in a language that is not English, and it is not possible to provide a translation or further context. The text appears to be a passage of text written in a language that is not English, and it is not possible to provide a translation or further context. The text appears to be a passage of text written in a language that is not English, and it is not possible to provide a translation or further context. The text appears to be a passage of text written in a language that is not English, and it is not possible to provide a translation or further context. The text appears to be a passage of text written in a language that is not English, and it is not possible to provide a translation or further context. The text appears to be a passage of text written in a language that is not English, and it is not possible to provide a translation or further context. The text appears to be a passage of text written in a language that is not English, and it is not possible to provide a translation or further context. The text appears to be a passage of text written in a language that is not English, and it is not possible to provide a translation or further context. The text appears to be a passage of text written in a language that is not English, and it is not possible to provide a translation or further context. The text appears to be a passage of
+The text appears to be a passage of
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The text appears to be a
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+
+=============================
+
+
+
+
+
+Date and Time: 2026-04-02T12:00:53
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: hindi1.jpg
+Actual output data
+मैं बचपन से हिन्दी और पंजाबी लिखता आ र हूँ और मुझे हमेशा से देवनागरी लिखने में बहु म ना आता है | स्कूल में मेरी लिखावत बहु खराब होती थी , जिस की वज ह स मेरी हिन्दी अध्यापिका मु ज़ हद से ज्यादा ड़ टी थी | ब ड हो क र मु ज़ प ता च ल की मु ज़ भा पा एं कित नी अच्ची लगती है | इस लि ए अब मैं विदेशी लोगों को हिन्दी और पंजाबी स ी                               
+=============================
+
+
+
+
+
+Date and Time: 2026-04-02T12:21:43
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: hindi2.jpg
+Actual output data
+The extracted text from the image is:
+
+1. अपना काम समय से करो
+2. दूसरों की मदद करो
+3. हमें किताबों का सम्मान चाहिए
+
+This text appears to be a list of three items, written in Hindi. The first item suggests being punctual, the second item suggests helping others, and the third item suggests showing respect for books.
+=============================
+
+
+
+
+
+Date and Time: 2026-04-02T12:38:50
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/account-opening/page1
+File Name: account_form_page2.jpg
+Actual output data
+{ 
+  "top_section": { 
+    "branch_name": "", 
+    "branch_code": "03660", 
+    "date": "24-03-2026", 
+    "customer_id": "1088987", 
+    "account_number": "123456789012", 
+    "account_type": "Normal", 
+    "ckyc_number": "", 
+    "pf_number": "1088987" 
+  }, 
+  "personal_section": { 
+    "first_name": "NITHIN", 
+    "middle_name": "YESUDAS", 
+    "last_name": "", 
+    "dob": "", 
+    "gender": "Male", 
+    "marital_status": "Married", 
+    "parent_or_spouse_name": "YESUDAS", 
+    "guardian_name": "", 
+    "relationship_with_guardian": "", 
+    "nationality": "Indian", 
+    "citizenship": "Indian", 
+    "occupation_type": "Others", 
+    "employee_id": "", 
+    "place_of_posting": "NAVI MUMBAI", 
+    "organization_name": "SBT BANKING", 
+    "nature_of_business": "Engineering", 
+    "designation": "Engineer", 
+    "annual_income": "1000000", 
+    "net_worth": "1000000", 
+    "source_of_funds": "Salary", 
+    "religion": "Hindu", 
+    "category": "General", 
+    "person_with_disability": "No", 
+    "education": "10th Class Passed", 
+    "politically_exposed": "No", 
+    "pan_number": "BKPPY3202W" 
+  }, 
+  "contact_section": { 
+    "mobile_number": "91 9498060036", 
+    "email": "NATHANY@GMAIL.COM", 
+    "std_tel_off": "", 
+    "tel_res": "" 
+  } 
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-02T12:46:14
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/account-opening/page1
+File Name: account_form_page2.jpg
+Actual output data
+{ 
+  "top_section": { 
+    "branch_name": "", 
+    "branch_code": "03660", 
+    "date": "24-03-2026", 
+    "customer_id": "1088987", 
+    "account_number": "123456789012", 
+    "account_type": "Normal", 
+    "ckyc_number": "", 
+    "pf_number": "1088987" 
+  }, 
+  "personal_section": { 
+    "first_name": "NITHIN", 
+    "middle_name": "YESUDAS", 
+    "last_name": "", 
+    "dob": "", 
+    "gender": "Male", 
+    "marital_status": "Married", 
+    "parent_or_spouse_name": "YESUDAS", 
+    "guardian_name": "", 
+    "relationship_with_guardian": "", 
+    "nationality": "Indian", 
+    "citizenship": "Indian", 
+    "occupation_type": "Others", 
+    "employee_id": "", 
+    "place_of_posting": "NAVI MUMBAI", 
+    "organization_name": "SBT BANKING", 
+    "nature_of_business": "Engineering", 
+    "designation": "Engineer", 
+    "annual_income": "1000000", 
+    "net_worth": "1000000", 
+    "source_of_funds": "Salary", 
+    "religion": "Hindu", 
+    "category": "General", 
+    "person_with_disability": "No", 
+    "education": "10th Class Passed", 
+    "politically_exposed": "No", 
+    "pan_number": "BKPPY3202W" 
+  }, 
+  "contact_section": { 
+    "mobile_number": "91 9498060036", 
+    "email": "NATHANY@GMAIL.COM", 
+    "std_tel_off": "", 
+    "tel_res": "" 
+  } 
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-04T12:35:06
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: marathi1.jpg
+Actual output data
+The extracted text from the image is:
+
+सोपी नज्हती; पण माझ्या अंगातल सुप्त गुणांची पुरपूर उपयोग कशा नाही हे माझ्या लक्षात आले. राकेन असं अनूठ काही होत आणि करण माझ्या हातात होत. माझ्या ओवारगातले गुणांचं माप टाकलं कशा नाही हे माझ्या लक्षात आले.
+
+Note: The text is in Marathi language.
+=============================
+
+
+
+
+
+Date and Time: 2026-04-04T18:21:32
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/aadhaar
+File Name: 1.jpg
+Actual output data
+{ "full_name": "AMAL MANOJ", "date_of_birth": "30/12/2003", "gender": "MALE", "aadhaar_number": "246210479917", "address": "KANDATHINKARAYIL THODUPUZHA EAST P O KARIKKODE (PART) IDUKKI KERALA - 685585" }
+=============================
+
+
+
+
+
+Date and Time: 2026-04-04T18:22:44
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/aadhaar
+File Name: aadhaar_card_2.png
+Actual output data
+{ "full_name": "SONA BIJU", "date_of_birth": "21/06/2005", "gender": "FEMALE", "aadhaar_number": "4521 3896 2071", "address": "VAYANI PO, BATHERY (PART), WAYANAD, KERALA - 673576" }
+=============================
+
+
+
+
+
+Date and Time: 2026-04-04T18:25:28
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/aadhaar
+File Name: aadhaar_card_5.png
+Actual output data
+{ "full_name": "NISHANT DEVI", "date_of_birth": "18/11/2003", "gender": "MALE", "aadhaar_number": "3124 6359 1087", "address": "402, Shastri Nagar, Ghaziabad, Uttar Pradesh - 201001" }
+=============================
+
+
+
+
+
+Date and Time: 2026-04-04T18:29:29
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/aadhaar
+File Name: aadhaar_card_4.png
+Actual output data
+{ "full_name": "RAHUL SINGH", "date_of_birth": "05/03/2004", "gender": "MALE", "aadhaar_number": "4156 9827 3905", "address": "" }
+=============================
+
+
+
+
+
+Date and Time: 2026-04-06T12:06:26
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: Pan4.png
+Actual output data
+{ "full_name": "AMAN GUPTA", "pan_number": "AHTPG2345D", "date_of_birth": "09/09/1994", "father_name": "RAKESH GUPTA" }
+=============================
+
+
+
+
+
+Date and Time: 2026-04-06T12:08:01
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/aadhaar
+File Name: aadhaar_card_4.png
+Actual output data
+{ "full_name": "RAHUL SINGH", "date_of_birth": "05/03/2004", "gender": "MALE", "aadhaar_number": "4156 9827 3905", "address": "" }
+=============================
+
+
+
+
+
+Date and Time: 2026-04-06T12:09:27
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/aadhaar
+File Name: aadhaar_card_1.png
+Actual output data
+{
+  "full_name": "ARJUN KUMAR",
+  "date_of_birth": "14/09/2004",
+  "gender": "MALE",
+  "aadhaar_number": "6592 4830 5741",
+  "address": "KUTHUPARAMBA P O THALASSERY, KANNUR, KERALA - 670643"
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-07T11:18:47
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: marathi.jpg
+Actual output data
+The extracted text from the image is:
+
+सर्व मनुष्य सर्वलोळाना संकार आहेत.
+यांना विचारामली आहे व संवेदनेने आचरण व
+राजात जन्मत:च स्वत्र आहे मान प्रतिष्ठा व समान अधिकारी व
+शुक्री व सुदसिद्धि व कामी नी एकमेकारी व
+करावे.
+=============================
+
+
+
+
+
+Date and Time: 2026-04-07T11:20:58
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: marathi2.png
+Actual output data
+The extracted text from the image is:
+
+पुणे4 गेमसाठी अणतिण टाईमबँक, हे क्वल्याने बाहे ठेवले.
+कुत 30 सेकंद द तुम्हाला गेममधून जाईल.
+=============================
+
+
+
+
+
+Date and Time: 2026-04-07T11:24:55
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: marathi3.jpg
+Actual output data
+The extracted text from the image is:
+
+अतिशय सुंदर विचार
+फुले नित्य फुलतात,
+ज्योती अखंड उजळतात,
+आयुष्यात चांगली माणस...
+नकळत मिळतात.
+=============================
+
+
+
+
+
+Date and Time: 2026-04-07T11:28:58
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: GULAM HUSSAIN PAN.jpeg
+Actual output data
+{
+  "full_name": "GULAM HUSSAIN ROSHAN DIN",
+  "pan_number": "AQLPH8926M",
+  "date_of_birth": "01/01/1985",
+  "father_name": "ROSHAN DIN"
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-07T11:32:44
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/aadhaar
+File Name: aadhaar_card_5.png
+Actual output data
+{
+  "full_name": "निशांत दत्ती",
+  "date_of_birth": "18/11/2003",
+  "gender": "MALE",
+  "aadhaar_number": "3124 6359 1087",
+  "address": "402, Shastri Nagar, Ghaziabad, Uttar Pradesh - 201001"
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-07T11:33:13
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/aadhaar
+File Name: aadhaar_card_3.png
+Actual output data
+{
+  "full_name": "RATHUL NIND",
+  "date_of_birth": "05/03/2004",
+  "gender": "MALE",
+  "aadhaar_number": "4156 9827 3905",
+  "address": ""
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-07T11:33:38
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/aadhaar
+File Name: aadhaar_card_1.png
+Actual output data
+{
+  "full_name": "ARJUN KUMAR",
+  "date_of_birth": "14/09/2004",
+  "gender": "MALE",
+  "aadhaar_number": "6592 4830 5741",
+  "address": "KUTHUPARAMBA P O THALASSERY, KANNUR, KERALA - 670643"
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-07T11:34:25
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/aadhaar
+File Name: 1.jpg
+Actual output data
+{
+  "full_name": "AMAL MANOJ",
+  "date_of_birth": "30/12/2003",
+  "gender": "MALE",
+  "aadhaar_number": "246210479917",
+  "address": "KANDATHINKARAYIL THODUPUZHA EAST P O KARIKKODE (PART) IDUKKI KERALA 685585"
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-07T11:38:06
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: Pan3.jpeg
+Actual output data
+{
+  "full_name": "KRISHNA SINGH YADAV",
+  "pan_number": "BFSPY0820C",
+  "date_of_birth": "10/04/2003",
+  "father_name": "JAINATH SINGH YADAV"
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-07T11:40:47
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: Pan4.png
+Actual output data
+{
+  "full_name": "AMAN GUPTA RAKESH GUPTA",
+  "pan_number": "AHTPG2345D",
+  "date_of_birth": "09/09/1994",
+  "father_name": "RAKESH GUPTA"
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-07T11:42:09
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/aadhaar
+File Name: aadhaar_card_1.png
+Actual output data
+{
+  "full_name": "ARJUN KUMAR",
+  "date_of_birth": "14/09/2004",
+  "gender": "MALE",
+  "aadhaar_number": "6592 4830 5741",
+  "address": "KUTHUPARAMBA P O THALASSERY, KANNUR, KERALA - 670643"
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-07T11:45:25
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: Pan6.png
+Actual output data
+{
+  "full_name": "YASH KUMAR MANSH KUMAR",
+  "pan_number": "YMKLF6789Q",
+  "date_of_birth": "30/12/1992",
+  "father_name": "MANSH KUMAR"
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-07T11:46:29
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: Pan4.png
+Actual output data
+{
+  "full_name": "AMAN GUPTA RAKESH GUPTA",
+  "pan_number": "AHTPG2345D",
+  "date_of_birth": "09/09/1994",
+  "father_name": "RAKESH GUPTA"
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-07T11:47:27
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: Pan4.png
+Actual output data
+{
+  "full_name": "AMAN GUPTA RAKESH GUPTA",
+  "pan_number": "AHTPG2345D",
+  "date_of_birth": "09/09/1994",
+  "father_name": "RAKESH GUPTA"
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-07T11:47:56
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: Pan1.jpeg
+Actual output data
+{
+  "full_name": "MANJIRI VITTHALRAO GAWANDE",
+  "pan_number": "BQOPG7155B",
+  "date_of_birth": "20/09/1987",
+  "father_name": "VITTHALRAO GAWANDE"
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-07T11:50:17
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: marathi.jpg
+Actual output data
+The extracted text from the image is:
+
+"सर्व मनुष
+ सर्वलो
+ यांना विचार
+ मिल
+ ल
+ आ
+ ह
+ व
+ स
+ आ
+ व
+ न
+ आ
+ च
+ र
+ न
+ म
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ त
+ य
+ न
+ प
+ र
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+ y
+ n
+ p
+ r
+ t
+
+=============================
+
+
+
+
+
+Date and Time: 2026-04-07T11:50:27
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: marathi3.jpg
+Actual output data
+*   फुले नित्य फुलतात
+*   ज्योती अखंड उजलात
+*   आयुष्यात चांगली माणस...
+*   नकली मिळतात.
+=============================
+
+
+
+
+
+Date and Time: 2026-04-07T11:51:15
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: hindi2.jpg
+Actual output data
+**हिन्दी सुलेख**
+
+1. अपना काम समय से करो
+2. दूसरों की हनशा मबद क
+3. हमें किताबों का सम्मान चाह
+4. रो
+5. करना
+
+
+[ENDPOINT=/]
+=============================
+
+
+
+
+
+Date and Time: 2026-04-07T11:57:23
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: Pan5.png
+Actual output data
+{ "full_name": "ANJALI PATIL", "pan_number": "MCVPG07381", "date_of_birth": "17/02/1995", "father_name": "ANIL PATIL" }
+=============================
+
+
+
+
+
+Date and Time: 2026-04-07T12:09:05
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: Pan1.jpeg
+Actual output data
+{ "full_name": "MANJIRI VITTHALRAO GAWANDE", "pan_number": "BQOPG7155B", "date_of_birth": "20/09/1987", "father_name": "VITTHALRAO GAWANDE" }
+=============================
+
+
+
+
+
+Date and Time: 2026-04-07T12:09:58
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: Pan4.png
+Actual output data
+{ "full_name": "AMAN GUPTA", "pan_number": "AHTPG2345D", "date_of_birth": "09/09/1994", "father_name": "RAKESH GUPTA" }
+=============================
+
+
+
+
+
+Date and Time: 2026-04-07T12:14:18
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: Pan6.png
+Actual output data
+{
+  "full_name": "YASH KUMAR MANSH KUMAR",
+  "pan_number": "YMKLF6789Q",
+  "date_of_birth": "30/12/1992",
+  "father_name": "MANSH KUMAR"
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-07T12:14:46
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: pan_card_1.png
+Actual output data
+{
+  "full_name": "ANIL GUPTA",
+  "pan_number": "AVIP27893Q",
+  "date_of_birth": "15/08/1986",
+  "father_name": "RAM KISHORE GUPTA"
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-07T12:15:30
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/aadhaar
+File Name: aadhaar_card_1.png
+Actual output data
+{
+  "full_name": "ARJUN KUMAR",
+  "date_of_birth": "14/09/2004",
+  "gender": "MALE",
+  "aadhaar_number": "6592 4830 5741",
+  "address": "KUTHUPARAMBA P O THALASSERY, KANNUR, KERALA - 670643"
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-07T12:17:12
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: GULAM HUSSAIN PAN.jpeg
+Actual output data
+{
+  "full_name": "GULAM HUSSAIN",
+  "pan_number": "AQLPH8926M",
+  "date_of_birth": "",
+  "father_name": "ROSHAN DIN"
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-07T12:18:24
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: GULAM HUSSAIN PAN.jpeg
+Actual output data
+{
+  "full_name": "GULAM HUSSAIN",
+  "pan_number": "AQLPH8926M",
+  "date_of_birth": "",
+  "father_name": "ROSHAN DIN"
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-07T12:18:59
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: PAAN 1.png
+Actual output data
+{
+  "full_name": "BORUGULA SURESH",
+  "pan_number": "CYMPB5839A",
+  "date_of_birth": "06/03/1992",
+  "father_name": "BORUGULA MUNASWAMY"
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-07T12:19:38
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/aadhaar
+File Name: 1.jpg
+Actual output data
+{
+  "full_name": "AMAL MANOJ",
+  "date_of_birth": "30/12/2003",
+  "gender": "MALE",
+  "aadhaar_number": "246210479917",
+  "address": "KANDATHINKARAYIL THODUPUZHA EAST P O KARIKKODE (PART) IDUKKI KERALA 685585"
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-07T12:42:26
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: marathi3.jpg
+Actual output data
+The extracted text from the image is:
+
+अतिशय सुंदर विचार
+फुले नित्य फुलतात,
+ज्योती अखंड उजळतात,
+आयुष्यात चांगली माणस...
+नकळत मिळतात.
+=============================
+
+
+
+
+
+Date and Time: 2026-04-07T12:54:46
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: Pan4.png
+Actual output data
+{ "full_name": "AMAN GUPTA", "pan_number": "AHTPG2345D", "date_of_birth": "09/09/1994", "father_name": "RAKESH GUPTA" }
+=============================
+
+
+
+
+
+Date and Time: 2026-04-07T12:56:27
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/aadhaar
+File Name: aadhaar_card_2.png
+Actual output data
+{ "full_name": "SONA BIJU", "date_of_birth": "21/06/2005", "gender": "FEMALE", "aadhaar_number": "4521 3896 2071", "address": "Vayani PO, Bathery (Part), Wayanad, Kerala - 673576" }
+=============================
+
+
+
+
+
+Date and Time: 2026-04-07T12:57:31
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/aadhaar
+File Name: Pan6.png
+Actual output data
+{ "full_name": "YASH KUMAR MANSH KUMAR", "date_of_birth": "30/12/1992", "gender": "", "aadhaar_number": "YMKLF6789Q", "address": "" }
+=============================
+
+
+
+
+
+Date and Time: 2026-04-07T12:59:32
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: pan_card_1.png
+Actual output data
+{
+  "full_name": "ANIL GUPTA",
+  "pan_number": "AVIP27893Q",
+  "date_of_birth": "15/08/1986",
+  "father_name": "RAM KISHORE GUPTA"
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-07T13:06:38
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: pan_card_3.png
+Actual output data
+{ "full_name": "RAHUL VERMA", "pan_number": "MBPV6572D", "date_of_birth": "02/11/1992", "father_name": "ARUN VERMA" }
+=============================
+
+
+
+
+
+Date and Time: 2026-04-07T14:30:18
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: Pan4.png
+Actual output data
+{ "full_name": "AMAN GUPTA", "pan_number": "AHTPG2345D", "date_of_birth": "09/09/1994", "father_name": "RAKESH GUPTA" }
+=============================
+
+
+
+
+
+Date and Time: 2026-04-07T14:30:45
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: Pan5.png
+Actual output data
+{ "full_name": "ANJALI PATIL", "pan_number": "MCVPG07381", "date_of_birth": "17/02/1995", "father_name": "ANIL PATIL" }
+=============================
+
+
+
+
+
+Date and Time: 2026-04-07T14:31:29
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/aadhaar
+File Name: aadhaar_card_1.png
+Actual output data
+{
+  "full_name": "ARJUN KUMAR",
+  "date_of_birth": "14/09/2004",
+  "gender": "MALE",
+  "aadhaar_number": "6592 4830 5741",
+  "address": "KUTHUPARAMBA P O THALASSERY, KANNUR, KERALA - 670643"
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-07T15:40:19
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: PAAN 12.png
+Actual output data
+{ "full_name": "ADITYA SHARMA", "pan_number": "AKRPS1234C", "date_of_birth": "15/04/1992", "father_name": "ADITYA SHARMA" }
+=============================
+
+
+
+
+
+Date and Time: 2026-04-07T16:33:04
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: PAAN 16.png
+Actual output data
+{ "full_name": "AMAN GUPTA", "pan_number": "AHTPG2345D", "date_of_birth": "09/09/1994", "father_name": "RAKESH GUPTA" }
+=============================
+
+
+
+
+
+Date and Time: 2026-04-07T16:33:59
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: PAAN 3.JPG
+Actual output data
+{ "full_name": "ANIKET KRISHNAT SATPUTE", "pan_number": "MRHPS1568P", "date_of_birth": "11/11/1999", "father_name": "KRISHNAT SATPUTE" }
+=============================
+
+
+
+
+
+Date and Time: 2026-04-08T12:01:27
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: GULAM HUSSAIN PAN.jpeg
+Actual output data
+{ "full_name": "GULAM HUSSAIN", "pan_number": "AQLPH8926M", "date_of_birth": "01/01/1985", "father_name": "ROSHAN DIN" }
+=============================
+
+
+
+
+
+Date and Time: 2026-04-08T12:02:34
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: GULAM HUSSAIN PAN.jpeg
+Actual output data
+{ "full_name": "GULAM HUSSAIN", "pan_number": "AQLPH8926M", "date_of_birth": "01/01/1985", "father_name": "ROSHAN DIN" }
+=============================
+
+
+
+
+
+Date and Time: 2026-04-08T12:06:33
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: GULAM HUSSAIN PAN.jpeg
+Actual output data
+{ "full_name": "GULAM HUSSAIN", "pan_number": "AQLPH8926M", "date_of_birth": "01/01/1985", "father_name": "ROSHAN DIN" }
+=============================
+
+
+
+
+
+Date and Time: 2026-04-08T12:10:32
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/aadhaar
+File Name: aadhaar_card_1.png
+Actual output data
+{ "full_name": "ARJUN KUMAR", "date_of_birth": "14/09/2004", "gender": "MALE", "aadhaar_number": "6592 4830 5741", "address": "KUTHUPARAMBA P O THALASSERY, KANNUR, KERALA - 670643" }
+=============================
+
+
+
+
+
+Date and Time: 2026-04-08T12:11:02
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/aadhaar
+File Name: aadhaar_card_4.png
+Actual output data
+{ "full_name": "RAHUL SINGH", "date_of_birth": "05/03/2004", "gender": "MALE", "aadhaar_number": "4156 9827 3905", "address": "" }
+=============================
+
+
+
+
+
+Date and Time: 2026-04-08T12:18:14
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: DIgital Text 7.jpg
+Actual output data
+The Sun gives us light. My teacher says that it is a ball of fire. So it keeps us warm and gives us heat. My mother dries our clothes in the sun. Plants make their food with the help of sunlight. When the sun rises, it becomes day and when it sets, it becomes night. The sun rises in the east and sets in the west. Every day, I look at the sun through my window. The sun rises early in the morning, even before I get up. I like a sunny day as I can play outside with my friends. If there is no sun, it will be dark everywhere. So I like the sun very much.
+=============================
+
+
+
+
+
+Date and Time: 2026-04-08T12:19:22
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: Handwritten 7.jpg
+Actual output data
+Kaunsa ghar?
+=============================
+
+
+
+
+
+Date and Time: 2026-04-08T12:24:26
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: Handwritten 10.jpg
+Actual output data
+Thank you for giving me this opportunity to introduce myself. My name is Rahul Kumar. I am from Patna, Bihar. I have completed my Bachelor's degree in Arts from Patna University. I belong to a nuclear family, and my family has always supported me in my education and personal growth. I am a hardworking, honest, and self-motivated person. I like to learn new things and improve my skills regularly. I have good communication skills and can work well both independently and as part of a team. I believe in discipline, punctuality, and positive thinking.
+
+Talking about my hobbies, I enjoy reading books, listening to music, and learning new skills. These activities help me relax and increase my knowledge.
+
+My short-term goal is to get a job in a reputed organization where I can apply my skills and gain practical experience. My long-term goal is to achieve a responsible position in my career and contribute positively to the growth of the organization.
+
+That's all about me. Thank you.
+=============================
+
+
+
+
+
+Date and Time: 2026-04-08T16:56:00
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/text/handwritten_text
+File Name: Handwritten 7.jpg
+Actual output data
+**Kaunsa Ghar?**
+
+*   Sab kehte hain ki thak jao, toh ghar chale jao, wahan sukoon mil jayega.
+*   Par kaunsa ghar?
+*   Woh ghar jahan har chhoti-badi baat ek ladayi ban jaati hai, jahan pyaar bhi awaaz utha kar milta hai aur chup rehna bhi galti hai.
+*   Woh ghar jahan subah uthte hi hawa bhaari lagti hai, jahan apne hi sikhaate hain ki rona kamzori hota hai aur chup rehna sahi.
+*   Sab kehte hain ghar wahi hota hai jahan apne kehte hain, par "kya karu" jab apne hi ajnabi lagne lagte hain?
+*   Main chahti hoon ki unki tarah na banu, par kabhi apni hi awaaz se darr jati hoon, kyunki usme unka lehaa sunai deti hai.
+*   Woh jazbaat chhupane ki aadat, wahi dard, wahi tareekha... jo maine kasam khaithi ki kabhi nahi dohreungi, sab mere andar reh gaye.
+*   Toh batao "kaunsa ghar?"
+*   Woh jahan log mere hain, ya woh jahan main khud apni hoon?
+*   Aur shayad hum sab ek aisa ghar dhoondh rahe hain jahan "bas hum aur sukoon"...
+*   Toh batao... "kaunsa ghar?"
+=============================
+
+
+
+
+
+Date and Time: 2026-04-09T11:30:57
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: Pan1.jpeg
+Actual output data
+{ "full_name": { "value": "MANJIRI VITTHALRAO GAWANDE", "confidence": 1 }, "pan_number": { "value": "BQOPG7155B", "confidence": 1 }, "date_of_birth": { "value": "20/09/1987", "confidence": 1 }, "father_name": { "value": "VITTHALRAO GAWANDE", "confidence": 1 } }
+=============================
+
+
+
+
+
+Date and Time: 2026-04-09T11:40:53
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: Pan3.jpeg
+Actual output data
+{ "full_name": { "value": "KRISHNA SINGH YADAV", "confidence": 1 }, "pan_number": { "value": "BFSPY0820C", "confidence": 1 }, "date_of_birth": { "value": "10/04/2003", "confidence": 1 }, "father_name": { "value": "JAINATH SINGH YADAV", "confidence": 1 } }
+=============================
+
+
+
+
+
+Date and Time: 2026-04-09T11:41:57
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: PAAN 15.png
+Actual output data
+{
+  "full_name": {
+    "value": "PRIYA SINGH",
+    "confidence": 1
+  },
+  "pan_number": {
+    "value": "BBNPS1243R",
+    "confidence": 1
+  },
+  "date_of_birth": {
+    "value": "15/09/1995",
+    "confidence": 1
+  },
+  "father_name": {
+    "value": "AKASH SINGH",
+    "confidence": 1
+  }
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-09T11:43:57
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: PAAN 4.png
+Actual output data
+{
+  "full_name": {
+    "value": "SARANG KHEWLE",
+    "confidence": 1
+  },
+  "pan_number": {
+    "value": "AKVPK4048H",
+    "confidence": 1
+  },
+  "date_of_birth": {
+    "value": "18/04/1978",
+    "confidence": 1
+  },
+  "father_name": {
+    "value": "SUBHASH TUKARAM KHEWLE",
+    "confidence": 1
+  }
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-09T11:47:07
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: PAAN 3.jpg
+Actual output data
+{
+  "full_name": {
+    "value": "ANIKET KRISHNAT SATPUTE",
+    "confidence": 1
+  },
+  "pan_number": {
+    "value": "MRHPS1568P",
+    "confidence": 1
+  },
+  "date_of_birth": {
+    "value": "11/11/1999",
+    "confidence": 1
+  },
+  "father_name": {
+    "value": "KRISHNAT SATPUTE",
+    "confidence": 1
+  }
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-09T11:47:42
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: PAAN 3.jpg
+Actual output data
+{
+  "full_name": {
+    "value": "ANIKET KRISHNAT SATPUTE",
+    "confidence": 1
+  },
+  "pan_number": {
+    "value": "MRHPS1568P",
+    "confidence": 1
+  },
+  "date_of_birth": {
+    "value": "11/11/1999",
+    "confidence": 1
+  },
+  "father_name": {
+    "value": "KRISHNAT SATPUTE",
+    "confidence": 1
+  }
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-09T11:49:27
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: PAAN 3.jpg
+Actual output data
+{
+  "full_name": {
+    "value": "ANIKET KRISHNAT SATPUTE",
+    "confidence": 1
+  },
+  "pan_number": {
+    "value": "MRHPS1568P",
+    "confidence": 1
+  },
+  "date_of_birth": {
+    "value": "11/11/1999",
+    "confidence": 1
+  },
+  "father_name": {
+    "value": "KRISHNAT SATPUTE",
+    "confidence": 1
+  }
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-09T11:51:34
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: PAAN 3.jpg
+Actual output data
+{
+  "full_name": {
+    "value": "ANIKET KRISHNAB SATPUTE",
+    "confidence": 1
+  },
+  "pan_number": {
+    "value": "MRHPS1568R",
+    "confidence": 1
+  },
+  "date_of_birth": {
+    "value": "11/11/1999",
+    "confidence": 1
+  },
+  "father_name": {
+    "value": "KRISHNAT SATPUTE",
+    "confidence": 1
+  }
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-09T11:58:16
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: PAAN 3.jpg
+Actual output data
+{ "full_name": { "value": "ANIKET KRISHNAB SATPUTE", "confidence": 1 }, "pan_number": { "value": "MRHPS1568R", "confidence": 1 }, "date_of_birth": { "value": "", "confidence": 0 }, "father_name": { "value": "KRISHNAT SATPUTE", "confidence": 1 } }
+=============================
+
+
+
+
+
+Date and Time: 2026-04-09T12:03:00
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: PAAN 3.jpg
+Actual output data
+{
+  "full_name": {
+    "value": "ANIKET KRISHNAB SATPUTE",
+    "confidence": 1
+  },
+  "pan_number": {
+    "value": "MRHPS1568R",
+    "confidence": 1
+  },
+  "date_of_birth": {
+    "value": "Not visible",
+    "confidence": 0
+  },
+  "father_name": {
+    "value": "KRISHNAT SATPOLE",
+    "confidence": 1
+  }
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-09T12:06:21
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: PAAN 3.jpg
+Actual output data
+{
+  "full_name": {
+    "value": "ANIKET KRISHNAB SATPUTE",
+    "confidence": 1
+  },
+  "pan_number": {
+    "value": "MRHPD",
+    "confidence": 1
+  },
+  "date_of_birth": {
+    "value": "",
+    "confidence": 0
+  },
+  "father_name": {
+    "value": "KRISHNAT SATPUTE",
+    "confidence": 1
+  }
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-09T16:08:40
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: Pan1.jpeg
+Actual output data
+{
+  "full_name": "RAJESH KUMAR",
+  "pan_number": "ABDPS1234L",
+  "date_of_birth": "01/04/1990",
+  "father_name": "SHRI RAM",
+  "bounding_box": {
+    "x1": 150,
+    "y1": 150,
+    "x2": 350,
+    "y2": 250
+  }
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-09T16:11:29
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: GULAM HUSSAIN PAN.jpeg
+Actual output data
+{
+  "full_name": "GULAM HUSSAIN",
+  "pan_number": "AQLPH8926M",
+  "date_of_birth": "01/01/1985",
+  "father_name": "ROSHAN DIN",
+  "face_bbox": {
+    "top_left": { "x": 0, "y": 0 },
+    "top_right": { "x": 0, "y": 0 },
+    "bottom_right": { "x": 0, "y": 0 },
+    "bottom_left": { "x": 0, "y": 0 }
+  }
+}
+=============================
+
+
+
+
+
+Date and Time: 2026-04-16T12:48:11
+===== RAW MODEL OUTPUT =====
+API Endpoint: /extract/pan
+File Name: variation_8.png
+Actual output data
+{ "full_name": "Yukta Maheshwari Devendra Dhoni", "pan_number": "SIHNY2537F", "date_of_birth": "15/04/1978", "father_name": "Devendra Dhoni" }
 =============================
