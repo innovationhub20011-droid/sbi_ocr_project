@@ -1,19 +1,12 @@
 import logging
 
 from fastapi import HTTPException, UploadFile
-from sqlalchemy.orm import Session
 
-from db.database import SessionLocal
 from extractors.pan_extractor import extract_pan as _extract_pan
-from services.document_service import retrieve_pan_details
+from services.ovd_services import retrieve_pan_details
 
 
 logger = logging.getLogger(__name__)
-
-
-def _serialize_record(record) -> dict:
-    return {key: value for key, value in record.__dict__.items() if not key.startswith("_")}
-
 
 async def extract_pan(file: UploadFile, photo: bool = False) -> dict:
     """Controller wrapper to keep route layer consistent across document types."""
@@ -21,10 +14,9 @@ async def extract_pan(file: UploadFile, photo: bool = False) -> dict:
 
 
 def get_all_pan() -> dict:
-    db: Session = SessionLocal()
     try:
-        pan_records = retrieve_pan_details(db)
-        return {"pan_cards": [_serialize_record(record) for record in pan_records]}
+        pan_records = retrieve_pan_details()
+        return {"pan_cards": pan_records}
 
     except Exception as exc:
         logger.exception("Failed to retrieve PAN records")
@@ -32,6 +24,3 @@ def get_all_pan() -> dict:
             status_code=500,
             detail=f"Failed to retrieve PAN records: {str(exc)}"
         )
-
-    finally:
-        db.close()

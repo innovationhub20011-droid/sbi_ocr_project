@@ -2,12 +2,10 @@ import base64
 import logging
 
 from fastapi import UploadFile, HTTPException
-from sqlalchemy.orm import Session
 
-from db.database import SessionLocal
-from llm.inference import call_vision_model
+from llm.inference import call_vision_model_async
 from prompts.voter_prompt import VOTER_ID_PROMPT
-from services.document_service import process_voter_id
+from services.ovd_services import save_voter_id_details
 
 logger = logging.getLogger(__name__)
 
@@ -53,7 +51,7 @@ async def extract_voter_id(file: UploadFile) -> dict:
 
         image_base64 = base64.b64encode(contents).decode("utf-8")
 
-        voter_data = call_vision_model(
+        voter_data = await call_vision_model_async(
             VOTER_ID_PROMPT,
             image_base64,
             empty_voter_id(),
@@ -62,18 +60,7 @@ async def extract_voter_id(file: UploadFile) -> dict:
         )
 
         if _has_meaningful_content(voter_data):
-            db: Session = SessionLocal()
-            try:
-                process_voter_id(db, voter_data)
-                db.commit()
-            except HTTPException:
-                db.rollback()
-                raise
-            except Exception as exc:
-                db.rollback()
-                raise HTTPException(status_code=500, detail=f"Failed to save voter ID details: {str(exc)}")
-            finally:
-                db.close()
+            save_voter_id_details(voter_data)
         else:
             logger.info("Skipping voter ID save because extraction returned no meaningful content")
 

@@ -1,3 +1,4 @@
+import asyncio
 import logging
 from typing import Optional
 
@@ -103,3 +104,35 @@ def call_vision_model_raw(
             file_name,
         )
         raise RuntimeError("Raw vision model call failed") from exc
+
+
+async def call_vision_model_async(
+    prompt: str,
+    image_base64: str,
+    empty_schema: Optional[dict] = None,
+    api_endpoint: str = "N/A",
+    file_name: str = "N/A",
+) -> dict:
+    return await asyncio.to_thread(
+        call_vision_model,
+        prompt,
+        image_base64,
+        empty_schema,
+        api_endpoint,
+        file_name,
+    )
+
+
+async def call_vision_model_raw_async(
+    prompt: str,
+    image_base64: str,
+    api_endpoint: str = "N/A",
+    file_name: str = "N/A",
+) -> str:
+    return await asyncio.to_thread(
+        call_vision_model_raw,
+        prompt,
+        image_base64,
+        api_endpoint,
+        file_name,
+    )

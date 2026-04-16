@@ -1,30 +1,12 @@
 import logging
 import time
 
-from fastapi import FastAPI, UploadFile, File, Depends, Request, Query
-from sqlalchemy.orm import Session
-from controllers.pan_controller import get_all_pan 
-from controllers.aadhaar_controller import get_all_aadhaar
-from db.database import engine, get_db
+from fastapi import FastAPI, Request
+from db.database import engine
 from models.document_model import Base
-from controllers.pan_controller import extract_pan
-from controllers.aadhaar_controller import extract_aadhaar
-from controllers.passport_controller import extract_passport
-from controllers.driving_controller import extract_driving_license
-from controllers.voter_controller import extract_voter_id
-from controllers.text_documents.handwritten_text_controller import (
-    extract_handwritten_text,
-    get_all_handwritten_text_ocr,
-)
-from controllers.text_documents.digital_text_controller import (
-    extract_digital_text,
-    get_all_digital_text_ocr,
-)
-from controllers.text_documents.miscellaneous_text_controller import (
-    extract_misc_text,
-    get_all_miscellaneous_text_ocr,
-)
-from controllers.account_opening_controller.page1_controller import extract_account_opening_page1
+from routers.account_opening_router import router as account_opening_router
+from routers.ovd_router import router as ovd_router
+from routers.text_documents_router import router as text_documents_router
 
 logging.basicConfig(
     level=logging.INFO,
@@ -35,6 +17,9 @@ logging.getLogger().setLevel(logging.INFO)
 logger = logging.getLogger("uvicorn.error")
 
 app = FastAPI(title="SBI OCR Vision API")
+app.include_router(ovd_router)
+app.include_router(account_opening_router)
+app.include_router(text_documents_router)
 
 
 @app.middleware("http")
@@ -66,78 +51,3 @@ async def log_http_requests(request: Request, call_next):
 async def startup_event():
     logger.info("Logger smoke check: application startup initialized")
     Base.metadata.create_all(bind=engine)
-
-@app.post("/extract/pan")
-async def pan_api(file: UploadFile = File(...), photo: bool = Query(False)):
-    logger.info("Request received on /extract/pan | file=%s", file.filename)
-    return await extract_pan(file, photo=photo)
-
-@app.post("/extract/aadhaar")
-async def aadhaar_api(file: UploadFile = File(...)):
-    logger.info("Request received on /extract/aadhaar | file=%s", file.filename)
-    return await extract_aadhaar(file)
-
-@app.post("/extract/passport")
-async def passport_api(file: UploadFile = File(...)):
-    logger.info("Request received on /extract/passport | file=%s", file.filename)
-    return await extract_passport(file)
-
-@app.post("/extract/driving-license")
-async def driving_license_api(file: UploadFile = File(...)):
-    logger.info("Request received on /extract/driving-license | file=%s", file.filename)
-    return await extract_driving_license(file)
-
-@app.post("/extract/voter-id")
-async def voter_id_api(file: UploadFile = File(...)):
-    logger.info("Request received on /extract/voter-id | file=%s", file.filename)
-    return await extract_voter_id(file)
-
-@app.post("/extract/text/handwritten_text")
-async def handwritten_text_api(file: UploadFile = File(...)):
-    logger.info("Request received on /extract/text/handwritten_text | file=%s", file.filename)
-    return await extract_handwritten_text(file)
-
-
-@app.post("/extract/text/digital_text")
-async def digital_text_api(file: UploadFile = File(...)):
-    logger.info("Request received on /extract/text/digital_text | file=%s", file.filename)
-    return await extract_digital_text(file)
-
-
-@app.post("/extract/text/miscellaneous_text")
-async def misc_text_api(file: UploadFile = File(...)):
-    logger.info("Request received on /extract/text/miscellaneous_text | file=%s", file.filename)
-    return await extract_misc_text(file)
-
-@app.post("/extract/account-opening/page1")
-async def account_opening_page1_api(file: UploadFile = File(...), db: Session = Depends(get_db)):
-    logger.info("Request received on /extract/account-opening/page1 | file=%s", file.filename)
-    return await extract_account_opening_page1(file, db)
-
-@app.get("/retrieve/pan/all")
-async def retrieve_all_pan():
-    logger.info("Request received on /retrieve/pan/all")
-    return get_all_pan()
-
-@app.get("/retrieve/aadhaar/all")
-async def retrieve_all_aadhaar():
-    logger.info("Request received on /retrieve/aadhaar/all")
-    return get_all_aadhaar()
-
-
-@app.get("/retrieve/text/handwritten_text/all")
-async def retrieve_all_handwritten_text():
-    logger.info("Request received on /retrieve/text/handwritten_text/all")
-    return get_all_handwritten_text_ocr()
-
-
-@app.get("/retrieve/text/digital_text/all")
-async def retrieve_all_digital_text():
-    logger.info("Request received on /retrieve/text/digital_text/all")
-    return get_all_digital_text_ocr()
-
-
-@app.get("/retrieve/text/miscellaneous_text/all")
-async def retrieve_all_miscellaneous_text():
-    logger.info("Request received on /retrieve/text/miscellaneous_text/all")
-    return get_all_miscellaneous_text_ocr()

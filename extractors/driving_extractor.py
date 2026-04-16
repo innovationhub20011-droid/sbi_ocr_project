@@ -2,12 +2,10 @@ import base64
 import logging
 
 from fastapi import UploadFile, HTTPException
-from sqlalchemy.orm import Session
 
-from db.database import SessionLocal
-from llm.inference import call_vision_model
+from llm.inference import call_vision_model_async
 from prompts.driving_license_prompt import DRIVING_LICENSE_PROMPT
-from services.document_service import process_driving_license
+from services.ovd_services import save_driving_license_details
 
 logger = logging.getLogger(__name__)
 
@@ -54,7 +52,7 @@ async def extract_driving_license(file: UploadFile) -> dict:
 
         image_base64 = base64.b64encode(contents).decode("utf-8")
 
-        dl_data = call_vision_model(
+        dl_data = await call_vision_model_async(
             DRIVING_LICENSE_PROMPT,
             image_base64,
             empty_driving_license(),
@@ -63,18 +61,7 @@ async def extract_driving_license(file: UploadFile) -> dict:
         )
 
         if _has_meaningful_content(dl_data):
-            db: Session = SessionLocal()
-            try:
-                process_driving_license(db, dl_data)
-                db.commit()
-            except HTTPException:
-                db.rollback()
-                raise
-            except Exception as exc:
-                db.rollback()
-                raise HTTPException(status_code=500, detail=f"Failed to save driving license details: {str(exc)}")
-            finally:
-                db.close()
+            save_driving_license_details(dl_data)
         else:
             logger.info("Skipping driving license save because extraction returned no meaningful content")
 

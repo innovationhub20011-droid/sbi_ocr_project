@@ -1,13 +1,14 @@
+import asyncio
 import base64
 import logging
+from typing import Any
 
 from fastapi import HTTPException, UploadFile
-from sqlalchemy.orm import Session
 
-from db.database import SessionLocal
-from llm.inference import call_vision_model
+from llm.inference import call_vision_model_async
 from prompts.aadhaar_prompt import AADHAAR_PROMPT
-from services.document_service import process_aadhaar
+from services.ovd_services import save_aadhaar_details
+from utils.face_detection import detect_first_face, face_to_data_url
 
 logger = logging.getLogger(__name__)
 
@@ -22,7 +23,7 @@ def empty_aadhaar() -> dict:
     }
 
 
-async def extract_aadhaar(file: UploadFile) -> dict:
+async def extract_aadhaar(file: UploadFile, photo: bool = False) -> dict[str, Any]:
     if not file.filename:
         raise HTTPException(status_code=400, detail="File must have a name")
 
@@ -35,30 +36,32 @@ async def extract_aadhaar(file: UploadFile) -> dict:
             raise HTTPException(status_code=400, detail="Uploaded file is empty")
 
         image_base64 = base64.b64encode(contents).decode("utf-8")
-        aadhaar_data = call_vision_model(
+        vision_task = call_vision_model_async(
             AADHAAR_PROMPT,
             image_base64,
             empty_aadhaar(),
             api_endpoint="/extract/aadhaar",
             file_name=file.filename,
         )
+        face_task = asyncio.to_thread(detect_first_face, image_base64) if photo else None
+
+        if face_task is None:
+            aadhaar_data = await vision_task
+            face_crop = None
+        else:
+            aadhaar_data, face_crop = await asyncio.gather(vision_task, face_task)
+
+        response: dict[str, Any] = {"aadhaar_data": aadhaar_data}
 
         if aadhaar_data.get("aadhaar_number"):
-            db: Session = SessionLocal()
-            try:
-                process_aadhaar(db, aadhaar_data)
-                db.commit()
-            except HTTPException:
-                db.rollback()
-                raise
-            except Exception:
-                db.rollback()
-                logger.exception("Failed to save Aadhaar details")
-                raise HTTPException(status_code=500, detail="Failed to save Aadhaar details")
-            finally:
-                db.close()
+            aadhaar_result = save_aadhaar_details(aadhaar_data)
+            if aadhaar_result.get("warning"):
+                response["warning"] = aadhaar_result["warning"]
 
-        return {"aadhaar_data": aadhaar_data}
+        if photo:
+            response["face_image"] = face_to_data_url(face_crop) if face_crop is not None else None
+
+        return response
 
     except HTTPException:
         raise

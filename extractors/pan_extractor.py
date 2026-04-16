@@ -5,10 +5,9 @@ from typing import Any
 
 from fastapi import HTTPException, UploadFile
 
-from db.database import SessionLocal
-from llm.inference import call_vision_model
+from llm.inference import call_vision_model_async
 from prompts.pan_prompt import PAN_PROMPT
-from services.document_service import process_pan
+from services.ovd_services import save_pan_details
 from utils.face_detection import detect_first_face, face_to_data_url
 
 logger = logging.getLogger(__name__)
@@ -36,8 +35,7 @@ async def extract_pan(file: UploadFile, photo: bool = False) -> dict[str, Any]:
             raise HTTPException(status_code=400, detail="Uploaded file is empty")
 
         image_base64 = base64.b64encode(contents).decode("utf-8")
-        vision_task = asyncio.to_thread(
-            call_vision_model,
+        vision_task = call_vision_model_async(
             PAN_PROMPT,
             image_base64,
             empty_pan(),
@@ -54,9 +52,8 @@ async def extract_pan(file: UploadFile, photo: bool = False) -> dict[str, Any]:
 
         response: dict[str, Any] = {"pan_data": pan_data}
 
-        db = SessionLocal()
         try:
-            pan_result = process_pan(db, pan_data)
+            pan_result = save_pan_details(pan_data)
             if pan_result.get("warning"):
                 response["warning"] = pan_result["warning"]
         except HTTPException:
@@ -64,8 +61,6 @@ async def extract_pan(file: UploadFile, photo: bool = False) -> dict[str, Any]:
         except Exception:
             logger.exception("Failed to process PAN details")
             raise HTTPException(status_code=500, detail="Failed to save PAN details")
-        finally:
-            db.close()
 
         if photo:
             response["face_image"] = face_to_data_url(face_crop) if face_crop is not None else None

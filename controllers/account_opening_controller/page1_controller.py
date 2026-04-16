@@ -1,15 +1,14 @@
 import json
 from fastapi import UploadFile, HTTPException
-from sqlalchemy.orm import Session
-from llm.inference import call_vision_model
+from llm.inference import call_vision_model_async
 from prompts.account_opening.page1_schema import PAGE1_PROMPT
 from services.file_service import convert_image_to_base64
-from schemas.account_opening_schemas import AccountFormCreate, AccountFormPageCreate
-from db.repositories.account_opening_repository import create_account_form, create_account_form_page
+from schemas.account_opening_schemas import AccountFormCreate
+from services.account_opening_services import save_account_opening_page1
 import logging
 logger = logging.getLogger(__name__)
 
-async def extract_account_opening_page1(file: UploadFile, db: Session):
+async def extract_account_opening_page1(file: UploadFile):
     """
     Extract data from Account Opening Form Page 1.
     Creates entries in both account_forms and account_form_pages tables.
@@ -33,7 +32,7 @@ async def extract_account_opening_page1(file: UploadFile, db: Session):
         # -------------------------------
         # Call Vision Model
         # -------------------------------
-        response = call_vision_model(
+        response = await call_vision_model_async(
             prompt=PAGE1_PROMPT,
             image_base64=image_base64,
             empty_schema={},
@@ -77,38 +76,17 @@ async def extract_account_opening_page1(file: UploadFile, db: Session):
         )
 
         # Save account form to database
-        db_form = create_account_form(
-            db=db,
-            account_form=account_form_data,
-            created_by="system"
-        )
-
-        # -------------------------------
-        # Create Account Form Page Entry
-        # -------------------------------
         page_data_json = json.dumps(response, indent=2)
-
-        form_page_data = AccountFormPageCreate(
-            form_id=str(db_form.id),
+        save_result = save_account_opening_page1(
+            form_data=account_form_data,
             page_number=1,
             page_data=page_data_json,
-            created_by="system"
         )
 
-        # Save page data to database
-        db_page = create_account_form_page(
-            db=db,
-            form_page=form_page_data,
-            created_by="system"
-        )
-
-        # -------------------------------
-        # Return response
-        # -------------------------------
         return {
-            "status": "success",
-            "form_id": db_form.id,
-            "page_number": db_page.page_number,
+            "status": save_result["status"],
+            "form_id": save_result["form_id"],
+            "page_number": save_result["page_number"],
             "page1_data": response,
             "message": "Account opening form page 1 processed and saved successfully"
         }

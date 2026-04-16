@@ -2,13 +2,11 @@ import logging
 import re
 
 from fastapi import UploadFile, HTTPException
-from sqlalchemy.orm import Session
 
-from db.database import SessionLocal
-from llm.inference import call_vision_model
+from llm.inference import call_vision_model_async
 from prompts.passport_prompt import PASSPORT_PROMPT
 from services.file_service import convert_image_to_base64
-from services.document_service import process_passport
+from services.ovd_services import save_passport_details
 
 logger = logging.getLogger(__name__)
 
@@ -52,7 +50,7 @@ async def extract_passport(file: UploadFile):
 
         image_base64 = await convert_image_to_base64(file)
 
-        response = call_vision_model(
+        response = await call_vision_model_async(
             PASSPORT_PROMPT,
             image_base64,
             empty_passport(),
@@ -69,18 +67,7 @@ async def extract_passport(file: UploadFile):
             response["pin_code"] = ""
 
         if _has_meaningful_content(response):
-            db: Session = SessionLocal()
-            try:
-                process_passport(db, response)
-                db.commit()
-            except HTTPException:
-                db.rollback()
-                raise
-            except Exception as exc:
-                db.rollback()
-                raise HTTPException(status_code=500, detail=f"Failed to save passport details: {str(exc)}")
-            finally:
-                db.close()
+            save_passport_details(response)
         else:
             logger.info("Skipping passport save because extraction returned no meaningful content")
 
