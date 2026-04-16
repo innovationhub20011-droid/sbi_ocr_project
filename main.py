@@ -1,7 +1,7 @@
 import logging
 import time
 
-from fastapi import FastAPI, UploadFile, File, Depends, Request
+from fastapi import FastAPI, UploadFile, File, Depends, Request, Query
 from sqlalchemy.orm import Session
 from controllers.pan_controller import get_all_pan 
 from controllers.aadhaar_controller import get_all_aadhaar
@@ -68,9 +68,9 @@ async def startup_event():
     Base.metadata.create_all(bind=engine)
 
 @app.post("/extract/pan")
-async def pan_api(file: UploadFile = File(...)):
+async def pan_api(file: UploadFile = File(...), photo: bool = Query(False)):
     logger.info("Request received on /extract/pan | file=%s", file.filename)
-    return await extract_pan(file)
+    return await extract_pan(file, photo=photo)
 
 @app.post("/extract/aadhaar")
 async def aadhaar_api(file: UploadFile = File(...)):

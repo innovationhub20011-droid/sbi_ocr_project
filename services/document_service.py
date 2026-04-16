@@ -1,4 +1,7 @@
+from fastapi import HTTPException
+from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
+
 from models.document_model import AadhaarCardDetails, PanCardDetails
 from schemas.document_schemas import (
     PanCreate,
@@ -8,7 +11,6 @@ from schemas.document_schemas import (
     VoterIdCreate,
     TextDocumentOcrCreate,
 )
-from db.repositories.pan_repository import create_pan
 from db.repositories.aadhaar_repository import create_aadhaar
 from db.repositories.passport_repository import create_passport
 from db.repositories.driving_license_repository import create_driving_license
@@ -45,7 +47,46 @@ def normalize_pan_data(data: dict) -> dict:
 
 def process_pan(db: Session, data: dict):
     pan = PanCreate(**normalize_pan_data(data))
-    return create_pan(db, pan)
+
+    existing = db.query(PanCardDetails).filter(
+        PanCardDetails.pan_number == pan.pan_number
+    ).first()
+
+    if existing:
+        return {
+            "record": existing,
+            "saved": False,
+            "warning": "Data for this PAN card already exists in the database.",
+        }
+
+    db_pan = PanCardDetails(
+        pan_number=pan.pan_number,
+        full_name=pan.full_name,
+        father_name=pan.father_name,
+        date_of_birth=pan.date_of_birth,
+        pan_type=pan.derive_pan_type(),
+        ocr_source="vision_model",
+        created_by="system",
+    )
+
+    try:
+        db.add(db_pan)
+        db.commit()
+        db.refresh(db_pan)
+        return {"record": db_pan, "saved": True, "warning": None}
+    except IntegrityError:
+        db.rollback()
+        existing = db.query(PanCardDetails).filter(
+            PanCardDetails.pan_number == pan.pan_number
+        ).first()
+        return {
+            "record": existing,
+            "saved": False,
+            "warning": "Data for this PAN card already exists in the database.",
+        }
+    except Exception as exc:
+        db.rollback()
+        raise HTTPException(status_code=500, detail=f"Failed to save PAN details: {str(exc)}")
 
 
 def process_aadhaar(db: Session, data: dict):

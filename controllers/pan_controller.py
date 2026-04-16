@@ -15,9 +15,9 @@ def _serialize_record(record) -> dict:
     return {key: value for key, value in record.__dict__.items() if not key.startswith("_")}
 
 
-async def extract_pan(file: UploadFile) -> dict:
+async def extract_pan(file: UploadFile, photo: bool = False) -> dict:
     """Controller wrapper to keep route layer consistent across document types."""
-    return await _extract_pan(file)
+    return await _extract_pan(file, photo=photo)
 
 
 def get_all_pan() -> dict:
