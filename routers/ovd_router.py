@@ -14,9 +14,13 @@ router = APIRouter()
 
 
 @router.post("/extract/pan")
-async def pan_api(file: UploadFile = File(...), photo: bool = Query(False)):
+async def pan_api(
+    file: UploadFile = File(...),
+    photo: bool = Query(False),
+    signature: bool = Query(False),
+):
     logger.info("Request received on /extract/pan | file=%s", file.filename)
-    return await extract_pan(file, photo=photo)
+    return await extract_pan(file, photo=photo, signature=signature)
 
 
 @router.post("/extract/aadhaar")

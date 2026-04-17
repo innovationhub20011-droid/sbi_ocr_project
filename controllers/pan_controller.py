@@ -8,9 +8,9 @@ from services.ovd_services import retrieve_pan_details
 
 logger = logging.getLogger(__name__)
 
-async def extract_pan(file: UploadFile, photo: bool = False) -> dict:
+async def extract_pan(file: UploadFile, photo: bool = False, signature: bool = False) -> dict:
     """Controller wrapper to keep route layer consistent across document types."""
-    return await _extract_pan(file, photo=photo)
+    return await _extract_pan(file, photo=photo, signature=signature)
 
 
 def get_all_pan() -> dict:

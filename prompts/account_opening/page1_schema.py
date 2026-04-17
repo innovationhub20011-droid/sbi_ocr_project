@@ -4,7 +4,7 @@ Extract structured data from SBI Account Opening Form Page 1.
 Rules:
 - Extract only from labeled fields.
 - Do not shift values between fields.
-- For checkboxes, return only the selected option text.
+- For checkboxes, return only the selected option text i.e in the right side of checkbox.
 - If "Others" is selected and a value is written, return: "Others - <value>"
 - If nothing is selected or field not visible, return empty string.
 - Date format: DD-MM-YYYY.

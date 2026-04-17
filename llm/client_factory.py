@@ -15,23 +15,13 @@ llm_config = {
 
 
 @lru_cache(maxsize=16)
-def get_json_client(model_name: str) -> ChatOllama:
+def get_llm_client(model_name: str, isjson: bool = False) -> ChatOllama:
     return ChatOllama(
         base_url=_settings.base_url,
         **{
             **llm_config,
             "model": model_name,
         },
-        format="json",
+        format="json" if isjson else "",
     )
 
-
-@lru_cache(maxsize=16)
-def get_raw_client(model_name: str) -> ChatOllama:
-    return ChatOllama(
-        base_url=_settings.base_url,
-        **{
-            **llm_config,
-            "model": model_name,
-        },
-    )

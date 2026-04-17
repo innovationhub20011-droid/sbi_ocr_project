@@ -9,6 +9,7 @@ from llm.inference import call_vision_model_async
 from prompts.pan_prompt import PAN_PROMPT
 from services.ovd_services import save_pan_details
 from utils.face_detection import detect_first_face, face_to_data_url
+from utils.signature_detection import detect_first_signature, signature_to_data_url
 
 logger = logging.getLogger(__name__)
 
@@ -22,7 +23,7 @@ def empty_pan() -> dict:
     }
 
 
-async def extract_pan(file: UploadFile, photo: bool = False) -> dict[str, Any]:
+async def extract_pan(file: UploadFile, photo: bool = False, signature: bool = False) -> dict[str, Any]:
     if not file.filename:
         raise HTTPException(status_code=400, detail="File must have a name")
 
@@ -42,13 +43,20 @@ async def extract_pan(file: UploadFile, photo: bool = False) -> dict[str, Any]:
             "/extract/pan",
             file.filename,
         )
+        signature_task = asyncio.to_thread(detect_first_signature, image_base64) if signature else None
         face_task = asyncio.to_thread(detect_first_face, image_base64) if photo else None
 
-        if face_task is None:
-            pan_data = await vision_task
-            face_crop = None
-        else:
+        signature_crop = None
+        face_crop = None
+
+        if signature_task is not None and face_task is not None:
+            pan_data, signature_crop, face_crop = await asyncio.gather(vision_task, signature_task, face_task)
+        elif signature_task is not None:
+            pan_data, signature_crop = await asyncio.gather(vision_task, signature_task)
+        elif face_task is not None:
             pan_data, face_crop = await asyncio.gather(vision_task, face_task)
+        else:
+            pan_data = await vision_task
 
         response: dict[str, Any] = {"pan_data": pan_data}
 
@@ -62,7 +70,12 @@ async def extract_pan(file: UploadFile, photo: bool = False) -> dict[str, Any]:
             logger.exception("Failed to process PAN details")
             raise HTTPException(status_code=500, detail="Failed to save PAN details")
 
-        if photo:
+        if signature_task is not None:
+            response["signature_image"] = (
+                signature_to_data_url(signature_crop) if signature_crop is not None else None
+            )
+
+        if face_task is not None:
             response["face_image"] = face_to_data_url(face_crop) if face_crop is not None else None
 
         return response
