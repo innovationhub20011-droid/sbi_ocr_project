@@ -39,8 +39,12 @@ def detect_first_signature(
     """Detect and return the first signature crop from an image."""
     img = _decode_base64_image(image_base64)
     model = get_signature_model(model_path)
-
-    results = model.predict(source=img, verbose=False, conf=0.1, imgsz=1280)
+    height = img.shape[0]
+    midpoint = height // 2
+    bottom_half = img[midpoint:, :]
+    bottom_half_gray = cv2.cvtColor(bottom_half, cv2.COLOR_BGR2GRAY)
+    bottom_half_input = cv2.cvtColor(bottom_half_gray, cv2.COLOR_GRAY2BGR)
+    results = model.predict(source=bottom_half_input, verbose=False, conf=0.05, imgsz=1280)
 
     for result in results:
         boxes = result.boxes
@@ -59,10 +63,10 @@ def detect_first_signature(
 
         x1 = max(0, x1 - padding_x)
         y1 = max(0, y1 - padding_y)
-        x2 = min(img.shape[1], x2 + padding_x)
-        y2 = min(img.shape[0], y2 + padding_y)
+        x2 = min(bottom_half.shape[1], x2 + padding_x)
+        y2 = min(bottom_half.shape[0], y2 + padding_y)
 
-        signature = img[y1:y2, x1:x2]
+        signature = bottom_half[y1:y2, x1:x2]
         if signature.size != 0:
             return signature
 
