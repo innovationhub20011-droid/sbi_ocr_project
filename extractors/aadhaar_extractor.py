@@ -8,6 +8,7 @@ from fastapi import HTTPException, UploadFile
 from llm.inference import call_vision_model_async
 from prompts.aadhaar_prompt import AADHAAR_PROMPT
 from services.ovd_services import save_aadhaar_details
+from utils.document_classifier import validate_document_type
 from utils.face_detection import detect_first_face, face_to_data_url
 
 logger = logging.getLogger(__name__)
@@ -34,6 +35,19 @@ async def extract_aadhaar(file: UploadFile, photo: bool = False) -> dict[str, An
         contents = await file.read()
         if not contents:
             raise HTTPException(status_code=400, detail="Uploaded file is empty")
+
+        try:
+            is_valid, predicted_label, confidence = validate_document_type(contents, "aadhaar")
+        except ValueError as exc:
+            raise HTTPException(status_code=400, detail=str(exc)) from exc
+
+        if not is_valid:
+            raise HTTPException(
+                status_code=400,
+                detail=(
+                    "Uploaded document was not an Aadhaar card"
+                ),
+            )
 
         image_base64 = base64.b64encode(contents).decode("utf-8")
         vision_task = call_vision_model_async(

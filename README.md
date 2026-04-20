@@ -26,10 +26,11 @@ This API supports:
 
 1. A client uploads an image or PDF to a FastAPI endpoint.
 2. The file is converted to base64 image content.
-3. A prompt specific to the document type is sent to an Ollama vision model through LangChain.
-4. The response is parsed into JSON or plain OCR text.
-5. Supported results are saved through SQLAlchemy repositories.
-6. Raw model output is appended to `data/raw_model_output.txt` for inspection/debugging.
+3. PAN and Aadhaar uploads are first validated with the local document-classification model.
+4. A prompt specific to the document type is sent to an Ollama vision model through LangChain.
+5. The response is parsed into JSON or plain OCR text.
+6. Supported results are saved through SQLAlchemy repositories.
+7. Raw model output is appended to `data/raw_model_output.txt` for inspection/debugging.
 
 ## Tech stack
 

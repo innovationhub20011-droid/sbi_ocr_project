@@ -8,6 +8,7 @@ from fastapi import HTTPException, UploadFile
 from llm.inference import call_vision_model_async
 from prompts.pan_prompt import PAN_PROMPT
 from services.ovd_services import save_pan_details
+from utils.document_classifier import validate_document_type
 from utils.face_detection import detect_first_face, face_to_data_url
 from utils.signature_detection import detect_first_signature, signature_to_data_url
 
@@ -34,6 +35,19 @@ async def extract_pan(file: UploadFile, photo: bool = False, signature: bool = F
         contents = await file.read()
         if not contents:
             raise HTTPException(status_code=400, detail="Uploaded file is empty")
+
+        try:
+            is_valid, predicted_label, confidence = validate_document_type(contents, "pan")
+        except ValueError as exc:
+            raise HTTPException(status_code=400, detail=str(exc)) from exc
+
+        if not is_valid:
+            raise HTTPException(
+                status_code=400,
+                detail=(
+                    "Uploaded document is not a PAN card "
+                ),
+            )
 
         image_base64 = base64.b64encode(contents).decode("utf-8")
         vision_task = call_vision_model_async(

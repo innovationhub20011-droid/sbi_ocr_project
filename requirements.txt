@@ -12,3 +12,5 @@ python-dotenv
 pypdfium2
 opencv-python
 ultralytics
+torch
+torchvision
