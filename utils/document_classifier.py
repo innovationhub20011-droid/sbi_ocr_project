@@ -112,11 +112,11 @@ def validate_document_type(
 ) -> tuple[bool, str, float]:
     predicted_label, confidence = classify_document_bytes(image_bytes)
     normalized_expected = _normalize_label(expected_label)
+    logger.info("Document classified as %s with confidence %.2f", predicted_label, confidence)
 
     if confidence < confidence_threshold:
         return False, predicted_label, confidence
 
     if predicted_label != normalized_expected:
         return False, predicted_label, confidence
-
     return True, predicted_label, confidence

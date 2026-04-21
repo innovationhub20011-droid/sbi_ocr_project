@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 
 
 @lru_cache(maxsize=1)
-def get_signature_model(model_path: str = "weights/yolov8s-signature.pt") -> YOLO:
+def get_signature_model(model_path: str = "weights/detector_yolo_4cls.pt") -> YOLO:
     """Load and cache the signature detection model."""
     return YOLO(model_path)
 
@@ -33,7 +33,7 @@ def _decode_base64_image(image_base64: str) -> np.ndarray:
 
 def detect_first_signature(
     image_base64: str,
-    model_path: str = "weights/yolov8s-signature.pt",
+    model_path: str = "weights/detector_yolo_4cls.pt",
     padding_ratio: float = 0.1,
 ) -> Optional[np.ndarray]:
     """Detect and return the first signature crop from an image."""
@@ -42,9 +42,7 @@ def detect_first_signature(
     height = img.shape[0]
     midpoint = height // 2
     bottom_half = img[midpoint:, :]
-    bottom_half_gray = cv2.cvtColor(bottom_half, cv2.COLOR_BGR2GRAY)
-    bottom_half_input = cv2.cvtColor(bottom_half_gray, cv2.COLOR_GRAY2BGR)
-    results = model.predict(source=bottom_half_input, verbose=False, conf=0.05, imgsz=1280)
+    results = model.predict(source=bottom_half, verbose=False, conf=0.1)
 
     for result in results:
         boxes = result.boxes
@@ -52,9 +50,26 @@ def detect_first_signature(
             logger.info("No signature boxes detected for the provided image")
             continue
 
-        best_idx = int(boxes.conf.argmax().item()) if hasattr(boxes, "conf") else 0
-        box = boxes[best_idx]
-        x1, y1, x2, y2 = map(int, box.xyxy[0].tolist())
+        signature_boxes = []
+        names = getattr(result, "names", None) or getattr(model, "names", {})
+
+        for box in boxes:
+            class_id = int(box.cls.item())
+            if isinstance(names, dict):
+                class_name = names.get(class_id, str(class_id))
+            elif isinstance(names, (list, tuple)) and 0 <= class_id < len(names):
+                class_name = names[class_id]
+            else:
+                class_name = str(class_id)
+            if class_name.lower() == "signature":
+                signature_boxes.append(box)
+
+        if not signature_boxes:
+            logger.info("No signature boxes detected for the provided image")
+            continue
+
+        best_box = max(signature_boxes, key=lambda b: float(b.conf.item()))
+        x1, y1, x2, y2 = map(int, best_box.xyxy[0].tolist())
 
         width = x2 - x1
         height = y2 - y1
