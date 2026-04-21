@@ -34,7 +34,6 @@ def _decode_base64_image(image_base64: str) -> np.ndarray:
 def detect_first_signature(
     image_base64: str,
     model_path: str = "weights/detector_yolo_4cls.pt",
-    padding_ratio: float = 0.1,
 ) -> Optional[np.ndarray]:
     """Detect and return the first signature crop from an image."""
     img = _decode_base64_image(image_base64)
@@ -70,16 +69,10 @@ def detect_first_signature(
 
         best_box = max(signature_boxes, key=lambda b: float(b.conf.item()))
         x1, y1, x2, y2 = map(int, best_box.xyxy[0].tolist())
-
-        width = x2 - x1
-        height = y2 - y1
-        padding_x = int(width * padding_ratio)
-        padding_y = int(height * padding_ratio)
-
-        x1 = max(0, x1 - padding_x)
-        y1 = max(0, y1 - padding_y)
-        x2 = min(bottom_half.shape[1], x2 + padding_x)
-        y2 = min(bottom_half.shape[0], y2 + padding_y)
+        x1 = max(0, x1)
+        y1 = max(0, y1)
+        x2 = min(bottom_half.shape[1], x2)
+        y2 = min(bottom_half.shape[0], y2)
 
         signature = bottom_half[y1:y2, x1:x2]
         if signature.size != 0:
