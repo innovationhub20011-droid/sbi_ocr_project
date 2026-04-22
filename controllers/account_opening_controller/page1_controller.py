@@ -1,11 +1,14 @@
+import base64
 import json
+
+import logging
 from fastapi import UploadFile, HTTPException
 from llm.inference import call_vision_model_async
 from prompts.account_opening.page1_schema import PAGE1_PROMPT
-from services.file_service import convert_image_to_base64
 from schemas.account_opening_schemas import AccountFormCreate
 from services.account_opening_services import save_account_opening_page1
-import logging
+from utils.account_page_classifier import validate_account_page1
+
 logger = logging.getLogger(__name__)
 
 async def extract_account_opening_page1(file: UploadFile):
@@ -25,9 +28,31 @@ async def extract_account_opening_page1(file: UploadFile):
             raise HTTPException(status_code=400, detail="Only image files allowed")
 
         # -------------------------------
-        # Convert to base64
+        # Read file once so we can classify and OCR using the same bytes.
         # -------------------------------
-        image_base64 = await convert_image_to_base64(file)
+        image_bytes = await file.read()
+        if not image_bytes:
+            raise HTTPException(status_code=400, detail="Uploaded file is empty")
+
+        try:
+            is_page1, predicted_label, confidence = validate_account_page1(image_bytes)
+        except ValueError as exc:
+            raise HTTPException(status_code=400, detail=str(exc)) from exc
+
+        logger.info(
+            "Account page classifier result for %s: label=%s confidence=%.4f",
+            file.filename,
+            predicted_label,
+            confidence,
+        )
+
+        if not is_page1:
+            raise HTTPException(
+                status_code=422,
+                detail=f"Extraction allowed only for account opening page 1. Detected: {predicted_label}",
+            )
+
+        image_base64 = base64.b64encode(image_bytes).decode("utf-8")
 
         # -------------------------------
         # Call Vision Model
