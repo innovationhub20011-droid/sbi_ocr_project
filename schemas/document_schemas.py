@@ -111,7 +111,7 @@ class TextDocumentOcrCreate(BaseModel):
     @field_validator("document_type")
     @classmethod
     def validate_document_type(cls, v):
-        allowed = {"handwritten_text", "digital_text", "miscellaneous_text"}
+        allowed = {"handwritten_text", "digital_text"}
         normalized = (v or "").strip().lower()
         if normalized not in allowed:
             raise ValueError("Unsupported text document type")

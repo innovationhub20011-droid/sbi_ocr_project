@@ -4,7 +4,7 @@ from fastapi import HTTPException
 from sqlalchemy.exc import IntegrityError
 
 from db.database import SessionLocal
-from models.document_model import DigitalTextOcrDetails, HandwrittenTextOcrDetails, MiscellaneousTextOcrDetails
+from models.document_model import DigitalTextOcrDetails, HandwrittenTextOcrDetails
 from schemas.document_schemas import TextDocumentOcrCreate
 
 
@@ -22,9 +22,7 @@ def save_text_document_ocr(data: dict):
     try:
         model_map = {
             "handwritten_text": (HandwrittenTextOcrDetails, "Handwritten Text Document"),
-            "digital_text": (DigitalTextOcrDetails, "Digital Text Document"),
-            "miscellaneous_text": (MiscellaneousTextOcrDetails, "Miscellaneous Text Documents"),
-        }
+            "digital_text": (DigitalTextOcrDetails, "Digital Text Document")        }
         model_cls, label = model_map[ocr_data.document_type]
 
         db_record = model_cls(
@@ -64,15 +62,6 @@ def retrieve_digital_text_details() -> list[dict]:
     db = _open_session()
     try:
         records = db.query(DigitalTextOcrDetails).order_by(DigitalTextOcrDetails.id.desc()).all()
-        return [_serialize_record(record) | {"ocr_result": json.loads(record.ocr_result) if record.ocr_result else {}} for record in records]
-    finally:
-        db.close()
-
-
-def retrieve_miscellaneous_text_details() -> list[dict]:
-    db = _open_session()
-    try:
-        records = db.query(MiscellaneousTextOcrDetails).order_by(MiscellaneousTextOcrDetails.id.desc()).all()
         return [_serialize_record(record) | {"ocr_result": json.loads(record.ocr_result) if record.ocr_result else {}} for record in records]
     finally:
         db.close()

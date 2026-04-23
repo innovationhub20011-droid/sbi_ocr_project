@@ -160,19 +160,3 @@ class DigitalTextOcrDetails(Base):
     updated_date = Column(DateTime)
 
 
-class MiscellaneousTextOcrDetails(Base):
-    __tablename__ = "miscellaneous_text_ocr_details"
-
-    id = Column(String(36), primary_key=True, index=True, default=generate_alphanumeric_id)
-    document_type = Column(String(100), nullable=False)
-    file_name = Column(String(255))
-    ocr_result = Column(Text, nullable=False)
-    total_pages = Column(Integer, nullable=False)
-    ocr_source = Column(String(100))
-    is_verified = Column(String(1), default="N")
-    verified_by = Column(String(100))
-    verified_date = Column(DateTime)
-    created_by = Column(String(100))
-    created_date = Column(DateTime, server_default=func.now())
-    updated_by = Column(String(100))
-    updated_date = Column(DateTime)
